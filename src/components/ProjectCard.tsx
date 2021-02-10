@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export type ProjectCardProps = {
   title: string;
   description: string;
@@ -18,10 +20,17 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
   return (
     <div className="p-4 md:w-1/2 lg:w-1/3 opacity-90 hover:opacity-100">
       <div className="h-auto border-2 bg-black border-gray-800 overflow-hidden rounded-lg shadow-sm cursor-pointer transition-all duration-500 group hover:border-gray-800 border-opacity-50 hover:border-opacity-50  hover:shadow-md">
-        <img
+        {/* <img
           className="lg:h-48 md:h-36 w-full object-cover object-center opacity-50 transition-opacity duration-500 group-hover:opacity-100"
           src={imgsrc}
           alt="blog"
+        /> */}
+        <Image
+          alt="Next.js logo"
+          src={imgsrc}
+          width="640"
+          height="360"
+          className="lg:h-48 md:h-36 w-full object-cover object-center opacity-50 transition-opacity duration-500 group-hover:opacity-100"
         />
         <div className="p-6">
           <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1 uppercase">

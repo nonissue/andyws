@@ -24,7 +24,7 @@ const Index: React.FunctionComponent = () => {
               type="web"
               tags={["react", "prisma", "postgres", "typescript"]}
               link="/projects/test"
-              imgsrc="https://picsum.photos/seed/blotestws/640/360"
+              imgsrc="/project-thumbs/1.jpg"
             />
             <ProjectCard
               title="The Catalyzer"
@@ -33,7 +33,7 @@ const Index: React.FunctionComponent = () => {
               type="NODE.JS"
               tags={["react", "next.js"]}
               link="/projects/thecatalyzer"
-              imgsrc="https://picsum.photos/seed/cata/640/360"
+              imgsrc="/project-thumbs/2.jpg"
             />
             <ProjectCard
               title="The 400 Blows"
@@ -42,7 +42,7 @@ const Index: React.FunctionComponent = () => {
               type="NODE.JS"
               tags={["react", "next.js"]}
               link="/projects/400blows"
-              imgsrc="https://picsum.photos/seed/blows/640/360"
+              imgsrc="/project-thumbs/3.jpg"
             />
             <ProjectCard
               title="Shooting Stars"
@@ -51,7 +51,7 @@ const Index: React.FunctionComponent = () => {
               type="NODE.JS"
               tags={["react", "prisma", "postgres", "typescript"]}
               link="/projects/shootingstars"
-              imgsrc="https://picsum.photos/seed/shooting/640/360"
+              imgsrc="/project-thumbs/4.jpg"
             />
             <ProjectCard
               title="Test Project"
@@ -59,7 +59,7 @@ const Index: React.FunctionComponent = () => {
               type="web"
               tags={["react", "prisma", "postgres", "typescript"]}
               link="/projects/test"
-              imgsrc="https://picsum.photos/seed/blotestws/640/360"
+              imgsrc="/project-thumbs/1.jpg"
             />
             <ProjectCard
               title="The Catalyzer"
@@ -68,7 +68,7 @@ const Index: React.FunctionComponent = () => {
               type="NODE.JS"
               tags={["react", "next.js"]}
               link="/projects/thecatalyzer"
-              imgsrc="https://picsum.photos/seed/cata/640/360"
+              imgsrc="/project-thumbs/2.jpg"
             />
             <ProjectCard
               title="Shooting Stars"
@@ -77,7 +77,7 @@ const Index: React.FunctionComponent = () => {
               type="NODE.JS"
               tags={["react", "prisma", "postgres", "typescript"]}
               link="/projects/shootingstars"
-              imgsrc="https://picsum.photos/seed/shooting/640/360"
+              imgsrc="/project-thumbs/3.jpg"
             />
             <ProjectCard
               title="The 400 Blows"
@@ -86,7 +86,7 @@ const Index: React.FunctionComponent = () => {
               type="NODE.JS"
               tags={["react", "next.js"]}
               link="/projects/400blows"
-              imgsrc="https://picsum.photos/seed/blows/640/360"
+              imgsrc="/project-thumbs/4.jpg"
             />
           </div>
         </div>
