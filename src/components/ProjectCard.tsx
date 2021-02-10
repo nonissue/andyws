@@ -16,7 +16,7 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
   imgsrc,
 }) => {
   return (
-    <div className="p-4 md:w-1/2 lg:w-1/3 opacity-75 hover:opacity-100">
+    <div className="p-4 md:w-1/2 lg:w-1/3 opacity-90 hover:opacity-100">
       <div className="h-auto border-2 bg-black border-gray-800 overflow-hidden rounded-lg shadow-sm cursor-pointer transition-all duration-500 group hover:border-gray-800 border-opacity-50 hover:border-opacity-50  hover:shadow-md">
         <img
           className="lg:h-48 md:h-36 w-full object-cover object-center opacity-50 transition-opacity duration-500 group-hover:opacity-100"
@@ -24,13 +24,13 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
           alt="blog"
         />
         <div className="p-6">
-          <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1 uppercase">
+          <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1 uppercase">
             {type}
           </h2>
           <h1 className="title-font text-lg font-medium text-white mb-3">
             {title}
           </h1>
-          <p className="mb-3 line-clamp-3 text-gray-400 font-sans font-normal leading-relaxed">
+          <p className="mb-3 line-clamp-3 text-gray-300 font-sans font-normal leading-relaxed">
             {description}
           </p>
 
@@ -40,7 +40,7 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
                 #
                 <a
                   href="#"
-                  className="text-gray-500 hover:text-gray-300 transition-colors duration-300"
+                  className="text-gray-400 hover:text-gray-300 transition-colors duration-300"
                 >
                   {tag}
                 </a>

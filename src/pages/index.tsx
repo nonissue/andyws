@@ -9,11 +9,11 @@ const Index: React.FunctionComponent = () => {
             <img
               src="/logo-lightfg-crop.png"
               alt="nonissue logo"
-              className="opacity-20 object-contain h-full max-h-12 p-1 lg:p-0 lg:max-h-8 lg:mx-4 hover:opacity-90 cursor-pointer transition-opacity duration-500 -ml-4"
+              className="opacity-40 object-contain h-full max-h-12 p-1 lg:p-0 lg:max-h-8 lg:mx-4 hover:opacity-90 cursor-pointer transition-opacity duration-500 -ml-4"
             />
           </div>
 
-          <h2 className="tracking-widest text-xl title-font opacity-30 text-white text-center lg:px-0 font-normal uppercase px-4 mx-4 my-8">
+          <h2 className="tracking-widest text-xl title-font opacity-75 text-white text-center lg:px-0 font-normal uppercase px-4 mx-4 my-8">
             Projects
           </h2>
 
@@ -93,7 +93,7 @@ const Index: React.FunctionComponent = () => {
       </section>
 
       <div className="container px-4 py-6 mx-auto bg-black">
-        <h2 className="tracking-widest text-xl title-font opacity-30 text-white text-center lg:px-0 font-normal uppercase px-4 mx-4 my-8">
+        <h2 className="tracking-widest text-xl title-font opacity-75 text-white text-center lg:px-0 font-normal uppercase px-4 mx-4 my-8">
           Activity
         </h2>
 
