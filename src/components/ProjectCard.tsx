@@ -3,7 +3,7 @@ export type ProjectCardProps = {
   description: string;
   type: string;
   link: string;
-  stack: string[];
+  tags: string[];
   imgsrc: string;
 };
 
@@ -12,14 +12,14 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
   description,
   type,
   link,
-  stack,
+  tags,
   imgsrc,
 }) => {
   return (
-    <div className="p-4 md:w-1/2 lg:w-1/3 ">
-      <div className="h-auto border-2 bg-gray-900 border-gray-800 rounded-lg overflow-hidden hover:border-gray-700 shadow-sm hover:shadow-md cursor-pointer transition-all duration-500 group">
+    <div className="p-4 md:w-1/2 lg:w-1/3 opacity-75 hover:opacity-100">
+      <div className="h-auto border-2 bg-black border-gray-800 overflow-hidden rounded-lg shadow-sm cursor-pointer transition-all duration-500 group hover:border-gray-800 border-opacity-50 hover:border-opacity-50  hover:shadow-md">
         <img
-          className="lg:h-48 md:h-36 w-full object-cover object-center opacity-50  transition-opacity duration-500 group-hover:opacity-100"
+          className="lg:h-48 md:h-36 w-full object-cover object-center opacity-50 transition-opacity duration-500 group-hover:opacity-100"
           src={imgsrc}
           alt="blog"
         />
@@ -30,25 +30,27 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
           <h1 className="title-font text-lg font-medium text-white mb-3">
             {title}
           </h1>
-          <p className="mb-3 line-clamp-3 text-gray-400">{description}</p>
+          <p className="mb-3 line-clamp-3 text-gray-400 font-sans font-normal leading-relaxed">
+            {description}
+          </p>
 
-          <div className="leading-loose font-mono flex flex-row w-100 flex-wrap mb-3 text-gray-600">
-            {stack.map((item) => (
-              <span key={item} className=" mr-2 block">
+          <div className="leading-normal text-xs font-mono flex flex-row w-100 flex-wrap mb-3 text-gray-600">
+            {tags.map((tag) => (
+              <span key={tag} className=" mr-2 block">
                 #
                 <a
                   href="#"
                   className="text-gray-500 hover:text-gray-300 transition-colors duration-300"
                 >
-                  {item}
+                  {tag}
                 </a>
               </span>
             ))}
           </div>
 
-          <div className="flex items-center flex-wrap mb-3">
+          <div className="flex items-center justify-end mt-6 flex-wrap mb-0">
             <a
-              className="text-yellow-300 inline-flex lg:w-auto md:w-full items-center md:mb-2 lg:mb-0"
+              className="text-yellow-300 font-semibold text-xs uppercase tracking-widest inline-flex lg:w-auto md:w-full items-center md:mb-2 lg:mb-0"
               href={link}
             >
               Learn More
@@ -65,7 +67,7 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
                 <path d="M12 5l7 7-7 7"></path>
               </svg>
             </a>
-            <span className="text-gray-500 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-800">
+            <span className="hidden text-gray-500 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-800">
               <svg
                 className="w-4 h-4 mr-1"
                 stroke="currentColor"
@@ -78,9 +80,9 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                 <circle cx="12" cy="12" r="3"></circle>
               </svg>
-              1.2K
+              {Math.floor(Math.random() * 902) + 135}
             </span>
-            <span className="text-gray-500 inline-flex items-center leading-none text-sm">
+            <span className="hidden text-gray-500 inline-flex items-center leading-none text-sm">
               <svg
                 className="w-4 h-4 mr-1"
                 stroke="currentColor"
@@ -92,7 +94,7 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
               >
                 <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
               </svg>
-              6
+              {Math.floor(Math.random() * 10) + 2}
             </span>
           </div>
 
