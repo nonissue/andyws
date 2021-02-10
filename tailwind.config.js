@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // eslint-disable-next-line
 const colors = require("tailwindcss/colors");
 // eslint-disable-next-line no-undef
@@ -7,6 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        transparent: "transparent",
+        current: "currentColor",
         yellow: colors.yellow,
         purple: colors.purple,
         blue: colors.blue,
@@ -25,6 +28,9 @@ module.exports = {
   variants: {
     extend: {},
   },
-  // eslint-disable-next-line no-undef
-  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/line-clamp"),
+  ],
 };
