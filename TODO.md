@@ -1,3 +1,4 @@
 ## ISSUES
 
-- [ ] css broken in prod
+- [x] css broken in prod
+- [ ] shrink logo

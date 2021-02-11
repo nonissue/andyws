@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ProjectCard, Timeline } from "src/components";
 
 const Index: React.FunctionComponent = () => {
@@ -5,15 +6,18 @@ const Index: React.FunctionComponent = () => {
     <>
       <section className="text-gray-400 bg-black body-font">
         <div className="container px-4 py-6 mx-auto">
-          <div className="w-full flex justify-center lg:justify-start mt-8">
-            <img
-              src="/logo-lightfg-crop.png"
+          <div className="w-full flex justify-start lg:justify-start ml-3 mt-8">
+            <Image
+              src="/saol-lightfg.svg"
               alt="nonissue logo"
-              className="opacity-40 object-contain h-full max-h-12 p-1 lg:p-0 lg:max-h-8 lg:mx-4 hover:opacity-90 cursor-pointer transition-opacity duration-500 -ml-4"
+              width={75 * 1.5}
+              height={28 * 1.5}
+              // className="mx-4 pl-4"
+              // className="opacity-100 object-contain h-full max-h-12 p-1 lg:p-0 lg:max-h-8 lg:mx-4 hover:opacity-90 cursor-pointer transition-opacity duration-500 -ml-4"
             />
           </div>
 
-          <h2 className="tracking-widest text-xl title-font opacity-75 text-white text-center lg:px-0 font-normal uppercase px-4 mx-4 my-8">
+          <h2 className="tracking-widest text-xl title-font opacity-75 text-white text-left lg:px-0 font-normal uppercase px-4 pl-0 mx-4 my-8">
             Projects
           </h2>
 

@@ -20,11 +20,6 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
   return (
     <div className="p-4 md:w-1/2 lg:w-1/3 opacity-90 hover:opacity-100">
       <div className="h-auto border-2 bg-black border-gray-800 overflow-hidden rounded-lg shadow-sm cursor-pointer transition-all duration-500 group hover:border-gray-800 border-opacity-50 hover:border-opacity-50  hover:shadow-md">
-        {/* <img
-          className="lg:h-48 md:h-36 w-full object-cover object-center opacity-50 transition-opacity duration-500 group-hover:opacity-100"
-          src={imgsrc}
-          alt="blog"
-        /> */}
         <Image
           alt="Next.js logo"
           src={imgsrc}
@@ -106,10 +101,6 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
               {Math.floor(Math.random() * 10) + 2}
             </span>
           </div>
-
-          {/* <p className="leading-relaxed mb-3 font-mono text-gray-500"> */}
-
-          {/* </p> */}
         </div>
       </div>
     </div>
