@@ -22,9 +22,9 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
       <div className="h-auto border bg-gray-900 border-gray-800 border-opacity-100 overflow-hidden shadow-sm cursor-pointer transition-all duration-500 group hover:border-gray-700 hover:border-opacity-100 hover:shadow-md">
         <div
           className="relative w-full h-48 border-0 border-b-0 border-gray-700 z-50"
-          style={{
-            boxShadow: "inset 0 4px 8px 10px rgba(255, 255, 255, 0.9)",
-          }}
+          // style={{
+          //   boxShadow: "inset 0 4px 8px 10px rgba(255, 255, 255, 0.9)",
+          // }}
         >
           <Image
             alt="Next.js logo"
