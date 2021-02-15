@@ -1,6 +1,6 @@
 export const Timeline: React.FunctionComponent = () => {
   return (
-    <section className="text-gray-400 bg-black body-font">
+    <section className="text-gray-400 bg-gray-900 body-font">
       <div className="container px-5 py-0 mx-auto flex flex-wrap">
         <div className="flex flex-wrap w-full">
           <div className="w-auto max-w-50 lg:m-auto md:pr-10 md:py-6">

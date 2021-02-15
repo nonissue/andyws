@@ -6,6 +6,7 @@ import Head from "next/head";
 import type { NextRouter } from "next/router";
 
 import "./global.css";
+import "./custom.css";
 
 import { Providers } from "src/components";
 
