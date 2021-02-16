@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { ProjectCard, Timeline } from "src/components";
+import { ProjectCard, Timeline, ThemeChanger } from "src/components";
 
-const Index: React.FunctionComponent = () => {
+const Index: React.FunctionComponent & { theme?: string } = () => {
   return (
     <>
       <section className="text-gray-400 shadow-xl mb-8 bg-gray-900 body-font max-w-6xl mx-auto">
@@ -11,10 +11,12 @@ const Index: React.FunctionComponent = () => {
               <Image
                 src="/saol-lightfg.svg"
                 alt="nonissue logo"
-                width={75 * 1.5}
-                height={28 * 1.5}
+                width={`${75 * 1.5}px`}
+                height={`${28 * 1.5}px`}
               />
             </div>
+
+            <ThemeChanger />
 
             <div className="text-white">
               <svg

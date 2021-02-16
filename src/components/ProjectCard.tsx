@@ -20,12 +20,7 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
   return (
     <div className="p-4 md:w-1/2 lg:w-1/3 opacity-100 hover:opacity-100">
       <div className="h-auto border bg-gray-900 border-gray-800 border-opacity-100 overflow-hidden shadow-sm cursor-pointer transition-all duration-500 group hover:border-gray-700 hover:border-opacity-100 hover:shadow-md">
-        <div
-          className="relative w-full h-48 border-0 border-b-0 border-gray-700 z-50"
-          // style={{
-          //   boxShadow: "inset 0 4px 8px 10px rgba(255, 255, 255, 0.9)",
-          // }}
-        >
+        <div className="relative w-full h-48 border-0 border-b-0 border-gray-700 z-50">
           <Image
             alt="Next.js logo"
             src={imgsrc}
@@ -34,7 +29,7 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
             className="opacity-100 z-0 transition-opacity duration-500 group-hover:opacity-100 "
           />
         </div>
-        <div className="p-6 border-t border-gray-700 transition-all duration-1000 group-hover:border-gray-600">
+        <div className="p-6 border-t border-gray-800 transition-all duration-500 group-hover:border-gray-600">
           <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1 uppercase">
             {type}
           </h2>

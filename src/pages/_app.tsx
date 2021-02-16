@@ -5,15 +5,19 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import type { NextRouter } from "next/router";
 
+import { ThemeProvider } from "next-themes";
+
 import "./global.css";
 import "./custom.css";
 
-import { Providers } from "src/components";
+// import { Providers } from "src/components";
 
 export interface AppRenderProps {
   pageProps: object;
   err?: Error;
-  Component: NextComponentType<NextPageContext, AppRenderProps, object>;
+  Component: NextComponentType<NextPageContext, AppRenderProps, object> & {
+    theme: string;
+  };
   router: NextRouter;
 }
 
@@ -22,12 +26,12 @@ const MyApp: React.FunctionComponent<AppProps & AppRenderProps> = ({
   pageProps,
 }) => {
   return (
-    <Providers>
+    <ThemeProvider forcedTheme={Component.theme || undefined} attribute="class">
       <Head>
         <title>non</title>
       </Head>
       <Component {...pageProps} />
-    </Providers>
+    </ThemeProvider>
   );
 };
 
