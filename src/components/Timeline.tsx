@@ -1,14 +1,14 @@
 export const Timeline: React.FunctionComponent = () => {
   return (
-    <section className="text-gray-400 bg-gray-900 body-font">
-      <div className="container px-5 py-0 mx-auto flex flex-wrap">
-        <div className="flex flex-wrap w-full">
+    <section className="text-gray-200 bg-gray-900 body-font ">
+      <div className="container px-5 py-0 mx-autoflex flex-wrap">
+        <div className="flex flex-wrap w-3/4 mx-auto">
           <div className="w-auto max-w-50 lg:m-auto md:pr-10 md:py-6">
             <div className="flex relative pb-12">
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div className="h-full w-0.5 bg-gray-900 bgpointer-events-none" />
+                <div className="h-full w-0.5 bg-gray-800 bgpointer-events-none" />
               </div>
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-900 inline-flex items-center justify-center text-white relative z-10">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-700 shadow-lg inline-flex items-center justify-center text-white relative z-10">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -22,7 +22,7 @@ export const Timeline: React.FunctionComponent = () => {
                 </svg>
               </div>
               <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-sm text-gray-300 mb-1 tracking-wider">
+                <h2 className="font-medium title-font text-sm text-gray-500 mb-1 tracking-wider">
                   STEP 1
                 </h2>
                 <p className="leading-relaxed">
@@ -33,9 +33,9 @@ export const Timeline: React.FunctionComponent = () => {
             </div>
             <div className="flex relative pb-12">
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div className="h-full w-0.5 bg-gray-900 bgpointer-events-none" />
+                <div className="h-full w-0.5 bg-gray-800 bgpointer-events-none" />
               </div>
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-900 inline-flex items-center justify-center text-white relative z-10">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-700 shadow-lg inline-flex items-center justify-center text-white relative z-10">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -49,7 +49,7 @@ export const Timeline: React.FunctionComponent = () => {
                 </svg>
               </div>
               <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-sm text-gray-300 mb-1 tracking-wider">
+                <h2 className="font-medium title-font text-sm text-gray-500 mb-1 tracking-wider">
                   STEP 2
                 </h2>
                 <p className="leading-relaxed">
@@ -60,9 +60,9 @@ export const Timeline: React.FunctionComponent = () => {
             </div>
             <div className="flex relative pb-12">
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div className="h-full w-0.5 bg-gray-900 pointer-events-none" />
+                <div className="h-full w-0.5 bg-gray-800 opacity-75 pointer-events-none" />
               </div>
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-900 inline-flex items-center justify-center text-white relative z-10">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-700 shadow-lg inline-flex items-center justify-center text-white relative z-10">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -77,7 +77,7 @@ export const Timeline: React.FunctionComponent = () => {
                 </svg>
               </div>
               <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-sm text-gray-300 mb-1 tracking-wider">
+                <h2 className="font-medium title-font text-sm text-gray-500 mb-1 tracking-wider">
                   STEP 3
                 </h2>
                 <p className="leading-relaxed">
@@ -88,9 +88,9 @@ export const Timeline: React.FunctionComponent = () => {
             </div>
             <div className="flex relative pb-12">
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div className="h-full w-0.5 bg-gray-900 pointer-events-none" />
+                <div className="h-full w-0.5 bg-gray-800 pointer-events-none" />
               </div>
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-900 inline-flex items-center justify-center text-white relative z-10">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-700 shadow-lg inline-flex items-center justify-center text-white relative z-10">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -105,7 +105,7 @@ export const Timeline: React.FunctionComponent = () => {
                 </svg>
               </div>
               <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-sm text-gray-300 mb-1 tracking-wider">
+                <h2 className="font-medium title-font text-sm text-gray-500 mb-1 tracking-wider">
                   STEP 4
                 </h2>
                 <p className="leading-relaxed">
@@ -115,7 +115,7 @@ export const Timeline: React.FunctionComponent = () => {
               </div>
             </div>
             <div className="flex relative">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-900 inline-flex items-center justify-center text-white relative z-10">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-700 shadow-lg inline-flex items-center justify-center text-white relative z-10">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -130,7 +130,7 @@ export const Timeline: React.FunctionComponent = () => {
                 </svg>
               </div>
               <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-sm text-gray-300 mb-1 tracking-wider">
+                <h2 className="font-medium title-font text-sm text-gray-500 mb-1 tracking-wider">
                   FINISH
                 </h2>
                 <p className="leading-relaxed">

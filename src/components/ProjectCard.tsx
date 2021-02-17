@@ -19,34 +19,34 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
 }) => {
   return (
     <div className="p-4 md:w-1/2 lg:w-1/3 opacity-100 hover:opacity-100">
-      <div className="h-auto border bg-gray-900 border-gray-800 border-opacity-100 overflow-hidden shadow-sm cursor-pointer transition-all duration-500 group hover:border-gray-700 hover:border-opacity-100 hover:shadow-md">
-        <div className="relative w-full h-48 border-0 border-b-0 border-gray-700 z-50">
+      <div className="h-auto border text-gray-800 border-gray-200 dark:bg-gray-900 dark:border-gray-800 overflow-hidden shadow-sm cursor-pointer transition-all duration-500 group hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-md">
+        <div className="relative w-full h-48 border-0 border-b-0 z-50">
           <Image
             alt="Next.js logo"
             src={imgsrc}
             layout="fill"
             objectFit="cover"
-            className="opacity-100 z-0 transition-opacity duration-500 group-hover:opacity-100 "
+            className="opacity-50 z-0 transition-opacity duration-500 group-hover:opacity-100 "
           />
         </div>
-        <div className="p-6 border-t border-gray-800 transition-all duration-500 group-hover:border-gray-600">
-          <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1 uppercase">
+        <div className="p-6 border-t border-gray-200 dark:border-gray-800 transition-all duration-500 group-hover:border-gray-600">
+          <h2 className="tracking-widest text-xs text-gray-400 font-medium dark:text-gray-400 mb-1 uppercase">
             {type}
           </h2>
-          <h1 className="title-font text-lg font-medium text-white mb-3">
+          <h1 className="title-font text-gray-700 text-lg font-semibold dark:text-white mb-3">
             {title}
           </h1>
-          <p className="mb-3 line-clamp-3 text-gray-300 font-sans font-normal leading-relaxed">
+          <p className="mb-3 line-clamp-3 text-gray-500 dark:text-gray-300 font-sans font-normal leading-relaxed">
             {description}
           </p>
 
-          <div className="leading-normal text-xs font-mono flex flex-row w-100 flex-wrap mb-3 text-gray-600">
+          <div className="leading-normal text-xs font-mono flex flex-row w-100 flex-wrap mb-3 text-gray-400 dark:text-gray-600">
             {tags.map((tag) => (
               <span key={tag} className=" mr-2 block">
                 #
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-gray-300 transition-colors duration-300"
+                  className="dark:text-gray-400 hover:text-gray-300 transition-colors duration-300"
                 >
                   {tag}
                 </a>
@@ -56,7 +56,7 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
 
           <div className="flex items-center justify-end mt-6 flex-wrap mb-0">
             <a
-              className="text-yellow-300 font-semibold text-xs uppercase tracking-widest inline-flex lg:w-auto md:w-full items-center md:mb-2 lg:mb-0"
+              className="dark:text-yellow-300 text-pink-500 font-semibold text-xs uppercase tracking-widest inline-flex lg:w-auto md:w-full items-center md:mb-2 lg:mb-0"
               href={link}
             >
               Learn More

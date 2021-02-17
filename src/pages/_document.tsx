@@ -19,7 +19,7 @@ export default class Document extends NextDocument {
             content="black-translucent"
           />
         </Head>
-        <body className="bg-white dark:bg-blue-200 text-white dark:text-black">
+        <body className="bg-gray-50 dark:bg-gray-900 text-white dark:text-black">
           <Main />
           <NextScript />
         </body>
