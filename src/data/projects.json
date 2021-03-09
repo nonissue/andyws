@@ -14,5 +14,21 @@
     "type": "scripting",
     "link": "https://github.com/nonissue/hammerspoon",
     "imgsrc": "/project-thumbs/1.jpg"
+  },
+  {
+    "title": "Verbosed",
+    "tags": [
+      "typescript",
+      "react",
+      "next.js",
+      "prisma",
+      "postgres",
+      "api",
+      "siri shortcuts"
+    ],
+    "description": "A simple web project that allows me to share a word of the day by invoking a siri shortcut on my iPhone",
+    "type": "web",
+    "link": "https://github.com/nonissue/wotd",
+    "imgsrc": "/project-thumbs/3.jpg"
   }
 ]
