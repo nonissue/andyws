@@ -1,7 +1,7 @@
 export const Timeline: React.FunctionComponent = () => {
   return (
-    <section className="text-gray-200 bg-gray-900 body-font ">
-      <div className="container px-5 py-0 mx-autoflex flex-wrap">
+    <section className="text-gray-200 bg-gray-900 font-display ">
+      <div className="px-5 py-0 mx-autoflex flex-wrap">
         <div className="flex flex-wrap w-3/4 mx-auto">
           <div className="w-auto max-w-50 lg:m-auto md:pr-10 md:py-6">
             <div className="flex relative pb-12">

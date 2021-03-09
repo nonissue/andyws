@@ -87,7 +87,7 @@ const Index: React.FunctionComponent = () => {
           />
         </div>
 
-        <div className="container -mx-2 py-6 bg-gray-900">
+        <div className="-mx-2 py-6 bg-gray-900">
           <h2 className="tracking-widest text-3xl title-font opacity-100 text-white text-center lg:px-0 font-medium uppercase px-4 mx-4 my-8">
             Activity
           </h2>
