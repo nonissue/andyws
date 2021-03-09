@@ -59,7 +59,7 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
               className="dark:text-yellow-300 text-pink-500 font-semibold text-xs uppercase tracking-widest inline-flex lg:w-auto md:w-full items-center md:mb-2 lg:mb-0"
               href={link}
             >
-              Learn More
+              View {title}
               <svg
                 className="w-4 h-4 ml-2"
                 viewBox="0 0 24 24"

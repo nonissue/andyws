@@ -8,6 +8,11 @@ export default class Document extends NextDocument {
         <Head>
           <meta charSet="UTF-8" />
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+          <meta
+            name="Description"
+            content="Nonissue: The portfolio and online home of Andy Williams"
+          />
+          <meta name="robots" content="index, follow" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
