@@ -19,21 +19,21 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
 }) => {
   return (
     <div className="p-4 md:w-1/2 lg:w-1/3 opacity-100 hover:opacity-100">
-      <div className="h-auto border text-gray-800 border-gray-200 dark:bg-gray-900 dark:border-gray-800 overflow-hidden shadow-sm cursor-pointer transition-all duration-500 group hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-md">
-        <div className="relative w-full h-48 border-0 border-b-0 z-50">
+      <div className="h-auto border text-gray-800 border-gray-100 dark:bg-gray-900 dark:border-gray-800 overflow-hidden shadow-sm cursor-pointer transition-all duration-500 group hover:border-gray-400 dark:hover:border-gray-700 hover:shadow-md">
+        <div className="relative w-full h-48 border-0 border-gray-900 dark:border-gray-900 border-b-0">
           <Image
             alt="Next.js logo"
             src={imgsrc}
             layout="fill"
             objectFit="cover"
-            className="opacity-50 z-0 transition-opacity duration-500 group-hover:opacity-100 "
+            className="opacity-50 transition-opacity duration-500 group-hover:opacity-100"
           />
         </div>
         <div className="p-6 border-t border-gray-200 dark:border-gray-800 transition-all duration-500 group-hover:border-gray-600">
-          <h2 className="tracking-widest text-xs text-gray-400 font-medium dark:text-gray-400 mb-1 uppercase">
+          <h2 className="tracking-widest text-xs text-gray-400 font-medium dark:text-gray-400 mb-2 uppercase">
             {type}
           </h2>
-          <h1 className="title-font text-gray-700 text-lg font-semibold dark:text-white mb-3">
+          <h1 className="title-font text-gray-800 text-2xl font-semibold dark:text-white mb-3 font-display">
             {title}
           </h1>
           <p className="mb-3 line-clamp-3 text-gray-500 dark:text-gray-300 font-sans font-normal leading-relaxed">

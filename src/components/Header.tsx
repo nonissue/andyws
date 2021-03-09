@@ -14,16 +14,16 @@ export const Header: React.FunctionComponent = () => {
   if (!mounted) return null;
 
   return (
-    <div className="container px-4 py-6 mx-auto">
+    <div className="px-4 py-6 mx-auto">
       <div className="flex items-center border-0 mt-8 mx-0">
-        <div className="w-full border-0 flex justify-start lg:justify-start ">
+        <div className="w-full border-0 flex justify-start">
           {/* Change image based on theme */}
           <Image
             src={`/logo-${theme}.svg`}
             alt="nonissue logo"
             width={`${75 * 1.5}`}
             height={`${28 * 1.5}`}
-            className="bg-gradient-to-t  from-pink-200 via-pink-100 to-pink-200  dark:from-fuchsia-700 dark:via-fuchsia-600 dark:to-fuchsia-700"
+            className="bg-gradient-to-t from-pink-200 via-pink-100 to-pink-200  dark:from-fuchsia-700 dark:via-fuchsia-600 dark:to-fuchsia-700"
           />
         </div>
 

@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Dotfiles",
+    "tags": ["lua", "macos", "tmux", "nvim", "fish-shell"],
+    "description": "My dotfiles, which includes fish shell functions & themes, my tmux configuration, and more.",
+    "type": "scripting",
+    "link": "https://github.com/nonissue/dotfiles",
+    "imgsrc": "/project-thumbs/2.jpg"
+  },
+  {
+    "title": "Hammerspoon",
+    "tags": ["lua", "macos", "custom"],
+    "description": "Hammerspoon provides a robust and extensible interface for customizing macOS. Here is my setup.",
+    "type": "scripting",
+    "link": "https://github.com/nonissue/hammerspoon",
+    "imgsrc": "/project-thumbs/1.jpg"
+  }
+]

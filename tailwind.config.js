@@ -44,6 +44,17 @@ module.exports = {
       inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.1)",
       none: "none",
     },
+    fontFamily: {
+      display: [
+        "Inter",
+        "ui-sans-serif",
+        "system-ui",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Helvetica Neue",
+        "sans-serif",
+      ],
+    },
   },
   variants: {
     extend: {},
