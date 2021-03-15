@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Transition } from "@headlessui/react";
 import Image from "next/image";
+import NextLink from "next/link";
 
 import { ThemeChanger } from "./";
 
@@ -33,9 +34,21 @@ export const Header: React.FunctionComponent = () => {
           />
         </div>
 
+        <input type="text"></input>
+
         <button className="py-1 px-0 mr-4 font-semibold border-b border-gray-300 dark:border-gray-700 hidden md:block ">
           Menu
         </button>
+        <NextLink href="/">
+          <a className="py-1 px-0 mr-4 font-semibold border-b border-gray-300 dark:border-gray-700 hidden md:block ">
+            Home
+          </a>
+        </NextLink>
+        <NextLink href="/about">
+          <a className="py-1 px-0 mr-4 font-semibold border-b border-gray-300 dark:border-gray-700 hidden md:block ">
+            About
+          </a>
+        </NextLink>
         <ThemeChanger />
 
         {/* 

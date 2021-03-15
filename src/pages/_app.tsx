@@ -21,16 +21,30 @@ export interface AppRenderProps {
   router: NextRouter;
 }
 
-const MyApp: React.FunctionComponent<AppProps & AppRenderProps> = ({
+type ComponentWithLayout<P> = NextComponentType<NextPageContext, any, P> & {
+  getLayout?: (
+    page: JSX.Element,
+    layoutProps: Record<string, unknown>
+  ) => JSX.Element;
+};
+type AppPropsWithLayout<P = Record<string, unknown>> = AppProps<P> & {
+  Component: ComponentWithLayout<P> & { theme: string };
+};
+
+// const MyApp: React.FunctionComponent<AppProps & AppRenderProps> = ({
+const MyApp: React.FunctionComponent<AppPropsWithLayout> = ({
+  // AppPropsWithLayout
   Component,
   pageProps,
 }) => {
+  const getLayout = Component.getLayout || ((page) => page);
+
   return (
     <ThemeProvider forcedTheme={Component.theme || undefined} attribute="class">
       <Head>
         <title>non</title>
       </Head>
-      <Component {...pageProps} />
+      {getLayout(<Component {...pageProps} />, pageProps)}
     </ThemeProvider>
   );
 };
