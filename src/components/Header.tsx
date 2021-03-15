@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import { useEffect, useState, useLayoutEffect } from "react";
 import { useTheme } from "next-themes";
 import { Transition } from "@headlessui/react";
@@ -25,7 +27,13 @@ const ScrollLock = () => {
   return <></>;
 };
 
-const MobileNav = ({ mobileMenuShown }: { mobileMenuShown: boolean }) => {
+const MobileNav = ({
+  mobileMenuShown,
+  toggleMobileMenu,
+}: {
+  mobileMenuShown: boolean;
+  toggleMobileMenu: () => void;
+}) => {
   // if (!mobileMenuShown) {
   //   return null;
   // }
@@ -40,7 +48,7 @@ const MobileNav = ({ mobileMenuShown }: { mobileMenuShown: boolean }) => {
         enter="transition duration-300 transform"
         enterFrom="opacity-0"
         enterTo="opacity-100 "
-        leave="transition duration-300 "
+        leave="transition duration-500 "
         leaveFrom="opacity-100 "
         leaveTo="opacity-0 "
         // beforeLeave={() => {
@@ -51,17 +59,28 @@ const MobileNav = ({ mobileMenuShown }: { mobileMenuShown: boolean }) => {
         <div className="absolute top-0 h-screen font-sans font-semibold text-lg py-4  left-0  px-2 rounded-2xl shadow-xl w-screen bg-gray-200 dark:bg-gray-900 text-gray-700 ring-1 ring-black ring-opacity-5  focus:outline-none  dark:text-gray-50">
           <div className="py-2 mt-24 dark:bg-opacity-90 rounded-2xl dark:bg-black bg-gray-50  bg-opacity-90 ">
             <NextLink href="/">
-              <a className="py-2 my-2 px-6 mr-0 rounded-2xl transition-all duration-200 lg:border-gray-300 dark:border-gray-700 block hover:bg-pink-200 dark:hover:bg-fuchsia-500 dark:hover:bg-opacity-50 ring-opacity-0 ring-4 ring-transparent dark:ring-4 ring-inset dark:ring-transparent dark:hover:ring-fuchsia-400 hover:ring-4 hover:ring-fuchsia-400  dark:ring-opacity-50 dark:hover:ring-opacity-90">
+              <a
+                // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+                // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+                onClick={toggleMobileMenu}
+                className="py-2 my-2 px-6 mr-0 rounded-2xl transition-all duration-100 lg:border-gray-300 dark:border-gray-700 block hover:bg-pink-200 dark:hover:bg-fuchsia-500 dark:hover:bg-opacity-50 ring-opacity-0 ring-4 ring-transparent dark:ring-4 ring-inset dark:ring-transparent dark:hover:ring-fuchsia-400 hover:ring-4 hover:ring-fuchsia-400  dark:ring-opacity-50 dark:hover:ring-opacity-90"
+              >
                 Index
               </a>
             </NextLink>
-            <NextLink href="/">
-              <a className="py-2 px-6 my-2  mr-0 rounded-2xl transition-all duration-200 lg:border-gray-300 dark:border-gray-700 block hover:bg-pink-200 dark:hover:bg-fuchsia-500 dark:hover:bg-opacity-50 ring-opacity-0 ring-transparent ring-4 dark:ring-4 ring-inset dark:ring-transparent dark:hover:ring-fuchsia-400 hover:ring-4 hover:ring-fuchsia-400  dark:ring-opacity-50 dark:hover:ring-opacity-90">
+            <NextLink href="/about">
+              <a
+                onClick={toggleMobileMenu}
+                className="py-2 px-6 my-2  mr-0 rounded-2xl transition-all duration-100 lg:border-gray-300 dark:border-gray-700 block hover:bg-pink-200 dark:hover:bg-fuchsia-500 dark:hover:bg-opacity-50 ring-opacity-0 ring-transparent ring-4 dark:ring-4 ring-inset dark:ring-transparent dark:hover:ring-fuchsia-400 hover:ring-4 hover:ring-fuchsia-400  dark:ring-opacity-50 dark:hover:ring-opacity-90"
+              >
                 Activity
               </a>
             </NextLink>
             <NextLink href="/about">
-              <a className="py-2 px-6 my-2  mr-0 rounded-2xl transition-all duration-200 lg:border-gray-300 dark:border-gray-700 block hover:bg-pink-200 dark:hover:bg-fuchsia-500 dark:hover:bg-opacity-50 ring-opacity-0 ring-4 ring-transparent dark:ring-4 ring-inset dark:ring-transparent dark:hover:ring-fuchsia-400 hover:ring-4 hover:ring-fuchsia-400  dark:ring-opacity-50 dark:hover:ring-opacity-90">
+              <a
+                onClick={toggleMobileMenu}
+                className="py-2 px-6 my-2  mr-0 rounded-2xl transition-all duration-100 lg:border-gray-300 dark:border-gray-700 block hover:bg-pink-200 dark:hover:bg-fuchsia-500 dark:hover:bg-opacity-50 ring-opacity-0 ring-4 ring-transparent dark:ring-4 ring-inset dark:ring-transparent dark:hover:ring-fuchsia-400 hover:ring-4 hover:ring-fuchsia-400  dark:ring-opacity-50 dark:hover:ring-opacity-90"
+              >
                 About
               </a>
             </NextLink>
@@ -194,7 +213,10 @@ export const Header: React.FunctionComponent = () => {
             </div>
           </button>
         </div>
-        <MobileNav mobileMenuShown={mobileMenuShown} />
+        <MobileNav
+          mobileMenuShown={mobileMenuShown}
+          toggleMobileMenu={toggleMobileMenu}
+        />
         {mobileMenuShown && <ScrollLock />}
       </div>
     </div>

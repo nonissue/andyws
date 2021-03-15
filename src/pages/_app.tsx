@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-types */
 
 import type { NextComponentType, NextPageContext } from "next";
@@ -9,16 +10,7 @@ import { ThemeProvider } from "next-themes";
 import "./global.css";
 import "./custom.css";
 
-// Home, can't remember why i did this
-// Don't even know if they are used.
-// export interface AppRenderProps {
-//   pageProps: object;
-//   err?: Error;
-//   Component: NextComponentType<NextPageContext, AppRenderProps, object> & {
-//     theme: string;
-//   };
-//   router: NextRouter;
-// }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 
 type ComponentWithLayout<P> = NextComponentType<NextPageContext, any, P> & {
   getLayout?: (
