@@ -139,6 +139,7 @@ export const Header: React.FunctionComponent = () => {
                 leave="transition-opacity duration-100"
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
+                unmount={true}
               >
                 <div
                   className={`absloute top-0 inset-x-0 ${
@@ -164,13 +165,13 @@ export const Header: React.FunctionComponent = () => {
 
               <Transition
                 show={mobileMenuShown}
-                enter="transition duration-100"
+                enter="transition duration-300"
                 enterFrom="opacity-0 "
                 enterTo="opacity-100"
                 leave="transition-opacity duration-100"
                 leaveFrom="opacity-100"
                 leaveTo="opacity-100"
-                // unmount={true}
+                unmount={true}
                 // appear={true}
               >
                 <div className="absolute bg-transparent z-50 w-6 h-6 top-0 right-0">
