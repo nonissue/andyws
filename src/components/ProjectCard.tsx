@@ -18,19 +18,19 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
   imgsrc,
 }) => {
   return (
-    <div className="p-4 md:w-1/2 lg:w-1/3 opacity-100 hover:opacity-100">
-      <div className="h-auto border text-gray-800 border-gray-100 dark:bg-gray-900 dark:border-gray-800 overflow-hidden shadow-sm cursor-pointer transition-all duration-500 group hover:border-gray-400 dark:hover:border-gray-700 hover:shadow-md">
-        <div className="relative w-full h-48 border-0 border-gray-900 dark:border-gray-900 border-b-0">
+    <div className="py-4 px-2 md:w-1/2 lg:w-1/3 opacity-100 hover:opacity-100">
+      <div className="z-0 h-auto border text-gray-800 border-gray-100 dark:bg-gray-900 dark:border-gray-800 overflow-hidden shadow-sm cursor-pointer transition-all duration-500 group hover:border-gray-400 dark:hover:border-gray-700 hover:shadow-md">
+        <div className="relative w-full h-48 border-0 border-gray-900 dark:border-gray-900 border-b-0 z-0">
           <Image
             alt="Next.js logo"
             src={imgsrc}
             layout="fill"
             objectFit="cover"
-            className="opacity-50 transition-opacity duration-500 group-hover:opacity-100"
+            className="opacity-100 transition-opacity duration-500 group-hover:opacity-100"
           />
         </div>
         <div className="p-6 border-t border-gray-200 dark:border-gray-800 transition-all duration-500 group-hover:border-gray-600">
-          <h2 className="tracking-widest text-xs text-gray-400 font-medium dark:text-gray-400 mb-2 uppercase">
+          <h2 className="tracking-widest text-xs text-gray-500 dark:text-gray-400 mb-2 uppercase">
             {type}
           </h2>
           <h1 className="title-font text-gray-800 text-2xl font-semibold dark:text-white mb-3 font-display">
