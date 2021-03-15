@@ -9,7 +9,7 @@ export const TimelineBadge: React.FunctionComponent<{
           <div className="h-full w-0.5 bg-gray-800 bgpointer-events-none" />
         </div>
       )}
-      <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-gray-800 via-gray-700 to-gray-600 shadow-lg inline-flex items-center justify-center text-white relative z-10">
+      <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-gray-800 via-gray-700 to-gray-600 shadow-lg inline-flex items-center justify-center text-white relative z-0">
         <svg
           fill="none"
           stroke="currentColor"
