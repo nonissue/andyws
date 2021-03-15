@@ -4,13 +4,10 @@ import type { NextComponentType, NextPageContext } from "next";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import type { NextRouter } from "next/router";
-
 import { ThemeProvider } from "next-themes";
 
 import "./global.css";
 import "./custom.css";
-
-// import { Providers } from "src/components";
 
 export interface AppRenderProps {
   pageProps: object;
@@ -27,13 +24,12 @@ type ComponentWithLayout<P> = NextComponentType<NextPageContext, any, P> & {
     layoutProps: Record<string, unknown>
   ) => JSX.Element;
 };
+
 type AppPropsWithLayout<P = Record<string, unknown>> = AppProps<P> & {
   Component: ComponentWithLayout<P> & { theme: string };
 };
 
-// const MyApp: React.FunctionComponent<AppProps & AppRenderProps> = ({
 const MyApp: React.FunctionComponent<AppPropsWithLayout> = ({
-  // AppPropsWithLayout
   Component,
   pageProps,
 }) => {
