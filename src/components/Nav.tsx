@@ -1,5 +1,10 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
+
+// https://windstrap.netlify.app/#navbar
+// https://github.com/jkytoela/next-startd
+// https://github.com/ndimatteo/HULL
+
 import { useEffect, useState, useLayoutEffect } from "react";
 import { useTheme } from "next-themes";
 import { Transition } from "@headlessui/react";
@@ -80,7 +85,7 @@ const MobileNav = ({
   );
 };
 
-export const Header: React.FunctionComponent = () => {
+export const Nav: React.FunctionComponent = () => {
   const [mounted, setMounted] = useState(false);
   const [mobileMenuShown, setMobileMenuShown] = useState(false);
   const { theme } = useTheme();
@@ -102,7 +107,8 @@ export const Header: React.FunctionComponent = () => {
         <div className="w-full border-0 flex justify-start">
           {/* Change image based on theme */}
           <Image
-            src={`/logo-${theme}.svg`}
+            // src={`/logo-${"light"}.svg`}
+            src="/logo-light.svg"
             alt="nonissue logo"
             width={`${75 * 1.5}`}
             height={`${28 * 1.5}`}
