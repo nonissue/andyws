@@ -7,7 +7,7 @@
 
 import { useEffect, useState, useLayoutEffect } from "react";
 import { useTheme } from "next-themes";
-import { Transition } from "@headlessui/react";
+// import { Transition } from "@headlessui/react";
 import Image from "next/image";
 import NextLink from "next/link";
 
@@ -39,25 +39,28 @@ const MobileNav = ({
   mobileMenuShown: boolean;
   toggleMobileMenu: () => void;
 }) => {
+  const linkStyle = `text-gray-700 py-4 px-2 mr-0 block transition-all duration-300 hover:bg-gray-300 hover:bg-opacity-30`;
+
   return (
-    <div className="absolute top-0 left-0 z-0">
-      <Transition
-        appear={true}
-        show={mobileMenuShown}
-        enter="transition duration-300 transform"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="transition duration-500"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0"
-        unmount={true}
-      >
-        <div className="absolute top-0 h-screen font-sans font-semibold text-lg py-4 left-0 px-5 rounded-2xl shadow-xl w-screen bg-gray-200 dark:bg-gray-900 text-gray-700 ring-1 ring-black ring-opacity-5  focus:outline-none  dark:text-gray-50">
-          <div className="py-2 mt-24 dark:bg-opacity-90 rounded-sm dark:bg-black bg-gray-50  bg-opacity-90 ">
+    <div
+      className={`${
+        mobileMenuShown || "hidden"
+      }  inline-block mx-0 absolute top-0 left-0 text-center bg-clip-padding border-0 py-0 right-0 z-0 bg-white bg-opacity-80 shadow-sm backdrop-filter backdrop-blur-3xl backdrop-saturate-200 border-white border-opacity-90`}
+    >
+      {/* <div
+      className={`${
+        mobileMenuShown || "hidden"
+      } inline-block mx-4 left-0 right-0 fixed z-10 bg-white shadow-lg bg-opacity-60 backdrop-filter backdrop-blur-lg`}
+    > */}
+      <div className={``}>
+        {/* ring-1 ring-black ring-opacity-5 focus:outline-none */}
+        <div className="font-sans font-semibold text-xl  dark:bg-gray-900 text-gray-700  dark:text-gray-50">
+          <div className="dark:bg-opacity-90 rounded-sm dark:bg-black  ">
             <NextLink href="/">
               <a
                 onClick={toggleMobileMenu}
-                className="py-2 my-2 px-6 mr-0 rounded-sm transition-all duration-100 lg:border-gray-300 dark:border-gray-700 block hover:bg-pink-200 dark:hover:bg-fuchsia-500 dark:hover:bg-opacity-50 ring-opacity-0 ring-4 ring-transparent dark:ring-4 ring-inset dark:ring-transparent dark:hover:ring-fuchsia-400 hover:ring-4 hover:ring-fuchsia-400  dark:ring-opacity-50 dark:hover:ring-opacity-90"
+                //  lg:border-gray-300 dark:border-gray-700 block hover:bg-pink-200 dark:hover:bg-fuchsia-500 dark:hover:bg-opacity-50 ring-opacity-0 ring-4 ring-transparent dark:ring-4 ring-inset dark:ring-transparent dark:hover:ring-fuchsia-400 hover:ring-4 hover:ring-fuchsia-400 dark:ring-opacity-50 dark:hover:ring-opacity-90
+                className={linkStyle}
               >
                 Index
               </a>
@@ -65,7 +68,8 @@ const MobileNav = ({
             <NextLink href="/about">
               <a
                 onClick={toggleMobileMenu}
-                className="py-2 px-6 my-2  mr-0 rounded-sm transition-all duration-100 lg:border-gray-300 dark:border-gray-700 block hover:bg-pink-200 dark:hover:bg-fuchsia-500 dark:hover:bg-opacity-50 ring-opacity-0 ring-transparent ring-4 dark:ring-4 ring-inset dark:ring-transparent dark:hover:ring-fuchsia-400 hover:ring-4 hover:ring-fuchsia-400  dark:ring-opacity-50 dark:hover:ring-opacity-90"
+                //  lg:border-gray-300 dark:border-gray-700 block hover:bg-pink-200 dark:hover:bg-fuchsia-500 dark:hover:bg-opacity-50 ring-opacity-0 ring-4 ring-transparent dark:ring-4 ring-inset dark:ring-transparent dark:hover:ring-fuchsia-400 hover:ring-4 hover:ring-fuchsia-400 dark:ring-opacity-50 dark:hover:ring-opacity-90
+                className={linkStyle}
               >
                 Activity
               </a>
@@ -73,14 +77,15 @@ const MobileNav = ({
             <NextLink href="/about">
               <a
                 onClick={toggleMobileMenu}
-                className="py-2 px-6 my-2  mr-0 rounded-sm transition-all duration-100 lg:border-gray-300 dark:border-gray-700 block hover:bg-pink-200 dark:hover:bg-fuchsia-500 dark:hover:bg-opacity-50 ring-opacity-0 ring-4 ring-transparent dark:ring-4 ring-inset dark:ring-transparent dark:hover:ring-fuchsia-400 hover:ring-4 hover:ring-fuchsia-400  dark:ring-opacity-50 dark:hover:ring-opacity-90"
+                //  lg:border-gray-300 dark:border-gray-700 block hover:bg-pink-200 dark:hover:bg-fuchsia-500 dark:hover:bg-opacity-50 ring-opacity-0 ring-4 ring-transparent dark:ring-4 ring-inset dark:ring-transparent dark:hover:ring-fuchsia-400 hover:ring-4 hover:ring-fuchsia-400 dark:ring-opacity-50 dark:hover:ring-opacity-90
+                className={linkStyle}
               >
                 About
               </a>
             </NextLink>
           </div>
         </div>
-      </Transition>
+      </div>
     </div>
   );
 };
@@ -101,14 +106,13 @@ export const Nav: React.FunctionComponent = () => {
 
   return (
     <div
-      className={`container sticky bg-white dark:bg-gray-900 z-50 top-0 px-4 lg:px-10 py-6 mx-auto`}
+      className={`container sticky z-50 h-auto top-0 lg:px-10 pt-6 pb-1 mx-auto bg-white bg-opacity-95 backdrop-filter backdrop-blur-3xl shadow-xl dark:bg-gray-900 `}
     >
-      <div className="flex items-center border-0 mt-8 mx-0">
+      <div className="flex items-center border-0 mt-0 mx-4">
         <div className="w-full border-0 flex justify-start">
           {/* Change image based on theme */}
           <Image
-            // src={`/logo-${"light"}.svg`}
-            src="/logo-light.svg"
+            src={`/logo-${theme ? theme : "light"}.svg`}
             alt="nonissue logo"
             width={`${75 * 1.5}`}
             height={`${28 * 1.5}`}
@@ -127,88 +131,70 @@ export const Nav: React.FunctionComponent = () => {
           </a>
         </NextLink>
 
-        <input
-          type="text"
-          className="w-20 hidden lg:block lg:w-48 h-8 mr-5 border border-gray-200 dark:bg-gray-900 dark:border-gray-700"
-        ></input>
         <ThemeChanger />
 
-        {/* 
-        Condensed mobile nav 
-        */}
-        <div className=" right-0 top-0 z-50">
-          <button
-            className="p-2 md:hidden focus:outline-none rounded-full mr-3 outline-none hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-500 text-gray-900 border-0 border-gray-200 dark:border-gray-700 dark:text-gray-200 dark:bg-transparent"
-            onClick={() => toggleMobileMenu()}
-          >
+        <div className="relative z-50">
+          <button className="" onClick={() => toggleMobileMenu()}>
             <div className="relative w-6 h-6 p-0">
-              <Transition
-                show={!mobileMenuShown}
-                enter="transition-opacity duration-300"
-                enterFrom="opacity-0"
-                enterTo="opacity-100"
-                leave="transition-opacity duration-100"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
-                unmount={true}
-              >
-                <div
-                  className={`absloute top-0 inset-x-0 ${
-                    mobileMenuShown && "hidden" && false
-                  }`}
+              <div className={`${mobileMenuShown && "hidden" && false}`}>
+                {/* Heroicon menu icon */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
-                  {/* Heroicon menu icon */}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 6h16M4 12h16m-7 6h7"
-                    />
-                  </svg>
-                </div>
-              </Transition>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  />
+                </svg>
+              </div>
 
-              <Transition
-                show={mobileMenuShown}
-                enter="transition duration-300"
-                enterFrom="opacity-0 "
-                enterTo="opacity-100"
-                leave="transition-opacity duration-100"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-100"
-                unmount={true}
-              >
-                <div className="absolute bg-transparent z-50 w-6 h-6 top-0 right-0">
-                  {/* Heroicon X icon */}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </div>
-              </Transition>
+              {/* Heroicon X icon */}
+              {/* <div className="absolute bg-transparent z-50 w-6 h-6 top-0 right-0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </div> */}
             </div>
           </button>
         </div>
+      </div>
+      <div className="relative top-0 left-0 right-0 z-50 my-4 ">
         <MobileNav
           mobileMenuShown={mobileMenuShown}
           toggleMobileMenu={toggleMobileMenu}
         />
+        {/* Can disable this? */}
         {mobileMenuShown && <ScrollLock />}
+      </div>
+
+      <div className="hidden">
+        <h3>Test</h3>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.{" "}
+        </p>
       </div>
     </div>
   );
