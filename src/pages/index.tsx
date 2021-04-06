@@ -12,7 +12,7 @@ const Index: NextPage & {
         Projects
       </h2>
 
-      <div className="flex flex-wrap px-4 lg:px-8 container mx-auto">
+      <div className="flex flex-wrap px-2 lg:px-8 container mx-auto">
         {Projects.map((project) => (
           <ProjectCard key={project.title} {...project} />
         ))}

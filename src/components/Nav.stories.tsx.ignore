@@ -6,7 +6,7 @@ import { Nav } from ".";
 
 //👇 This default export determines where your story goes in the story list
 export default {
-  title: "Nav",
+  title: "Header",
   component: Nav,
 };
 

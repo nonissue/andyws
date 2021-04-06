@@ -49,8 +49,5 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "^4.1.2"
   },
-  "resolutions": {
-    "react": "17.0.1"
-  },
   "license": "MIT"
 }
