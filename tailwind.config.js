@@ -41,6 +41,7 @@ module.exports = {
         ],
         // overrides default font with inter
         sans: [
+          "IBM Plex Sans",
           "Inter",
           "ui-sans-serif",
           "system-ui",
@@ -48,6 +49,28 @@ module.exports = {
           "BlinkMacSystemFont",
           "Helvetica Neue",
           "sans-serif",
+        ],
+        serif: [
+          "IBM Plex Serif",
+          "Helvetica",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Helvetica Neue",
+          "sans-serif",
+        ],
+        mono: [
+          "IBM Plex Mono",
+          "Georgia",
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          "Liberation Mono",
+          "Courier New",
+          "monospace",
         ],
       },
       boxShadow: {

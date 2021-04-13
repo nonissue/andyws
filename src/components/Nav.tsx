@@ -26,12 +26,14 @@ const MobileNav = ({
     <div
       className={`${
         mobileMenuShown || "hidden"
-      }  inline-block mx-0 absolute top-0 left-0 text-center bg-clip-padding py-0 right-0 bg-white bg-opacity-80 shadow-lg backdrop-filter backdrop-blur-xl backdrop-saturate-200 border-white border-opacity-90 md:hidden dark:bg-gray-900 dark:bg-opacity-70`}
+      }  block mx-0 w-screen sticky h-auto top-0 left-0 right-0  z-50 text-center bg-clip-padding bg-opacity-50 shadow-lg backdrop-filter backdrop-blur-md backdrop-saturate-200 border-white border-opacity-90 dark:bg-gray-900 dark:bg-opacity-70`}
     >
-      <div className={``}>
+      <div
+        className={`absolute w-full bg-gray-200 bg-opacity-70 backdrop-filter backdrop-blur-xl`}
+      >
         {/* ring-1 ring-black ring-opacity-5 focus:outline-none */}
         <div className="font-sans font-semibold text-xl text-gray-700  dark:text-gray-50">
-          <div className="dark:bg-opacity-90 rounded-sm  ">
+          <div className="dark:bg-opacity-10 rounded-sm ">
             <NextLink href="/">
               <a onClick={toggleMobileMenu} className={linkStyle}>
                 Index
@@ -54,7 +56,7 @@ const MobileNav = ({
   );
 };
 
-export const Nav: React.FunctionComponent = () => {
+const Nav: React.FunctionComponent = () => {
   const { state } = useSiteContext();
   const { updateState } = useSiteContext();
 
@@ -80,9 +82,9 @@ export const Nav: React.FunctionComponent = () => {
       }));
     };
 
-    setTimeout(() => {
-      update();
-    }, 3000);
+    update();
+
+    console.log(state);
   }, []);
 
   useEffect(() => {
@@ -91,11 +93,10 @@ export const Nav: React.FunctionComponent = () => {
 
   return (
     <div
-      className={`container sticky z-30 h-auto top-0 lg:px-10 pt-6 pb-1 mx-auto bg-white bg-opacity-95 backdrop-filter backdrop-blur-3xl shadow-sm dark:bg-gray-900 dark:bg-opacity-80 `}
+      className={`sticky z-30 h-auto top-0 left-0 right-0  bg-opacity-70 backdrop-filter backdrop-blur-2xl bg-white shadow-lg dark:bg-gray-900 dark:bg-opacity-80 `}
     >
-      <div className="flex items-center mt-0 mx-4">
-        <div className="w-full border-0 flex justify-start">
-          {/* Change image based on theme */}
+      <div className="max-w-6xl w-full mx-auto relative top-0 left-0 flex items-center px-6 py-4 lg:px-10">
+        <div className="flex-grow flex justify-start">
           <Image
             src={`/logo-${theme ? theme : "light"}.svg`}
             alt="nonissue logo"
@@ -104,7 +105,7 @@ export const Nav: React.FunctionComponent = () => {
           />
         </div>
 
-        <div className="hidden md:block">
+        <div className="md:block text-gray-500">
           <NextLink href="/">
             <a className="py-1 px-0 mr-4 font-semibold border-b border-gray-300 dark:border-gray-700  ">
               Home
@@ -119,10 +120,14 @@ export const Nav: React.FunctionComponent = () => {
 
         <ThemeChanger />
 
-        <div className="relative md:hidden z-50">
+        <div className="relative z-50">
           <button className="p-2 " onClick={() => toggleMobileMenu()}>
-            <div className="relative  w-6 h-6 p-0">
-              <div className={`${mobileMenuShown && "hidden" && false}`}>
+            <div className="relative w-6 h-6 p-0">
+              <div
+                className={`${
+                  (mobileMenuShown && "block") || "block"
+                } text-gray-400`}
+              >
                 {/* Heroicon menu icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -138,35 +143,18 @@ export const Nav: React.FunctionComponent = () => {
                   />
                 </svg>
               </div>
-
-              {/* Heroicon X icon */}
-              {/* <div className="absolute bg-transparent z-50 w-6 h-6 top-0 right-0">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </div> */}
             </div>
           </button>
         </div>
       </div>
-      <div className="relative top-0 left-0 right-0 z-50 my-4 ">
+      <div className="relative top-0 z-50 ">
         <MobileNav
           mobileMenuShown={mobileMenuShown}
           toggleMobileMenu={toggleMobileMenu}
         />
-        {/* Can disable this? */}
-        {/* {mobileMenuShown && <ScrollLock />} */}
       </div>
     </div>
   );
 };
+
+export { Nav };
