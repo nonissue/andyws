@@ -1,4 +1,4 @@
-import { Header } from "src/components";
+import { Nav as Header } from "src/components";
 
 type Props = {
   children: React.ReactElement;

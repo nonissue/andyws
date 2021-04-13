@@ -26,7 +26,7 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
             src={imgsrc}
             layout="fill"
             objectFit="cover"
-            className="opacity-100 transition-opacity duration-500 group-hover:opacity-100"
+            className="opacity-100 transition-opacity duration-500 group-hover:opacity-100 z-0"
           />
         </div>
         <div className="p-6 border-t border-gray-200 dark:border-gray-800 transition-all duration-500 group-hover:border-gray-600">

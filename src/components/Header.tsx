@@ -34,12 +34,6 @@ const MobileNav = ({
   mobileMenuShown: boolean;
   toggleMobileMenu: () => void;
 }) => {
-  // if (!mobileMenuShown) {
-  //   return null;
-  // }
-
-  // useLockBodyScroll();
-
   return (
     <div className="absolute top-0 left-0 z-0">
       <Transition
@@ -47,23 +41,18 @@ const MobileNav = ({
         show={mobileMenuShown}
         enter="transition duration-300 transform"
         enterFrom="opacity-0"
-        enterTo="opacity-100 "
-        leave="transition duration-500 "
-        leaveFrom="opacity-100 "
-        leaveTo="opacity-0 "
-        // beforeLeave={() => {
-        //   window.confirm("Are you sure?");
-        // }}
+        enterTo="opacity-100"
+        leave="transition duration-500"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
         unmount={true}
       >
-        <div className="absolute top-0 h-screen font-sans font-semibold text-lg py-4  left-0  px-2 rounded-2xl shadow-xl w-screen bg-gray-200 dark:bg-gray-900 text-gray-700 ring-1 ring-black ring-opacity-5  focus:outline-none  dark:text-gray-50">
-          <div className="py-2 mt-24 dark:bg-opacity-90 rounded-2xl dark:bg-black bg-gray-50  bg-opacity-90 ">
+        <div className="absolute top-0 h-screen font-sans font-semibold text-lg py-4 left-0 px-5 rounded-2xl shadow-xl w-screen bg-gray-200 dark:bg-gray-900 text-gray-700 ring-1 ring-black ring-opacity-5  focus:outline-none  dark:text-gray-50">
+          <div className="py-2 mt-24 dark:bg-opacity-90 rounded-sm dark:bg-black bg-gray-50  bg-opacity-90 ">
             <NextLink href="/">
               <a
-                // eslint-disable-next-line jsx-a11y/click-events-have-key-events
-                // eslint-disable-next-line jsx-a11y/no-static-element-interactions
                 onClick={toggleMobileMenu}
-                className="py-2 my-2 px-6 mr-0 rounded-2xl transition-all duration-100 lg:border-gray-300 dark:border-gray-700 block hover:bg-pink-200 dark:hover:bg-fuchsia-500 dark:hover:bg-opacity-50 ring-opacity-0 ring-4 ring-transparent dark:ring-4 ring-inset dark:ring-transparent dark:hover:ring-fuchsia-400 hover:ring-4 hover:ring-fuchsia-400  dark:ring-opacity-50 dark:hover:ring-opacity-90"
+                className="py-2 my-2 px-6 mr-0 rounded-sm transition-all duration-100 lg:border-gray-300 dark:border-gray-700 block hover:bg-pink-200 dark:hover:bg-fuchsia-500 dark:hover:bg-opacity-50 ring-opacity-0 ring-4 ring-transparent dark:ring-4 ring-inset dark:ring-transparent dark:hover:ring-fuchsia-400 hover:ring-4 hover:ring-fuchsia-400  dark:ring-opacity-50 dark:hover:ring-opacity-90"
               >
                 Index
               </a>
@@ -71,7 +60,7 @@ const MobileNav = ({
             <NextLink href="/about">
               <a
                 onClick={toggleMobileMenu}
-                className="py-2 px-6 my-2  mr-0 rounded-2xl transition-all duration-100 lg:border-gray-300 dark:border-gray-700 block hover:bg-pink-200 dark:hover:bg-fuchsia-500 dark:hover:bg-opacity-50 ring-opacity-0 ring-transparent ring-4 dark:ring-4 ring-inset dark:ring-transparent dark:hover:ring-fuchsia-400 hover:ring-4 hover:ring-fuchsia-400  dark:ring-opacity-50 dark:hover:ring-opacity-90"
+                className="py-2 px-6 my-2  mr-0 rounded-sm transition-all duration-100 lg:border-gray-300 dark:border-gray-700 block hover:bg-pink-200 dark:hover:bg-fuchsia-500 dark:hover:bg-opacity-50 ring-opacity-0 ring-transparent ring-4 dark:ring-4 ring-inset dark:ring-transparent dark:hover:ring-fuchsia-400 hover:ring-4 hover:ring-fuchsia-400  dark:ring-opacity-50 dark:hover:ring-opacity-90"
               >
                 Activity
               </a>
@@ -79,7 +68,7 @@ const MobileNav = ({
             <NextLink href="/about">
               <a
                 onClick={toggleMobileMenu}
-                className="py-2 px-6 my-2  mr-0 rounded-2xl transition-all duration-100 lg:border-gray-300 dark:border-gray-700 block hover:bg-pink-200 dark:hover:bg-fuchsia-500 dark:hover:bg-opacity-50 ring-opacity-0 ring-4 ring-transparent dark:ring-4 ring-inset dark:ring-transparent dark:hover:ring-fuchsia-400 hover:ring-4 hover:ring-fuchsia-400  dark:ring-opacity-50 dark:hover:ring-opacity-90"
+                className="py-2 px-6 my-2  mr-0 rounded-sm transition-all duration-100 lg:border-gray-300 dark:border-gray-700 block hover:bg-pink-200 dark:hover:bg-fuchsia-500 dark:hover:bg-opacity-50 ring-opacity-0 ring-4 ring-transparent dark:ring-4 ring-inset dark:ring-transparent dark:hover:ring-fuchsia-400 hover:ring-4 hover:ring-fuchsia-400  dark:ring-opacity-50 dark:hover:ring-opacity-90"
               >
                 About
               </a>
@@ -97,7 +86,7 @@ export const Header: React.FunctionComponent = () => {
   const { theme } = useTheme();
 
   const toggleMobileMenu = () => {
-    setMobileMenuShown(!mobileMenuShown);
+    setMobileMenuShown((mobileMenuShown) => !mobileMenuShown);
   };
 
   // When mounted on client, now we can show the UI
@@ -107,7 +96,7 @@ export const Header: React.FunctionComponent = () => {
 
   return (
     <div
-      className={`container sticky bg-white dark:bg-gray-900 z-50 top-0 px-6 lg:px-10 py-6 mx-auto`}
+      className={`container sticky bg-white dark:bg-gray-900 z-50 top-0 px-4 lg:px-10 py-6 mx-auto`}
     >
       <div className="flex items-center border-0 mt-8 mx-0">
         <div className="w-full border-0 flex justify-start">
@@ -121,9 +110,6 @@ export const Header: React.FunctionComponent = () => {
           />
         </div>
 
-        {/* <button className="py-1 px-0 mr-4 font-semibold border-b border-gray-300 dark:border-gray-700  md:block ">
-          Menu
-        </button> */}
         <NextLink href="/">
           <a className="py-1 px-0 mr-4 font-semibold border-b border-gray-300 dark:border-gray-700 hidden md:block ">
             Home
@@ -191,7 +177,6 @@ export const Header: React.FunctionComponent = () => {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-100"
                 unmount={true}
-                // appear={true}
               >
                 <div className="absolute bg-transparent z-50 w-6 h-6 top-0 right-0">
                   {/* Heroicon X icon */}

@@ -24,6 +24,7 @@ module.exports = {
     "react/prop-types": "off", // We turn off prop-types rule, as we will use TypeScript's types instead.
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "@typescript-eslint/no-unused-vars": ["error"],
   },
