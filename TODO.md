@@ -3,6 +3,11 @@
 - [x] css broken in prod
 - [ ] shrink logo
 
+## Arch
+
+- [x] `useContext` for... app context (state)
+- [ ] Hook Nav state into new app context
+
 ## UI
 
 - [ ] Change fontstack

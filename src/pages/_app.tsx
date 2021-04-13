@@ -6,6 +6,7 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 // import type { NextRouter } from "next/router";
 import { ThemeProvider } from "next-themes";
+import { SiteContextProvider } from "src/lib/context";
 
 import "./global.css";
 import "./custom.css";
@@ -31,10 +32,12 @@ const MyApp: React.FunctionComponent<AppPropsWithLayout> = ({
 
   return (
     <ThemeProvider forcedTheme={Component.theme || undefined} attribute="class">
-      <Head>
-        <title>non</title>
-      </Head>
-      {getLayout(<Component {...pageProps} />, pageProps)}
+      <SiteContextProvider>
+        <Head>
+          <title>non</title>
+        </Head>
+        {getLayout(<Component {...pageProps} />, pageProps)}
+      </SiteContextProvider>
     </ThemeProvider>
   );
 };

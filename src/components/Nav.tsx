@@ -7,10 +7,10 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-// import { Transition } from "@headlessui/react";
 import Image from "next/image";
 import NextLink from "next/link";
 
+import { useSiteContext } from "src/lib/context";
 import { ThemeChanger } from "./";
 
 const MobileNav = ({
@@ -55,7 +55,10 @@ const MobileNav = ({
 };
 
 export const Nav: React.FunctionComponent = () => {
-  const [mounted, setMounted] = useState(false);
+  const { state } = useSiteContext();
+  const { updateState } = useSiteContext();
+
+  // const [mounted, setMounted] = useState(false);
   const [mobileMenuShown, setMobileMenuShown] = useState(false);
   const { theme } = useTheme();
 
@@ -64,13 +67,31 @@ export const Nav: React.FunctionComponent = () => {
   };
 
   // When mounted on client, now we can show the UI
-  useEffect(() => setMounted(true), []);
+  // useEffect(() => {
+  //   setMounted(true);
+  // }, []);
+  // if (!mounted) return null;
 
-  if (!mounted) return null;
+  useEffect(() => {
+    const update = async () => {
+      await updateState((state) => ({
+        ...state,
+        isLoading: false,
+      }));
+    };
+
+    setTimeout(() => {
+      update();
+    }, 3000);
+  }, []);
+
+  useEffect(() => {
+    console.log(state);
+  }, [state]);
 
   return (
     <div
-      className={`container sticky z-50 h-auto top-0 lg:px-10 pt-6 pb-1 mx-auto bg-white bg-opacity-95 backdrop-filter backdrop-blur-3xl shadow-sm dark:bg-gray-900 dark:bg-opacity-80 `}
+      className={`container sticky z-30 h-auto top-0 lg:px-10 pt-6 pb-1 mx-auto bg-white bg-opacity-95 backdrop-filter backdrop-blur-3xl shadow-sm dark:bg-gray-900 dark:bg-opacity-80 `}
     >
       <div className="flex items-center mt-0 mx-4">
         <div className="w-full border-0 flex justify-start">
