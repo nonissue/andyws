@@ -55,7 +55,7 @@ const Nav: React.FunctionComponent = () => {
   const { state } = useSiteContext();
   const { updateState } = useSiteContext();
 
-  // const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [mobileMenuShown, setMobileMenuShown] = useState(false);
   const { theme } = useTheme();
 
@@ -63,11 +63,11 @@ const Nav: React.FunctionComponent = () => {
     setMobileMenuShown((mobileMenuShown) => !mobileMenuShown);
   };
 
-  // When mounted on client, now we can show the UI
-  // useEffect(() => {
-  //   setMounted(true);
-  // }, []);
-  // if (!mounted) return null;
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   useEffect(() => {
     const update = async () => {
@@ -95,7 +95,7 @@ const Nav: React.FunctionComponent = () => {
           <NextLink href="/">
             <a>
               <Image
-                src={`/logo-${theme ? theme : "light"}.svg`}
+                src={`/logo-${theme === "light" ? "light" : "dark"}.svg`}
                 alt="nonissue logo"
                 width={`${75 * 1.5}`}
                 height={`${28 * 1.5}`}
