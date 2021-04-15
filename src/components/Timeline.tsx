@@ -29,7 +29,7 @@ export const TimelineBadge: React.FunctionComponent<{
 export const Timeline: React.FunctionComponent = () => {
   return (
     <section className="text-gray-200 bg-gray-900 text-sm lg:text-base font-display pb-8 ">
-      <div className="px-4 py-0 mx-auto flex  flex-wrap">
+      <div className="px-0 py-0 mx-auto flex  flex-wrap">
         <div className="flex flex-wrap">
           <div className="lg:m-auto md:pr-10 md:py-6">
             <div className="flex relative pb-8">

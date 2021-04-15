@@ -20,33 +20,28 @@ const MobileNav = ({
   mobileMenuShown: boolean;
   toggleMobileMenu: () => void;
 }) => {
-  const linkStyle = `text-gray-700 py-4 px-2 mr-0 block transition-all duration-100 hover:bg-gray-300 hover:bg-opacity-30 dark:text-gray-200 dark:hover:bg-gray-500 dark:hover:bg-opacity-40`;
+  const linkStyle = `text-gray-700 py-4 px-2 mr-0 block transition-all duration-100 hover:text-indigo-500 dark:text-gray-200 dark:hover:text-indigo-400`;
 
   return (
     <div
       className={`${
         mobileMenuShown || "hidden"
-      }  block mx-0 w-screen sticky h-auto top-0 left-0 right-0  z-50 text-center bg-clip-padding bg-opacity-50 shadow-lg backdrop-filter backdrop-blur-md backdrop-saturate-200 border-white border-opacity-90 dark:bg-gray-900 dark:bg-opacity-70`}
+      }  block mx-0 w-screen sticky h-auto top-0 left-0 right-0  z-50 text-center bg-clip-padding bg-opacity-50 shadow-lg backdrop-filter backdrop-blur-md backdrop-saturate-200 border-white border-opacity-90 dark:bg-gray-900 dark:bg-opacity-90`}
     >
       <div
-        className={`absolute w-full bg-gray-200 bg-opacity-70 backdrop-filter backdrop-blur-xl`}
+        className={`absolute w-full bg-gray-50 dark:bg-gray-900 dark:bg-opacity-70 bg-opacity-70 backdrop-filter backdrop-blur-lg`}
       >
         {/* ring-1 ring-black ring-opacity-5 focus:outline-none */}
-        <div className="font-sans font-semibold text-xl text-gray-700  dark:text-gray-50">
-          <div className="dark:bg-opacity-10 rounded-sm ">
-            <NextLink href="/">
-              <a onClick={toggleMobileMenu} className={linkStyle}>
-                Index
-              </a>
-            </NextLink>
-            <NextLink href="/about">
-              <a onClick={toggleMobileMenu} className={linkStyle}>
-                Activity
-              </a>
-            </NextLink>
+        <div className="font-sans font-semibold text-xl text-gray-700 max-w-4xl mx-auto dark:text-gray-50">
+          <div className="dark:bg-opacity-100 rounded-sm ">
             <NextLink href="/about">
               <a onClick={toggleMobileMenu} className={linkStyle}>
                 About
+              </a>
+            </NextLink>
+            <NextLink href="/contact">
+              <a onClick={toggleMobileMenu} className={linkStyle}>
+                Contact
               </a>
             </NextLink>
           </div>
@@ -93,30 +88,34 @@ const Nav: React.FunctionComponent = () => {
 
   return (
     <div
-      className={`sticky z-30 h-auto top-0 left-0 right-0  bg-opacity-70 backdrop-filter backdrop-blur-2xl bg-white shadow-lg dark:bg-gray-900 dark:bg-opacity-80 `}
+      className={`sticky z-30 h-auto top-0 left-0 right-0 bg-opacity-90 backdrop-filter backdrop-blur-xl bg-white shadow-md dark:bg-gray-900 dark:bg-opacity-50 `}
     >
-      <div className="max-w-6xl w-full mx-auto relative top-0 left-0 flex items-center px-6 py-4 lg:px-10">
+      <div className="max-w-4xl w-full mx-auto relative top-0 left-0 flex items-center px-6 py-4 lg:px-10">
         <div className="flex-grow flex justify-start">
-          <Image
-            src={`/logo-${theme ? theme : "light"}.svg`}
-            alt="nonissue logo"
-            width={`${75 * 1.5}`}
-            height={`${28 * 1.5}`}
-          />
+          <NextLink href="/">
+            <a>
+              <Image
+                src={`/logo-${theme ? theme : "light"}.svg`}
+                alt="nonissue logo"
+                width={`${75 * 1.5}`}
+                height={`${28 * 1.5}`}
+              />
+            </a>
+          </NextLink>
         </div>
 
-        <div className="md:block text-gray-500">
+        {/* <div className="md:block text-gray-700 dark:text-gray-200">
           <NextLink href="/">
-            <a className="py-1 px-0 mr-4 font-semibold border-b border-gray-300 dark:border-gray-700  ">
+            <a className="py-1 px-0 mr-4 font-semibold border-b-0 border-gray-300 dark:border-gray-700 hover:text-indigo-500 dark:hover:text-indigo-400 ">
               Home
             </a>
           </NextLink>
           <NextLink href="/about">
-            <a className="py-1 px-0 mr-4 font-semibold border-b border-gray-300 dark:border-gray-700  ">
+            <a className="py-1 px-0 mr-4 font-semibold border-b-0 border-gray-300 dark:border-gray-700 hover:text-indigo-500 dark:hover:text-indigo-400  ">
               About
             </a>
           </NextLink>
-        </div>
+        </div> */}
 
         <ThemeChanger />
 

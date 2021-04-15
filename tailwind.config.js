@@ -31,7 +31,7 @@ module.exports = {
       },
       fontFamily: {
         display: [
-          "Inter",
+          "IBM Plex Sans",
           "ui-sans-serif",
           "system-ui",
           "-apple-system",
@@ -42,7 +42,6 @@ module.exports = {
         // overrides default font with inter
         sans: [
           "IBM Plex Sans",
-          "Inter",
           "ui-sans-serif",
           "system-ui",
           "-apple-system",
@@ -52,7 +51,6 @@ module.exports = {
         ],
         serif: [
           "IBM Plex Serif",
-          "Helvetica",
           "ui-sans-serif",
           "system-ui",
           "-apple-system",
@@ -62,7 +60,6 @@ module.exports = {
         ],
         mono: [
           "IBM Plex Mono",
-          "Georgia",
           "ui-monospace",
           "SFMono-Regular",
           "Menlo",
@@ -93,9 +90,11 @@ module.exports = {
   variants: {
     extend: {
       backgroundOpacity: ["dark"],
+      backgroundImage: ["hover", "dark"],
       ringWidth: ["dark", "hover"],
       ringOpacity: ["dark", "hover"],
       ringColor: ["dark", "hover"],
+      borderWidth: ["last"],
     },
   },
   plugins: [
