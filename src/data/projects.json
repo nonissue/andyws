@@ -2,7 +2,7 @@
   {
     "title": "Dotfiles",
     "tags": ["lua", "macos", "tmux", "nvim", "fish-shell"],
-    "description": "My dotfiles, which includes fish shell functions & themes, my tmux configuration, and more.",
+    "description": "My dotfiles, which includes fish shell functions & themes, my tmux config, macOS changes, and more.",
     "type": "scripting",
     "link": "https://github.com/nonissue/dotfiles",
     "imgsrc": "/project-thumbs/2.jpg"
@@ -10,7 +10,7 @@
   {
     "title": "Hammerspoon",
     "tags": ["lua", "macos", "custom"],
-    "description": "Hammerspoon provides a robust and extensible interface for customizing macOS. Here is my setup.",
+    "description": "Hammerspoon provides a robust and extensible interface for customizing macOS. I've implemented several plugins, including a window management solution, a menubar sleep timer for macOS, a menubar for quickly changing resolution, and more.",
     "type": "scripting",
     "link": "https://github.com/nonissue/hammerspoon",
     "imgsrc": "/project-thumbs/1.jpg"
@@ -26,7 +26,7 @@
       "api",
       "siri shortcuts"
     ],
-    "description": "A simple web project that allows me to share a word of the day by invoking a siri shortcut on my iPhone",
+    "description": "A simple web project that allows me to share a word of the day by invoking a Siri shortcut on iOS.",
     "type": "web",
     "link": "https://github.com/nonissue/wotd",
     "imgsrc": "/project-thumbs/3.jpg"
