@@ -11,3 +11,8 @@
 
 - !! https://github.com/vercel/commerce/blob/master/pages/_app.tsx official vercel implementation
 - !! egghead teams approach: https://github.com/eggheadio/egghead-next/blob/main/src/pages/_app.tsx
+
+
+// https://windstrap.netlify.app/#navbar
+// https://github.com/jkytoela/next-startd
+// https://github.com/ndimatteo/HULL

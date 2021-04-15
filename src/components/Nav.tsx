@@ -1,10 +1,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 
-// https://windstrap.netlify.app/#navbar
-// https://github.com/jkytoela/next-startd
-// https://github.com/ndimatteo/HULL
-
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -63,11 +59,7 @@ const Nav: React.FunctionComponent = () => {
     setMobileMenuShown((mobileMenuShown) => !mobileMenuShown);
   };
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     const update = async () => {
@@ -86,12 +78,14 @@ const Nav: React.FunctionComponent = () => {
     console.log(state);
   }, [state]);
 
+  if (!mounted) return null;
+
   return (
     <div
       className={`sticky z-30 h-auto top-0 left-0 right-0 bg-opacity-90 backdrop-filter backdrop-blur-xl bg-white shadow-md dark:bg-gray-900 dark:bg-opacity-50 `}
     >
       <div className="max-w-4xl w-full mx-auto relative top-0 left-0 flex items-center px-6 py-4 lg:px-10">
-        <div className="flex-grow flex justify-start">
+        <div className="flex-grow flex justify-start ">
           <NextLink href="/">
             <a>
               <Image
@@ -99,33 +93,24 @@ const Nav: React.FunctionComponent = () => {
                 alt="nonissue logo"
                 width={`${75 * 1.5}`}
                 height={`${28 * 1.5}`}
+                className="opacity-80"
               />
             </a>
           </NextLink>
         </div>
 
-        {/* <div className="md:block text-gray-700 dark:text-gray-200">
-          <NextLink href="/">
-            <a className="py-1 px-0 mr-4 font-semibold border-b-0 border-gray-300 dark:border-gray-700 hover:text-indigo-500 dark:hover:text-indigo-400 ">
-              Home
-            </a>
-          </NextLink>
-          <NextLink href="/about">
-            <a className="py-1 px-0 mr-4 font-semibold border-b-0 border-gray-300 dark:border-gray-700 hover:text-indigo-500 dark:hover:text-indigo-400  ">
-              About
-            </a>
-          </NextLink>
-        </div> */}
-
         <ThemeChanger />
 
         <div className="relative z-50">
-          <button className="p-2 " onClick={() => toggleMobileMenu()}>
+          <button
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-500 text-gray-600 border-0 border-gray-200 dark:border-gray-500 mr-1 dark:text-gray-300 bg-transparent dark:bg-transparent "
+            onClick={() => toggleMobileMenu()}
+          >
             <div className="relative w-6 h-6 p-0">
               <div
                 className={`${
                   (mobileMenuShown && "block") || "block"
-                } text-gray-400`}
+                } dark:text-gray-300 text-gray-700`}
               >
                 {/* Heroicon menu icon */}
                 <svg

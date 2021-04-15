@@ -4,7 +4,7 @@ import Projects from "src/data/projects.json";
 const ProjectList = () => {
   return (
     <div>
-      <h2 className="text-2xl dark:text-gray-200 font-bold font-display text-gray-700 text-left mb-8">
+      <h2 className="text-2xl dark:text-gray-100 font-bold font-display text-gray-700 text-left mb-8">
         Projects
       </h2>
       {Projects.map((project) => (
