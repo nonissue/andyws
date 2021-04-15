@@ -20,31 +20,28 @@ const MobileNav = ({
   mobileMenuShown: boolean;
   toggleMobileMenu: () => void;
 }) => {
-  const linkStyle = `text-gray-700 py-4 px-2 mr-0 block transition-all duration-100 hover:bg-gray-300 hover:bg-opacity-30 dark:text-gray-200 dark:hover:bg-gray-500 dark:hover:bg-opacity-40`;
+  const linkStyle = `text-gray-700 py-4 px-2 mr-0 block transition-all duration-100 hover:text-indigo-500 dark:text-gray-200 dark:hover:text-indigo-400`;
 
   return (
     <div
       className={`${
         mobileMenuShown || "hidden"
-      }  inline-block mx-0 absolute top-0 left-0 text-center bg-clip-padding py-0 right-0 bg-white bg-opacity-80 shadow-lg backdrop-filter backdrop-blur-xl backdrop-saturate-200 border-white border-opacity-90 md:hidden dark:bg-gray-900 dark:bg-opacity-70`}
+      }  block mx-0 w-screen sticky h-auto top-0 left-0 right-0  z-50 text-center bg-clip-padding bg-opacity-50 shadow-lg backdrop-filter backdrop-blur-md backdrop-saturate-200 border-white border-opacity-90 dark:bg-gray-900 dark:bg-opacity-90`}
     >
-      <div className={``}>
+      <div
+        className={`absolute w-full bg-gray-50 dark:bg-gray-900 dark:bg-opacity-70 bg-opacity-70 backdrop-filter backdrop-blur-lg`}
+      >
         {/* ring-1 ring-black ring-opacity-5 focus:outline-none */}
-        <div className="font-sans font-semibold text-xl text-gray-700  dark:text-gray-50">
-          <div className="dark:bg-opacity-90 rounded-sm  ">
-            <NextLink href="/">
-              <a onClick={toggleMobileMenu} className={linkStyle}>
-                Index
-              </a>
-            </NextLink>
-            <NextLink href="/about">
-              <a onClick={toggleMobileMenu} className={linkStyle}>
-                Activity
-              </a>
-            </NextLink>
+        <div className="font-sans font-semibold text-xl text-gray-700 max-w-4xl mx-auto dark:text-gray-50">
+          <div className="dark:bg-opacity-100 rounded-sm ">
             <NextLink href="/about">
               <a onClick={toggleMobileMenu} className={linkStyle}>
                 About
+              </a>
+            </NextLink>
+            <NextLink href="/contact">
+              <a onClick={toggleMobileMenu} className={linkStyle}>
+                Contact
               </a>
             </NextLink>
           </div>
@@ -54,7 +51,7 @@ const MobileNav = ({
   );
 };
 
-export const Nav: React.FunctionComponent = () => {
+const Nav: React.FunctionComponent = () => {
   const { state } = useSiteContext();
   const { updateState } = useSiteContext();
 
@@ -80,9 +77,9 @@ export const Nav: React.FunctionComponent = () => {
       }));
     };
 
-    setTimeout(() => {
-      update();
-    }, 3000);
+    update();
+
+    console.log(state);
   }, []);
 
   useEffect(() => {
@@ -91,38 +88,45 @@ export const Nav: React.FunctionComponent = () => {
 
   return (
     <div
-      className={`container sticky z-30 h-auto top-0 lg:px-10 pt-6 pb-1 mx-auto bg-white bg-opacity-95 backdrop-filter backdrop-blur-3xl shadow-sm dark:bg-gray-900 dark:bg-opacity-80 `}
+      className={`sticky z-30 h-auto top-0 left-0 right-0 bg-opacity-90 backdrop-filter backdrop-blur-xl bg-white shadow-md dark:bg-gray-900 dark:bg-opacity-50 `}
     >
-      <div className="flex items-center mt-0 mx-4">
-        <div className="w-full border-0 flex justify-start">
-          {/* Change image based on theme */}
-          <Image
-            src={`/logo-${theme ? theme : "light"}.svg`}
-            alt="nonissue logo"
-            width={`${75 * 1.5}`}
-            height={`${28 * 1.5}`}
-          />
+      <div className="max-w-4xl w-full mx-auto relative top-0 left-0 flex items-center px-6 py-4 lg:px-10">
+        <div className="flex-grow flex justify-start">
+          <NextLink href="/">
+            <a>
+              <Image
+                src={`/logo-${theme ? theme : "light"}.svg`}
+                alt="nonissue logo"
+                width={`${75 * 1.5}`}
+                height={`${28 * 1.5}`}
+              />
+            </a>
+          </NextLink>
         </div>
 
-        <div className="hidden md:block">
+        {/* <div className="md:block text-gray-700 dark:text-gray-200">
           <NextLink href="/">
-            <a className="py-1 px-0 mr-4 font-semibold border-b border-gray-300 dark:border-gray-700  ">
+            <a className="py-1 px-0 mr-4 font-semibold border-b-0 border-gray-300 dark:border-gray-700 hover:text-indigo-500 dark:hover:text-indigo-400 ">
               Home
             </a>
           </NextLink>
           <NextLink href="/about">
-            <a className="py-1 px-0 mr-4 font-semibold border-b border-gray-300 dark:border-gray-700  ">
+            <a className="py-1 px-0 mr-4 font-semibold border-b-0 border-gray-300 dark:border-gray-700 hover:text-indigo-500 dark:hover:text-indigo-400  ">
               About
             </a>
           </NextLink>
-        </div>
+        </div> */}
 
         <ThemeChanger />
 
-        <div className="relative md:hidden z-50">
+        <div className="relative z-50">
           <button className="p-2 " onClick={() => toggleMobileMenu()}>
-            <div className="relative  w-6 h-6 p-0">
-              <div className={`${mobileMenuShown && "hidden" && false}`}>
+            <div className="relative w-6 h-6 p-0">
+              <div
+                className={`${
+                  (mobileMenuShown && "block") || "block"
+                } text-gray-400`}
+              >
                 {/* Heroicon menu icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -138,35 +142,18 @@ export const Nav: React.FunctionComponent = () => {
                   />
                 </svg>
               </div>
-
-              {/* Heroicon X icon */}
-              {/* <div className="absolute bg-transparent z-50 w-6 h-6 top-0 right-0">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </div> */}
             </div>
           </button>
         </div>
       </div>
-      <div className="relative top-0 left-0 right-0 z-50 my-4 ">
+      <div className="relative top-0 z-50 ">
         <MobileNav
           mobileMenuShown={mobileMenuShown}
           toggleMobileMenu={toggleMobileMenu}
         />
-        {/* Can disable this? */}
-        {/* {mobileMenuShown && <ScrollLock />} */}
       </div>
     </div>
   );
 };
+
+export { Nav };

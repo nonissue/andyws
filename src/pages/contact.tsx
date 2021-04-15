@@ -7,12 +7,12 @@ const About: React.FunctionComponent & {
     <section className="padded-container bg-white dark:bg-gray-900 font-display">
       <div className="">
         <h2 className="text-2xl dark:text-gray-200 font-bold font-display text-gray-700 text-left mb-8">
-          About
+          Contact
         </h2>
 
         <div className="flex flex-wrap">
-          Andy Williams is a developer and photography based in Edmonton,
-          Canada.
+          Email me at andy [at] nonissue.org or find me on
+          instagram/twitter/github: @nonissue.
         </div>
 
         <br />
