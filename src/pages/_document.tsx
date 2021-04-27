@@ -41,7 +41,7 @@ export default class Document extends NextDocument {
             rel="stylesheet"
           />
         </Head>
-        <body className="text-gray-900 dark:text-gray-100">
+        <body className="text-gray-900 dark:text-gray-100 dark:bg-gray-900 bg-white">
           <Main />
           <NextScript />
         </body>
