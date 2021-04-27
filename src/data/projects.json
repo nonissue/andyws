@@ -1,7 +1,7 @@
 [
   {
     "title": "Dotfiles",
-    "tags": ["lua", "macos", "tmux", "nvim", "fish-shell"],
+    "tags": ["macos", "tmux", "nvim", "fish-shell"],
     "description": "My dotfiles, which includes fish shell functions & themes, my tmux config, macOS changes, and more.",
     "type": "scripting",
     "link": "https://github.com/nonissue/dotfiles",
