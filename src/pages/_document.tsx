@@ -40,6 +40,10 @@ export default class Document extends NextDocument {
             href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,700&family=IBM+Plex+Serif:wght@100&display=swap"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=block"
+            rel="stylesheet"
+          />
         </Head>
         <body className="text-gray-900 dark:text-gray-100 dark:bg-gray-900 bg-white">
           <Main />

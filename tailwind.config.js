@@ -29,6 +29,9 @@ module.exports = {
         lb: colors.lightBlue,
         white: "#fff",
       },
+      fontSize: {
+        xxs: ".625rem",
+      },
       fontFamily: {
         display: [
           "IBM Plex Sans",
@@ -69,6 +72,17 @@ module.exports = {
           "Courier New",
           "monospace",
         ],
+        label: [
+          "Recursive",
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          "Liberation Mono",
+          "Courier New",
+          "monospace",
+        ],
       },
       boxShadow: {
         sm: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
@@ -95,6 +109,7 @@ module.exports = {
       ringOpacity: ["dark", "hover"],
       ringColor: ["dark", "hover"],
       borderWidth: ["last"],
+      padding: ["last"],
     },
   },
   plugins: [

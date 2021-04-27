@@ -84,7 +84,7 @@ const Nav: React.FunctionComponent = () => {
     <div
       className={`sticky z-30 h-auto top-0 left-0 right-0 bg-opacity-90 backdrop-filter backdrop-blur-xl bg-white shadow-sm dark:shadow-xl dark:bg-gray-900 dark:bg-opacity-50 border-b dark:border-gray-800 border-gray-900 border-opacity-5 dark:border-opacity-60`}
     >
-      <div className="max-w-4xl w-full mx-auto relative top-0 left-0 flex items-center px-6 py-4 lg:px-10">
+      <div className="max-w-4xl w-full mx-auto relative top-0 left-0 flex items-center px-6 py-4 lg:px-6">
         <div className="flex-grow flex justify-start ">
           <NextLink href="/">
             <a>
