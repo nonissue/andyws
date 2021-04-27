@@ -9,6 +9,9 @@ import NextLink from "next/link";
 import { useSiteContext } from "src/lib/context";
 import { ThemeChanger } from "./";
 
+const LOGO_WIDTH = 75;
+const LOGO_HEIGHT = 28;
+
 const MobileNav = ({
   mobileMenuShown,
   toggleMobileMenu,
@@ -91,8 +94,8 @@ const Nav: React.FunctionComponent = () => {
               <Image
                 src={`/logo-${theme === "light" ? "light" : "dark"}.svg`}
                 alt="nonissue logo"
-                width={`${75 * 1.5}`}
-                height={`${28 * 1.5}`}
+                width={`${LOGO_WIDTH * 1.5}`}
+                height={`${LOGO_HEIGHT * 1.5}`}
                 className="opacity-80"
               />
             </a>

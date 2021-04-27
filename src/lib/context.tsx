@@ -1,19 +1,19 @@
 import React, { createContext, useContext, useState } from "react";
 
 type SiteContextState = {
-  nav: {
-    isOpen: boolean;
-    activeID: string | undefined;
-  };
   isLoading: boolean;
+  nav: {
+    activeID: string | undefined;
+    isOpen: boolean;
+  };
 };
 
 const initialSiteContext: SiteContextState = {
-  nav: {
-    isOpen: false,
-    activeID: undefined,
-  },
   isLoading: true,
+  nav: {
+    activeID: undefined,
+    isOpen: false,
+  },
 };
 
 export const SiteContext = createContext<
