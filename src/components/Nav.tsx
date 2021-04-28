@@ -92,7 +92,7 @@ const Nav: React.FunctionComponent = () => {
           <NextLink href="/">
             <a>
               <Image
-                src={`/logo-${theme === "light" ? "light" : "dark"}.svg`}
+                src={`/logo-${theme === "dark" ? "dark" : "light"}.svg`}
                 alt="nonissue logo"
                 width={`${LOGO_WIDTH * 1.5}`}
                 height={`${LOGO_HEIGHT * 1.5}`}
