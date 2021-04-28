@@ -56,7 +56,9 @@ const Nav: React.FunctionComponent = () => {
 
   const [mounted, setMounted] = useState(false);
   const [mobileMenuShown, setMobileMenuShown] = useState(false);
-  const { theme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
+
+  console.log("resolved:" + resolvedTheme);
 
   const toggleMobileMenu = () => {
     setMobileMenuShown((mobileMenuShown) => !mobileMenuShown);
@@ -87,17 +89,28 @@ const Nav: React.FunctionComponent = () => {
     <div
       className={`sticky z-30 h-auto top-0 left-0 right-0 bg-opacity-90 backdrop-filter backdrop-blur-xl bg-white shadow-sm dark:shadow-xl dark:bg-gray-900 dark:bg-opacity-50 border-b dark:border-gray-800 border-gray-900 border-opacity-5 dark:border-opacity-60`}
     >
-      <div className="max-w-4xl w-full mx-auto relative top-0 left-0 flex items-center px-6 py-4 lg:px-6">
-        <div className="flex-grow flex justify-start ">
+      <div className="max-w-4xl w-full mx-auto relative top-0 left-0 flex items-center px-6 py-4 lg:py-6 lg:px-6">
+        <div className="flex flex-grow ">
           <NextLink href="/">
-            <a>
-              <Image
-                src={`/logo-${theme === "dark" ? "dark" : "light"}.svg`}
-                alt="nonissue logo"
-                width={`${LOGO_WIDTH * 1.5}`}
-                height={`${LOGO_HEIGHT * 1.5}`}
-                className="opacity-80"
-              />
+            <a style={{ height: `${LOGO_HEIGHT * 1.2}px` }}>
+              {(theme === "light" || resolvedTheme === "light") && (
+                <Image
+                  src="/logo-light.svg"
+                  alt="nonissue logo"
+                  width={`${LOGO_WIDTH * 1.2}`}
+                  height={`${LOGO_HEIGHT * 1.3}`}
+                  className="opacity-80"
+                />
+              )}
+              {(theme === "dark" || resolvedTheme === "dark") && (
+                <Image
+                  src="/logo-dark.svg"
+                  alt="nonissue logo"
+                  width={`${LOGO_WIDTH * 1.2}`}
+                  height={`${LOGO_HEIGHT * 1.2}`}
+                  className="opacity-80"
+                />
+              )}
             </a>
           </NextLink>
         </div>

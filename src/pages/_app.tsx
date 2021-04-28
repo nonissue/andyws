@@ -34,6 +34,7 @@ const MyApp: React.FunctionComponent<AppPropsWithLayout> = ({
       <ThemeProvider
         forcedTheme={Component.theme || undefined}
         attribute="class"
+        enableSystem={true}
       >
         <SiteContextProvider>
           <Head>
