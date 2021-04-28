@@ -4,9 +4,9 @@ import { getLayout } from "src/layouts/Layout";
 const About: React.FunctionComponent & {
   getLayout?: (component: JSX.Element) => JSX.Element;
 } = () => {
-  const rowStyle = `flex lg:items-start flex-row lg:flex-col items-center lg:mb-2 justify-between`;
-  const labelStyle = `rcrsv-mono uppercase text-gray-600 dark:text-gray-400 tracking-wider text-sm lg:text-md pr-2`;
-  const linkStyle = `rcrsv-custom-label flex items-center text-lg lg:text-xl font-bold text-blue-600 dark:text-blue-400 hover:text-orange-600 dark:hover:text-orange-400 font-label my-2`;
+  const rowStyle = `flex lg:items-start flex-col lg:flex-col lg:items-start lg:mb-2 justify-between`;
+  const labelStyle = `rcrsv-mono uppercase text-gray-400 dark:text-gray-400 tracking-wider text-lg lg:text-md pr-2`;
+  const linkStyle = `rcrsv-custom-label flex items-center text-xl lg:text-xl font-bold text-blue-600 dark:text-blue-400 hover:text-orange-600 dark:hover:text-orange-400 font-label my-2`;
 
   return (
     <section className="padded-container bg-white dark:bg-gray-900 font-display  lg:border-l lg:border-r dark:border-gray-800">

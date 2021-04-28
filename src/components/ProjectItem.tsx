@@ -12,7 +12,7 @@ const ProjectItem = (project: Project) => {
     <div className="px-0 py-4 grid grid-cols-1 md:grid-cols-3 border-t border-gray-200 dark:border-gray-800 my-2 last:border-b-0 last:pb-0">
       <div>
         <a href={project.link}>
-          <h2 className="text-2xl md:text-2xl mt-0 md:mt-0 inline-block mb-2 md:mb-0 font-semibold font-mono uppercase  tracking-widest  text-blue-600 hover:text-orange-500 dark:text-blue-300 dark:hover:text-orange-300">
+          <h2 className="text-2xl md:text-2xl mt-0 md:mt-0 inline-block mb-2 md:mb-0 font-semibold font-mono tracking-wide  text-blue-600 hover:text-orange-500 dark:text-blue-300 dark:hover:text-orange-300">
             {project.title}
           </h2>
         </a>

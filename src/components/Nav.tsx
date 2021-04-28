@@ -30,7 +30,6 @@ const MobileNav = ({
       <div
         className={`absolute  w-full border-t py-2 border-b border-gray-900 shadow-sm dark:shadow-2xl dark:border-gray-800 border-opacity-5 dark:border-opacity-60 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-70 bg-opacity-70 backdrop-filter backdrop-blur-lg`}
       >
-        {/* ring-1 ring-black ring-opacity-5 focus:outline-none */}
         <div className="font-sans font-semibold text-xl text-gray-700 max-w-4xl mx-auto dark:text-gray-50">
           <div className="dark:bg-opacity-100 rounded-sm ">
             <NextLink href="/about">
@@ -87,12 +86,15 @@ const Nav: React.FunctionComponent = () => {
 
   return (
     <div
-      className={`sticky z-30 h-auto top-0 left-0 right-0 bg-opacity-90 backdrop-filter backdrop-blur-xl bg-white shadow-sm dark:shadow-xl dark:bg-gray-900 dark:bg-opacity-50 border-b dark:border-gray-800 border-gray-900 border-opacity-5 dark:border-opacity-60`}
+      className={`sticky z-30 h-auto top-0 left-0 right-0 bg-opacity-90 backdrop-filter backdrop-blur-xl bg-white dark:shadow-xl dark:bg-gray-900 dark:bg-opacity-50 border-b dark:border-gray-800 border-gray-900 border-opacity-10 dark:border-opacity-60`}
     >
       <div className="max-w-4xl w-full mx-auto relative top-0 left-0 flex items-center px-6 py-4 lg:py-6 lg:px-6">
         <div className="flex flex-grow ">
           <NextLink href="/">
-            <a style={{ height: `${LOGO_HEIGHT * 1.2}px` }}>
+            <a
+              style={{ height: `${LOGO_HEIGHT * 1.2}px` }}
+              onClick={() => setMobileMenuShown(false)}
+            >
               {(theme === "light" || resolvedTheme === "light") && (
                 <Image
                   src="/logo-light.svg"
