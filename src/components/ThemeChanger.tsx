@@ -10,6 +10,8 @@ export const ThemeChanger: React.FunctionComponent = () => {
 
   if (!mounted) return null;
 
+  console.log(theme);
+
   return (
     <div className="">
       <button
