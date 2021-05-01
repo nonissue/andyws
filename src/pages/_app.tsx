@@ -5,7 +5,7 @@ import type { NextComponentType, NextPageContext } from "next";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { ThemeProvider } from "next-themes";
-import Inspect from "inspx";
+// import Inspect from "inspx";
 import { SiteContextProvider } from "src/lib/context";
 import { Nav } from "src/components";
 
@@ -30,22 +30,22 @@ const MyApp: React.FunctionComponent<AppPropsWithLayout> = ({
   const getLayout = Component.getLayout || ((page) => page);
 
   return (
-    <Inspect>
-      <ThemeProvider
-        forcedTheme={Component.theme || undefined}
-        attribute="class"
-        enableSystem={true}
-      >
-        <SiteContextProvider>
-          <Head>
-            <title>non</title>
-          </Head>
+    // <Inspect>
+    <ThemeProvider
+      forcedTheme={Component.theme || undefined}
+      attribute="class"
+      enableSystem={true}
+    >
+      <SiteContextProvider>
+        <Head>
+          <title>non</title>
+        </Head>
 
-          <Nav />
-          {getLayout(<Component {...pageProps} />, pageProps)}
-        </SiteContextProvider>
-      </ThemeProvider>
-    </Inspect>
+        <Nav />
+        {getLayout(<Component {...pageProps} />, pageProps)}
+      </SiteContextProvider>
+    </ThemeProvider>
+    // </Inspect>
   );
 };
 

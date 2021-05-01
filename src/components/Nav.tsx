@@ -57,7 +57,7 @@ const Nav: React.FunctionComponent = () => {
   const [mobileMenuShown, setMobileMenuShown] = useState(false);
   const { theme, resolvedTheme } = useTheme();
 
-  console.log("resolved:" + resolvedTheme);
+  // console.log("resolved:" + resolvedTheme);
 
   const toggleMobileMenu = () => {
     setMobileMenuShown((mobileMenuShown) => !mobileMenuShown);

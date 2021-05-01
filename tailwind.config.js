@@ -53,15 +53,6 @@ module.exports = {
           "Helvetica Neue",
           "sans-serif",
         ],
-        serif: [
-          "IBM Plex Serif",
-          "ui-sans-serif",
-          "system-ui",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Helvetica Neue",
-          "sans-serif",
-        ],
         mono: [
           "IBM Plex Mono",
           "ui-monospace",

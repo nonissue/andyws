@@ -2,9 +2,9 @@
 
 ## Persistent Layout
 
-- Ultimately adopted this: 
+- Ultimately adopted this:
   - https://github.com/vercel/next.js/issues/9556#issuecomment-741947211
-  - Not sure 
+  - Not sure
 - other: https://github.com/dwightwatson/blitz/commit/18beb6fb1d650a7faa7de19dfd1c186b98c7dfe5
 - other: https://github.com/minvws/nl-covid19-data-dashboard/blob/3b166dd2d7c4f99fa4341507faf2ccb793df411b/packages/app/src/pages/_app.tsx
 - other: https://github.com/tomasgil123/persistent-layout-typescript/blob/master/pages/_app.tsx
@@ -12,7 +12,14 @@
 - !! https://github.com/vercel/commerce/blob/master/pages/_app.tsx official vercel implementation
 - !! egghead teams approach: https://github.com/eggheadio/egghead-next/blob/main/src/pages/_app.tsx
 
-
 // https://windstrap.netlify.app/#navbar
 // https://github.com/jkytoela/next-startd
 // https://github.com/ndimatteo/HULL
+
+## Webfotn shit
+
+- https://css-tricks.com/how-to-load-fonts-in-a-way-that-fights-fout-and-makes-lighthouse-happy/
+- https://csswizardry.com/2020/05/the-fastest-google-fonts/
+- https://github.com/ekafyi/example-nextjs-webfont-optimization/blob/46568966da0d6d99aa9a275c2205be662b679092/pages/index.tsx
+- https://github.com/vercel/next.js/pull/14746
+- https://github.com/vercel/next.js/pull/24572/files
