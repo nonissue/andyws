@@ -45,10 +45,7 @@ export default class Document extends NextDocument {
             rel="stylesheet"
           />
           {/* Simple Analytics script */}
-          <script
-            async
-            src={`https://scripts.simpleanalyticscdn.com/latest.js`}
-          />
+          <script async src={`https://sa.nonissue.org/latest.js`} />
         </Head>
         <body className="text-gray-900 dark:text-gray-100 dark:bg-gray-900 bg-white">
           <Main />
