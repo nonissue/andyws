@@ -82,7 +82,7 @@ const Nav: React.FunctionComponent = () => {
     console.log(state);
   }, [state]);
 
-  if (!mounted) return null;
+  // if (!mounted) return null;
 
   return (
     <div
@@ -90,31 +90,33 @@ const Nav: React.FunctionComponent = () => {
     >
       <div className="max-w-4xl w-full mx-auto relative top-0 left-0 flex items-center px-6 py-4 lg:py-6 lg:px-6">
         <div className="flex flex-grow ">
-          <NextLink href="/">
-            <a
-              style={{ height: `${LOGO_HEIGHT * 1.2}px` }}
-              onClick={() => setMobileMenuShown(false)}
-            >
-              {(theme === "light" || resolvedTheme === "light") && (
-                <Image
-                  src="/logo-light.svg"
-                  alt="nonissue logo"
-                  width={`${LOGO_WIDTH * 1.2}`}
-                  height={`${LOGO_HEIGHT * 1.3}`}
-                  className="opacity-80"
-                />
-              )}
-              {(theme === "dark" || resolvedTheme === "dark") && (
-                <Image
-                  src="/logo-dark.svg"
-                  alt="nonissue logo"
-                  width={`${LOGO_WIDTH * 1.2}`}
-                  height={`${LOGO_HEIGHT * 1.2}`}
-                  className="opacity-80"
-                />
-              )}
-            </a>
-          </NextLink>
+          {mounted && (
+            <NextLink href="/">
+              <a
+                style={{ height: `${LOGO_HEIGHT * 1.2}px` }}
+                onClick={() => setMobileMenuShown(false)}
+              >
+                {(theme === "light" || resolvedTheme === "light") && (
+                  <Image
+                    src="/logo-light.svg"
+                    alt="nonissue logo"
+                    width={`${LOGO_WIDTH * 1.2}`}
+                    height={`${LOGO_HEIGHT * 1.3}`}
+                    className="opacity-80"
+                  />
+                )}
+                {(theme === "dark" || resolvedTheme === "dark") && (
+                  <Image
+                    src="/logo-dark.svg"
+                    alt="nonissue logo"
+                    width={`${LOGO_WIDTH * 1.2}`}
+                    height={`${LOGO_HEIGHT * 1.2}`}
+                    className="opacity-80"
+                  />
+                )}
+              </a>
+            </NextLink>
+          )}
         </div>
 
         <ThemeChanger />
