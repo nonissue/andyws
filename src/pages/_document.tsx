@@ -44,6 +44,11 @@ export default class Document extends NextDocument {
             href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=block"
             rel="stylesheet"
           />
+          {/* Simple Analytics script */}
+          <script
+            async
+            src={`https://scripts.simpleanalyticscdn.com/latest.js`}
+          />
         </Head>
         <body className="text-gray-900 dark:text-gray-100 dark:bg-gray-900 bg-white">
           <Main />
