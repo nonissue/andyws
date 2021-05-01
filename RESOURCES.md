@@ -23,3 +23,6 @@
 - https://github.com/ekafyi/example-nextjs-webfont-optimization/blob/46568966da0d6d99aa9a275c2205be662b679092/pages/index.tsx
 - https://github.com/vercel/next.js/pull/14746
 - https://github.com/vercel/next.js/pull/24572/files
+- Fixed? Commit @ 2918f728bb7f64feeba5740f4b63d5cf4e1b36bf
+  - Yah, live prod version @ 99 lighthouse
+-
