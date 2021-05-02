@@ -25,10 +25,11 @@ const MobileNav = ({
     <div
       className={`${
         mobileMenuShown || "hidden"
-      }   mx-0 w-screen fixed bg-opacity-50  z-50 text-center border-opacity-90`}
+      }  max-w-4xl w-full mx-auto fixed left-0 right-0 bg-opacity-50 z-50 text-center border border-t-0 border-gray-200 border-opacity-100
+      dark:border-gray-800  dark:border-opacity-100`}
     >
       <div
-        className={`backdrop-filter backdrop-blur-lg relative top-full w-full border-t border-b py-2 border-gray-900 shadow-sm dark:shadow-2xl dark:border-gray-800 border-opacity-5 dark:border-opacity-60 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-50 bg-opacity-50 `}
+        className={`backdrop-filter backdrop-blur-lg relative top-full  py-2  shadow-sm dark:shadow-2xl bg-gray-50 dark:bg-gray-900 dark:bg-opacity-50 bg-opacity-50 `}
       >
         <div className="font-sans font-semibold text-xl text-gray-700 max-w-4xl mx-auto dark:text-gray-50">
           <div className="dark:bg-opacity-100 rounded-sm ">
@@ -83,11 +84,13 @@ const Nav: React.FunctionComponent = () => {
   return (
     <>
       <div
-        className={`sticky z-30 h-auto top-0 left-0 right-0 bg-opacity-90 border-b backdrop-filter backdrop-blur-xl bg-white border-gray-900 border-opacity-10
-      dark:shadow-xl dark:bg-gray-900 dark:bg-opacity-50 dark:border-gray-800 dark:border-opacity-60`}
+        className={`sticky z-30 h-auto top-0 left-0 right-0 max-w-4xl w-full mx-auto bg-opacity-50 border-b border-r border-l backdrop-filter backdrop-blur-lg bg-white border-gray-900 border-opacity-10
+                    bg-gradient-to-br from-gray-50 to-gray-100 via-gray-200
+                    dark:bg-gradient-to-r dark:from-gray-900 dark:to-gray-800 dark:via-gray-900  
+                    dark:shadow-xl dark:bg-gray-800 dark:bg-opacity-50 dark:border-gray-100 dark:border-opacity-5`}
       >
         <div className="max-w-4xl w-full mx-auto relative top-0 left-0 flex items-center px-6 py-4 lg:py-6 lg:px-6">
-          <div className="flex flex-grow ">
+          <div className="flex flex-grow">
             {mounted && (
               <NextLink href="/">
                 <a
@@ -152,7 +155,7 @@ const Nav: React.FunctionComponent = () => {
           </div>
         </div>
       </div>
-      <div className="">
+      <div>
         <MobileNav
           mobileMenuShown={mobileMenuShown}
           toggleMobileMenu={toggleMobileMenu}
