@@ -7,7 +7,7 @@ import Head from "next/head";
 import { ThemeProvider } from "next-themes";
 import Inspect from "inspx";
 import { SiteContextProvider } from "src/lib/context";
-import { Nav } from "src/components";
+import { Header } from "src/components";
 
 import "./app.css";
 
@@ -40,7 +40,7 @@ const MyApp: React.FunctionComponent<AppPropsWithLayout> = ({
             <title>non</title>
           </Head>
 
-          <Nav />
+          <Header />
           {getLayout(<Component {...pageProps} />, pageProps)}
         </SiteContextProvider>
       </ThemeProvider>

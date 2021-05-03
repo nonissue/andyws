@@ -1,3 +1,4 @@
+export * from "./Header";
 export { Nav } from "./Nav";
 export { ProjectCard } from "./ProjectCard";
 export { ProjectItem } from "./ProjectItem";
