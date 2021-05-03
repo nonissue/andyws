@@ -33,10 +33,10 @@ export const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
           <h2 className="tracking-widest text-xs text-gray-500 dark:text-gray-400 mb-2 uppercase">
             {type}
           </h2>
-          <h1 className="title-font text-gray-800 text-2xl font-semibold dark:text-white mb-3 font-display">
+          <h1 className="title-font text-gray-800 text-2xl font-semibold dark:text-white mb-3 font-sans">
             {title}
           </h1>
-          <p className="mb-3 line-clamp-3 text-gray-500 dark:text-gray-300 font-sans font-normal leading-relaxed">
+          <p className="mb-3 line-clamp-3 text-gray-500 dark:text-gray-300 font font-normal leading-relaxed font-mono">
             {description}
           </p>
 

@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
-import { ThemeChanger } from "src/components";
+// import { ThemeChanger } from "src/components";
 
 type MenuPopoverProps = {
   open: boolean;
@@ -14,13 +14,16 @@ const MenuPopover = ({ open }: MenuPopoverProps) => {
         show={open}
         as={Fragment}
         enter="transition ease-in-out duration-200"
-        enterFrom="opacity-0 -translate-y-2 scale-y-50"
-        enterTo="opacity-100 translate-y-0 scale-y-100"
+        enterFrom="opacity-0 -translate-y-2 "
+        enterTo="opacity-100 translate-y-0"
         leave="transition ease-in duration-150"
-        leaveFrom="opacity-100 translate-y-0 scale-y-100"
-        leaveTo="opacity-0 -translate-y-2 scale-y-50"
+        leaveFrom="opacity-100 translate-y-0 "
+        leaveTo="opacity-0 -translate-y-2"
       >
-        <Popover.Panel static className={`inset-x-0 z-10 transform absolute`}>
+        <Popover.Panel
+          static
+          className={`inset-x-0 z-10 transform absolute shadow-xl`}
+        >
           <div className="absolute inset-0 flex" aria-hidden="true">
             <div className="bg-white w-1/2" />
             <div className="bg-gray-50 w-1/2" />
@@ -140,7 +143,7 @@ const Header = () => {
                 <div className="flex-grow font-mono text-lg font-black">
                   NON
                 </div>
-                <ThemeChanger />
+                {/* <ThemeChanger /> */}
                 <Popover.Button>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />

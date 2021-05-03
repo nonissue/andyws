@@ -5,11 +5,11 @@ type Props = {
 function Layout({ children }: Props): React.ReactElement {
   return (
     <div className="">
-      <section className="dark:text-gray-100 text-gray-700 font-display">
+      <section className="dark:text-gray-100 text-gray-700 font-sans">
         {children}
       </section>
       <div className="wavy-lines-bg custom-container mb-6 z-0">
-        <div className="padded-container py-6 px-6 border-t font-mono uppercase text-xxs md:text-center text-center bg-white text-gray-400 md:border-r md:border-l dark:bg-gray-900 border-b-2 dark:border-gray-800 bg-opacity-90 dark:bg-opacity-70">
+        <div className="padded-container py-6 px-6  font-mono uppercase text-xxs md:text-center text-center bg-white text-gray-400 dark:bg-gray-900  bg-opacity-90 dark:bg-opacity-70">
           2021 © nonissue inc
         </div>
       </div>

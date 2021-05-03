@@ -1,6 +1,8 @@
 /* eslint-disable no-undef */
 // eslint-disable-next-line
 const colors = require("tailwindcss/colors");
+// eslint-disable-next-line
+const defaultTheme = require("tailwindcss/defaultTheme");
 // eslint-disable-next-line no-undef
 module.exports = {
   mode: "jit",
@@ -36,25 +38,7 @@ module.exports = {
         xxs: ".625rem",
       },
       fontFamily: {
-        display: [
-          "IBM Plex Sans",
-          "ui-sans-serif",
-          "system-ui",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Helvetica Neue",
-          "sans-serif",
-        ],
-        // overrides default font with inter
-        sans: [
-          "IBM Plex Sans",
-          "ui-sans-serif",
-          "system-ui",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Helvetica Neue",
-          "sans-serif",
-        ],
+        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
         mono: [
           "IBM Plex Mono",
           "ui-monospace",

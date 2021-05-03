@@ -28,7 +28,7 @@ export const TimelineBadge: React.FunctionComponent<{
 
 export const Timeline: React.FunctionComponent = () => {
   return (
-    <section className="text-gray-200 bg-gray-900 text-sm lg:text-base font-display pb-8 ">
+    <section className="text-gray-200 bg-gray-900 text-sm lg:text-base font-sans pb-8 ">
       <div className="px-0 py-0 mx-auto flex  flex-wrap">
         <div className="flex flex-wrap">
           <div className="lg:m-auto md:pr-10 md:py-6">
@@ -40,7 +40,7 @@ export const Timeline: React.FunctionComponent = () => {
                 <h2 className="font-medium uppercase text-sm font-mono text-gray-500 mb-1 tracking-wider">
                   GITHUB
                 </h2>
-                <p className="leading-relaxed font-display">
+                <p className="leading-relaxed font-sans">
                   Add a timeline/activity component that updates dynamically
                   (pulls from multiple sources, like github, twitter, instagram,
                   etc.)
@@ -53,7 +53,7 @@ export const Timeline: React.FunctionComponent = () => {
                 <h2 className="font-mono uppercase  title-font font-medium text-sm text-gray-500 mb-1 tracking-widest">
                   Twitter
                 </h2>
-                <p className="leading-relaxed font-display">
+                <p className="leading-relaxed font-sans">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry&apos;s
                   standard dummy text ever since the 1500s, when an unknown
@@ -77,7 +77,7 @@ export const Timeline: React.FunctionComponent = () => {
                 <h2 className="font-mono uppercase title-font font-medium text-sm text-gray-500 mb-1 tracking-widest">
                   FINISH
                 </h2>
-                <p className="leading-relaxed font-display">Profit.</p>
+                <p className="leading-relaxed font-sans">Profit.</p>
               </div>
             </div>
           </div>
