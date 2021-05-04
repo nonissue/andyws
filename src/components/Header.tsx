@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
-// import { ThemeChanger } from "src/components";
+import { ThemeChanger } from "src/components";
 
 type MenuPopoverProps = {
   open: boolean;
@@ -22,14 +22,14 @@ const MenuPopover = ({ open }: MenuPopoverProps) => {
       >
         <Popover.Panel
           static
-          className={`inset-x-0 z-10 transform absolute shadow-xl`}
+          className={`inset-x-0 z-10 transform absolute shadow-xl  backdrop-filter backdrop-blur-xl`}
         >
           <div className="absolute inset-0 flex" aria-hidden="true">
-            <div className="bg-white w-1/2" />
-            <div className="bg-gray-50 w-1/2" />
+            <div className="bg-white w-1/2 dark:bg-black dark:border-r dark:border-gray-900" />
+            <div className="bg-gray-50 w-1/2 dark:bg-black" />
           </div>
           <div className="relative max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2">
-            <nav className="grid gap-y-10 px-4 py-8 bg-white sm:grid-cols-2 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12">
+            <nav className="grid gap-y-10 px-4 py-8 sm:grid-cols-2 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12">
               <h2 id="solutionsHeading" className="sr-only">
                 Solutions menu
               </h2>
@@ -84,7 +84,7 @@ const MenuPopover = ({ open }: MenuPopoverProps) => {
                 </ul>
               </div>
             </nav>
-            <div className="bg-gray-50 px-4 py-8 sm:py-12 sm:px-6 lg:px-8 xl:pl-12">
+            <div className=" px-4 py-8 sm:py-12 sm:px-6 lg:px-8 xl:pl-12">
               <h3 className="text-lg font-semibold">Recent Activity</h3>
               <div className="mt-6 text-sm font-medium">
                 <a
@@ -135,15 +135,15 @@ const Header = () => {
           <div className="relative z-10 inset-0">
             <div className="max-w-4xl mx-auto flex px-4 py-6 sm:px-6 lg:px-8 inset-0">
               <div className="absolute inset-0 flex" aria-hidden="true">
-                <div className="bg-white w-1/2" />
-                <div className="bg-gray-50 w-1/2" />
+                <div className="bg-white w-1/2 dark:bg-black dark:border-r dark:border-gray-900" />
+                <div className="bg-gray-50 w-1/2 dark:bg-black " />
               </div>
 
               <div className="relative flex items-center space-between w-full">
                 <div className="flex-grow font-mono text-lg font-black">
                   NON
                 </div>
-                {/* <ThemeChanger /> */}
+                <ThemeChanger />
                 <Popover.Button>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
