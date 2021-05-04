@@ -34,9 +34,13 @@ export default class Document extends NextDocument {
             href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+          />
           <script async src={`https://sa.nonissue.org/latest.js`} />
         </Head>
-        <body className="text-gray-900 dark:text-gray-100 dark:bg-black bg-white">
+        <body className="text-gray-900 dark:text-gray-100 dark:bg-almostblack bg-white">
           <Main />
           <NextScript />
         </body>
