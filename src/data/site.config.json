@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "subMenuItems": [
+      {
+        "title": "Home",
+        "href": "/"
+      },
+      {
+        "title": "Projects",
+        "href": "/projects"
+      },
+      {
+        "title": "About",
+        "href": "/about"
+      },
+      {
+        "title": "Source",
+        "href": "https://github.com/nonissue/non-www"
+      }
+    ],
+    "socialMediaItems": [
+      {
+        "title": "Github",
+        "href": "https://www.github.com/nonissue"
+      },
+      {
+        "title": "Instagram",
+        "href": "https://instagram.com/nonissue"
+      },
+      {
+        "title": "Twitter",
+        "href": "https://twitter.com/twitter"
+      },
+      {
+        "title": "Email",
+        "href": "mailto:andy@nonissue.org"
+      }
+    ]
+  }
+}

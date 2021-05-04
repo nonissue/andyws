@@ -8,7 +8,7 @@ const Index: NextPage & {
 } = () => {
   return (
     <div className="">
-      <section className="padded-container bg-white dark:bg-black shadow-xl font-sans dark:border-gray-800 ">
+      <section className="padded-container font-sans">
         <ProjectList />
       </section>
     </div>

@@ -3,44 +3,7 @@ import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
 import { MenuTimeline, ThemeChanger } from "src/components";
-
-const siteSubMenuItems = [
-  {
-    title: "Home",
-    href: "/",
-  },
-  {
-    title: "Projects",
-    href: "/projects",
-  },
-  {
-    title: "About",
-    href: "/about",
-  },
-  {
-    title: "Source",
-    href: "https://github.com/nonissue/non-www",
-  },
-];
-
-const socialMediaItems = [
-  {
-    title: "Github",
-    href: "https://www.github.com/nonissue",
-  },
-  {
-    title: "Instagram",
-    href: "https://instagram.com/nonissue",
-  },
-  {
-    title: "Twitter",
-    href: "https://twitter.com/twitter",
-  },
-  {
-    title: "Email",
-    href: "mailto:andy@nonissue.org",
-  },
-];
+import SiteConfig from "src/data/site.config.json";
 
 type MenuPopoverProps = {
   open: boolean;
@@ -61,11 +24,11 @@ const MenuPopover = ({ open }: MenuPopoverProps) => {
       >
         <Popover.Panel
           static
-          className={`z-10 inset-x-0 transform absolute shadow-xl  lg:dark:border-t-2 lg:dark:border-gray-900`}
+          className={`z-10 inset-x-0 transform absolute shadow-xl lg:dark:border-t-2 lg:dark:border-gray-900`}
         >
           <div className="absolute inset-0 flex" aria-hidden="true">
-            <div className="bg-white w-1/2 dark:bg-black lg:dark:border-r-2 dark:border-gray-900 border-r-0 " />
-            <div className=" w-1/2 dark:bg-black bg-white lg:bg-gray-50" />
+            <div className="bg-white w-1/2 dark:bg-almostblack lg:dark:border-r-2 dark:border-gray-900 border-r-0 " />
+            <div className=" w-1/2 dark:bg-almostblack bg-white lg:bg-gray-50" />
           </div>
           <div className="relative max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2">
             <nav className="grid gap-y-10 px-4 py-8 sm:grid-cols-2 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12 ">
@@ -75,7 +38,7 @@ const MenuPopover = ({ open }: MenuPopoverProps) => {
               <div>
                 <h3 className="text-lg font-semibold">Site</h3>
                 <ul className="mt-3 space-y-3">
-                  {siteSubMenuItems.map((item) => (
+                  {SiteConfig.nav.subMenuItems.map((item) => (
                     <li key={item.title}>
                       <NextLink href={item.href}>
                         <a>{item.title}</a>
@@ -87,7 +50,7 @@ const MenuPopover = ({ open }: MenuPopoverProps) => {
               <div className="">
                 <h3 className="text-lg font-semibold">Contact</h3>
                 <ul className="mt-3 space-y-3">
-                  {socialMediaItems.map((item) => (
+                  {SiteConfig.nav.socialMediaItems.map((item) => (
                     <li key={item.title}>
                       <NextLink href={item.href}>
                         <a>{item.title}</a>
@@ -133,19 +96,19 @@ const Header = () => {
           >
             <Popover.Overlay
               static
-              className={`${"bg-white dark:bg-black fixed inset-0 bg-opacity-80 dark:bg-opacity-90 backdrop-filter backdrop-blur-none"}`}
+              className={`${"bg-white dark:bg-almostblack fixed inset-0 bg-opacity-80 dark:bg-opacity-50 backdrop-filter backdrop-blur-none"}`}
             />
           </Transition>
           <div className="relative z-20 inset-0">
             <div className="max-w-4xl mx-auto flex px-4 py-6 sm:px-6 lg:px-8 inset-0">
               <div className="absolute inset-0 flex" aria-hidden="true">
-                <div className="bg-white w-1/2 dark:bg-black lg:dark:border-r-0 dark:border-gray-900 border-r-0 100" />
-                <div className="bg-white w-1/2 dark:bg-black lg:bg-gray-50 " />
+                <div className="bg-white w-1/2 dark:bg-almostblack lg:dark:border-r-0 dark:border-gray-900 border-r-0 100" />
+                <div className="bg-white w-1/2 dark:bg-almostblack lg:bg-gray-50 " />
               </div>
 
               <div className="relative flex items-center space-between w-full">
-                <div className="flex-grow font-mono text-lg font-black">
-                  NON
+                <div className="flex-grow font-display text-lg text-almostblack  dark:text-gray-50 font-bold">
+                  ANDY.WS
                 </div>
 
                 <ThemeChanger />

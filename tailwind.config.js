@@ -23,6 +23,8 @@ module.exports = {
         blue: colors.blue,
         gray: colors.gray,
         bluegray: colors.blueGray,
+        almostblack: "hsl(221, 30%, 7%)",
+        // almostblack: "#131415",
         red: colors.red,
         orange: colors.orange,
         green: colors.green,
@@ -39,6 +41,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+        display: ["Space Mono", ...defaultTheme.fontFamily.sans],
         mono: [
           "IBM Plex Mono",
           "ui-monospace",

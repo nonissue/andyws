@@ -66,7 +66,7 @@ const MenuTimeline = () => {
                   <span
                     className={classNames(
                       event.iconBackground,
-                      "h-6 w-6 rounded-full flex items-center justify-center ring-8 ring-gray-50 dark:ring-black"
+                      "h-6 w-6 rounded-full flex items-center justify-center ring-8 ring-gray-50 dark:ring-almostblack"
                     )}
                   >
                     <event.icon

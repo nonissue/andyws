@@ -5,7 +5,7 @@ const ProjectList = () => {
   return (
     <div className=" ">
       <div className="grid grid-cols-1 md:grid-cols-3 items-center mb-4">
-        <h2 className="text-md font-medium block md:col-span-3 dark:text-gray-100  text-gray-700 text-left md:mt-0 max-w-md mx-auto md:max-w-none md:mx-0">
+        <h2 className="text-md font-medium block md:col-span-3 dark:text-gray-100 text-gray-700 text-left md:mt-0 max-w-md mx-auto md:max-w-none md:mx-0">
           Projects
         </h2>
         <h2 className="hidden uppercase text-md lg:col-span-1 dark:text-gray-100 font-light font-sans text-gray-400 text-left lg:mt-0">
