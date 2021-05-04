@@ -1,7 +1,46 @@
+import NextLink from "next/link";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
-import { ThemeChanger } from "src/components";
+import { MenuTimeline, ThemeChanger } from "src/components";
+
+const siteSubMenuItems = [
+  {
+    title: "Home",
+    href: "/",
+  },
+  {
+    title: "Projects",
+    href: "/projects",
+  },
+  {
+    title: "About",
+    href: "/about",
+  },
+  {
+    title: "Source",
+    href: "https://github.com/nonissue/non-www",
+  },
+];
+
+const socialMediaItems = [
+  {
+    title: "Github",
+    href: "https://www.github.com/nonissue",
+  },
+  {
+    title: "Instagram",
+    href: "https://instagram.com/nonissue",
+  },
+  {
+    title: "Twitter",
+    href: "https://twitter.com/twitter",
+  },
+  {
+    title: "Email",
+    href: "mailto:andy@nonissue.org",
+  },
+];
 
 type MenuPopoverProps = {
   open: boolean;
@@ -31,67 +70,39 @@ const MenuPopover = ({ open }: MenuPopoverProps) => {
           <div className="relative max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2">
             <nav className="grid gap-y-10 px-4 py-8 sm:grid-cols-2 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12">
               <h2 id="solutionsHeading" className="sr-only">
-                Solutions menu
+                Site Navigation
               </h2>
               <div>
                 <h3 className="text-lg font-semibold">Site</h3>
                 <ul className="mt-3 space-y-3">
-                  <li>
-                    <a className="flex" href="/analytics">
-                      Analytics
-                    </a>
-                  </li>
-                  <li>
-                    <a className="flex" href="/engagement">
-                      Engagement
-                    </a>
-                  </li>
-                  <li>
-                    <a className="flex" href="/security">
-                      Security
-                    </a>
-                  </li>
-                  <li>
-                    <a className="flex" href="/integrations">
-                      Integrations
-                    </a>
-                  </li>
+                  {siteSubMenuItems.map((item) => (
+                    <li key={item.title}>
+                      <NextLink href={item.href}>
+                        <a>{item.title}</a>
+                      </NextLink>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div className="">
-                <h3 className="text-lg font-semibold">Social Media</h3>
+                <h3 className="text-lg font-semibold">Contact</h3>
                 <ul className="mt-3 space-y-3">
-                  <li>
-                    <a className="flex" href="/analytics">
-                      Analytics
-                    </a>
-                  </li>
-                  <li>
-                    <a className="flex" href="/engagement">
-                      Engagement
-                    </a>
-                  </li>
-                  <li>
-                    <a className="flex" href="/security">
-                      Security
-                    </a>
-                  </li>
-                  <li>
-                    <a className="flex" href="/integrations">
-                      Integrations
-                    </a>
-                  </li>
+                  {socialMediaItems.map((item) => (
+                    <li key={item.title}>
+                      <NextLink href={item.href}>
+                        <a>{item.title}</a>
+                      </NextLink>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </nav>
             <div className=" px-4 py-8 sm:py-12 sm:px-6 lg:px-8 xl:pl-12">
               <h3 className="text-lg font-semibold">Recent Activity</h3>
-              <div className="mt-6 text-sm font-medium">
-                <a
-                  href="#"
-                  className="text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
-                >
-                  View all posts <span aria-hidden="true">&rarr;</span>
+              <MenuTimeline />
+              <div className="mt-10 text-sm font-medium text-right">
+                <a href="#" className=" transition ease-in-out duration-150">
+                  View more activity <span aria-hidden="true">&rarr;</span>
                 </a>
               </div>
             </div>

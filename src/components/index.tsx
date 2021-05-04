@@ -1,4 +1,5 @@
 export * from "./Header";
+export { MenuTimeline } from "./MenuTimeline";
 export { Nav } from "./Nav";
 export { ProjectCard } from "./ProjectCard";
 export { ProjectItem } from "./ProjectItem";
