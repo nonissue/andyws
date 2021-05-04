@@ -5,13 +5,12 @@ const timeline = [
   {
     id: 1,
     content: "Applied to",
-    target:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    target: "Lorem Ipsum is simply dummy.",
     href: "#",
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: UserIcon,
-    iconBackground: "bg-gray-400",
+    iconBackground: "bg-indigo-500",
   },
   {
     id: 2,
@@ -21,7 +20,7 @@ const timeline = [
     date: "Sep 22",
     datetime: "2020-09-22",
     icon: ThumbUpIcon,
-    iconBackground: "bg-blue-400",
+    iconBackground: "bg-purple-500",
   },
   {
     id: 3,
@@ -31,7 +30,7 @@ const timeline = [
     date: "Sep 28",
     datetime: "2020-09-28",
     icon: CheckIcon,
-    iconBackground: "bg-green-400",
+    iconBackground: "bg-pink-500",
   },
   {
     id: 4,
@@ -41,17 +40,7 @@ const timeline = [
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: ThumbUpIcon,
-    iconBackground: "bg-blue-500",
-  },
-  {
-    id: 5,
-    content: "Completed interview with",
-    target: "Katherine Snyder",
-    href: "#",
-    date: "Oct 4",
-    datetime: "2020-10-04",
-    icon: CheckIcon,
-    iconBackground: "bg-green-500",
+    iconBackground: "bg-indigo-500",
   },
 ];
 
@@ -61,44 +50,44 @@ function classNames(...classes: string[]) {
 
 const MenuTimeline = () => {
   return (
-    <div className="flow-root mt-2">
+    <div className="flow-root mt-4">
       <ul className="-mb-8">
         {timeline.map((event, eventIdx) => (
           <li key={event.id}>
-            <div className="relative pb-7">
+            <div className="relative pb-8">
               {eventIdx !== timeline.length - 1 ? (
                 <span
-                  className="absolute top-6 left-3 -ml-px h-full w-0.5 bg-gray-200"
+                  className="absolute top-6 left-3 -ml-px h-full w-0.5 bg-gray-200 dark:bg-gray-800"
                   aria-hidden="true"
                 />
               ) : null}
-              <div className="relative flex space-x-3 items-center">
+              <div className="relative flex space-x-4 items-center">
                 <div>
                   <span
                     className={classNames(
                       event.iconBackground,
-                      "h-6 w-6 rounded-full flex items-center justify-center ring-8 ring-gray-50"
+                      "h-6 w-6 rounded-full flex items-center justify-center ring-8 ring-gray-50 dark:ring-black"
                     )}
                   >
                     <event.icon
-                      className="h-4 w-4 text-white"
+                      className="h-4 w-4 text-white dark:text-black"
                       aria-hidden="true"
                     />
                   </span>
                 </div>
-                <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                <div className="min-w-0 flex-1 flex justify-between space-x-3 space-y-0 -mt-px">
                   <div>
-                    <p className="text-sm text-gray-500">
+                    <p className={`text-md dark:text-gray-400 line-clamp-1`}>
                       {event.content}{" "}
                       <a
                         href={event.href}
-                        className="font-medium text-gray-900"
+                        className="font-medium text-gray-900 dark:text-gray-300"
                       >
                         {event.target}
                       </a>
                     </p>
                   </div>
-                  <div className="text-right text-sm whitespace-nowrap text-gray-500 font-mono">
+                  <div className="text-right text-sm whitespace-nowrap text-gray-600 font-mono">
                     <time dateTime={event.datetime}>{event.date}</time>
                   </div>
                 </div>

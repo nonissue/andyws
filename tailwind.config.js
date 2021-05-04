@@ -76,7 +76,7 @@ module.exports = {
     extend: {
       backgroundImage: ["hover", "dark"],
       backgroundOpacity: ["dark"],
-      borderWidth: ["last"],
+      borderWidth: ["dark", "last"],
       margin: ["first"],
       padding: ["last"],
       ringColor: ["dark", "hover"],
