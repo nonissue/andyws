@@ -2,11 +2,10 @@
 
 ## Header
 
-- [ ] Mobile nav icon swap has slight layout shift?
-- [ ] Mobile nav isn't hidden when clicked/tapped
-  - [x] Not sure how to handle, watch route change or something?
-  - [x] Don't really wanna pass state setter down to mobile nav component so it can toggle parent state, just gets messy
-  - [x] Maybe implement app state using pullstate or context?
-  - [ ] Might be fixed? just passing toggle from parent
-  - [ ] State is preserved with history actions (back/forward). might want to clear menu if shown when traversing history
-  - [ ] https://nextjs.org/docs/api-reference/next/routergit ad
+- [ ] to get popover to close when a next link is clicked, had to use ugly workaround:
+  - [ ] https://github.com/tailwindlabs/headlessui/issues/427#issuecomment-826916025
+- [ ] Other info:
+  - [ ] https://github.com/tailwindlabs/headlessui/issues/120#issuecomment-717174190
+- [ ] Another solution is to change focus: https://github.com/RobinMalfait/headlessui-popover-does-not-close/blob/1a44ed81239df3bec5d8869a289f2adf48b6a186/src/Page.jsx
+- [ ] https://stackoverflow.com/questions/66572537/persistent-focus-in-nextjs
+- [ ] https://codesandbox.io/s/elegant-dirac-tmkc4?file=/pages/index.js

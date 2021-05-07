@@ -43,13 +43,15 @@ const MenuPopover = ({ open, closePopover }: MenuPopoverProps) => {
               <ul className="mt-3 space-y-3">
                 {SiteConfig.nav.subMenuItems.map((item) => (
                   <li key={item.title} className="">
-                    {/* <Popover.Button> */}
-                    <button onClick={() => closePopover()}>
+                    <button
+                      onClick={() => closePopover()}
+                      className=""
+                      tabIndex={-1}
+                    >
                       <WrappedNextLink href={item.href}>
                         {item.title}
                       </WrappedNextLink>
                     </button>
-                    {/* </Popover.Button> */}
                   </li>
                 ))}
               </ul>
@@ -119,9 +121,7 @@ const Header = () => {
 
               <div className="relative flex items-center space-between w-full">
                 <div className="flex-grow font-display text-lg text-almostblack  dark:text-gray-50 font-bold">
-                  {/* <Popover.Button> */}
                   <WrappedNextLink href="/">ANDY.WS</WrappedNextLink>
-                  {/* </Popover.Button> */}
                 </div>
 
                 <ThemeChanger />
