@@ -1,9 +1,6 @@
-/* eslint-disable no-undef */
-// eslint-disable-next-line
+/* eslint-disable */
 const colors = require("tailwindcss/colors");
-// eslint-disable-next-line
 const defaultTheme = require("tailwindcss/defaultTheme");
-// eslint-disable-next-line no-undef
 module.exports = {
   mode: "jit",
   purge: [
@@ -24,7 +21,6 @@ module.exports = {
         gray: colors.gray,
         bluegray: colors.blueGray,
         almostblack: "hsl(221, 30%, 7%)",
-        // almostblack: "#131415",
         red: colors.red,
         orange: colors.orange,
         green: colors.green,

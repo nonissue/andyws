@@ -18,7 +18,6 @@ const ProjectItem = (project: Project) => {
             {project.title}
           </h2>
         </a>
-        {/* <div className="flex flex-wrap gap-x-0.5 gap-y-0.5 pr-10"> */}
         <div className="space-x-1 space-y-1 flex-wrap  md:justify-start flex -ml-1 mt-0 md:pr-7 mb-0 md:mb-2">
           {project.tags.map((title) => (
             <Tag key={title} title={`#${title}`} />

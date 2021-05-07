@@ -9,7 +9,7 @@ const About: React.FunctionComponent & {
   const linkStyle = `rcrsv-custom-label flex items-center text-xl lg:text-xl font-bold text-blue-600 dark:text-blue-400 hover:text-orange-600 dark:hover:text-orange-400 font-label my-2`;
 
   return (
-    <section className="padded-container bg-white dark:bg-gray-900 font-sans  lg:border-l lg:border-r dark:border-gray-800">
+    <section className="padded-container bg-white dark:bg-gray-900 font-sans lg:border-l lg:border-r dark:border-gray-800">
       <div className="">
         <h2 className="text-2xl dark:text-gray-200 font-bold font-sans text-gray-700 text-left mb-8">
           Contact
