@@ -8,7 +8,7 @@ export type NextWrappedLinkProps = PropsWithChildren<
 
 const WrappedNextLink = (props: NextWrappedLinkProps) => {
   const { href, children, ...rest } = props;
-  console.log(props);
+
   return (
     <NextLink href={href}>
       <a {...rest} className="">

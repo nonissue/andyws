@@ -50,7 +50,7 @@ function classNames(...classes: string[]) {
 
 const MenuTimeline = () => {
   return (
-    <div className="flow-root mt-4">
+    <div className="flow-root mt-4 text-sm">
       <ul className="-mb-8">
         {timeline.map((event, eventIdx) => (
           <li key={event.id}>
@@ -75,7 +75,7 @@ const MenuTimeline = () => {
                     />
                   </span>
                 </div>
-                <div className="min-w-0 flex-1 flex justify-between space-x-3 space-y-0 -mt-px">
+                <div className="min-w-0 flex-1 flex justify-between space-x-3 space-y-0 mt-px">
                   <div>
                     <p className={`text-md dark:text-gray-400 line-clamp-1`}>
                       {event.content}{" "}

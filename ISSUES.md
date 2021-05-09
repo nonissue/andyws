@@ -2,6 +2,8 @@
 
 ## Header
 
+ATM it kind of works, but I think there is an issue with tab focus styling in dark mode
+
 - [ ] to get popover to close when a next link is clicked, had to use ugly workaround:
   - [ ] https://github.com/tailwindlabs/headlessui/issues/427#issuecomment-826916025
 - [ ] Other info:
