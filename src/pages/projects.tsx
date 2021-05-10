@@ -1,7 +1,7 @@
 import NextLink from "next/link";
 import { getLayout } from "src/layouts/Layout";
 
-const About: React.FunctionComponent & {
+const Projects: React.FunctionComponent & {
   getLayout?: (component: JSX.Element) => JSX.Element;
 } = () => {
   const rowStyle = `flex lg:items-start flex-col lg:flex-col lg:items-start lg:mb-2 justify-between`;
@@ -9,10 +9,10 @@ const About: React.FunctionComponent & {
   const linkStyle = `rcrsv-custom-label flex items-center text-xl lg:text-xl font-bold text-blue-600 dark:text-blue-400 hover:text-orange-600 dark:hover:text-orange-400 font-label my-2`;
 
   return (
-    <section className="padded-container bg-white dark:bg-gray-900 font-sans lg:border-l lg:border-r dark:border-gray-800">
+    <section className="padded-container bg-white dark:bg-almostblack font-sans">
       <div className="">
         <h2 className="text-2xl dark:text-gray-200 font-bold font-sans text-gray-700 text-left mb-8">
-          Contact
+          Projects
         </h2>
 
         <div className=" text-md lg:text-xl leading-10 mx-auto ">
@@ -75,6 +75,6 @@ const About: React.FunctionComponent & {
   );
 };
 
-About.getLayout = getLayout;
+Projects.getLayout = getLayout;
 
-export default About;
+export default Projects;

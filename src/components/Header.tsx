@@ -71,7 +71,7 @@ const MenuPopover = ({ open, closePopover }: MenuPopoverProps) => {
               </ul>
             </div>
           </nav>
-          <div className=" px-4 py-8 pt-2 lg:pt-12 sm:py-12 sm:px-6 lg:px-8 xl:pl-12">
+          <div className=" px-4 py-8 pt-2 lg:pt-12 sm:py-12 sm:px-6 lg:px-8 xl:pl-12 opacity-50">
             <h3 className="text-lg font-semibold">Recent Activity</h3>
             <MenuTimeline />
             <div className="mt-10 text-sm font-medium text-right">

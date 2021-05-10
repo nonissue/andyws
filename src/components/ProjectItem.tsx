@@ -11,10 +11,10 @@ type Project = {
 
 const ProjectItem = (project: Project) => {
   return (
-    <div className="px-0 py-4 grid grid-cols-1 md:grid-cols-3 md:border-t border-gray-200 dark:border-gray-800 my-2 last:border-b last:pb-6">
+    <div className="px-0 py-4 grid grid-cols-1 md:grid-cols-3 border-dotted border-t border-gray-200 dark:border-gray-800 my-2 last:border-b last:pb-6">
       <div className="max-w-md mx-auto md:max-w-none md:mx-0 block w-full">
         <a href={project.link}>
-          <h2 className=" md:text-left text-3xl  md:text-2xl mt-0 md:mt-1 mb-2 md:mb-0 font-sans font-bold text-gray-800  hover:text-orange-500 dark:text-gray-300 dark:hover:text-purple-300 transition-colors duration-300">
+          <h2 className=" md:text-left text-3xl md:text-2xl mt-0 md:mt-1 mb-2 md:mb-0 font-sans text-gray-800  hover:text-orange-500 dark:text-gray-300 dark:hover:text-purple-400 transition-colors duration-300">
             {project.title}
           </h2>
         </a>
