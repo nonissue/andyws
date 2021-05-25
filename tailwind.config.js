@@ -1,6 +1,8 @@
 /* eslint-disable */
+const underlineColorPlugin = require("./tailwind-underline-plugin");
 const colors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   mode: "jit",
   purge: [
@@ -87,5 +89,6 @@ module.exports = {
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms"),
     require("@tailwindcss/line-clamp"),
+    underlineColorPlugin,
   ],
 };
