@@ -2,12 +2,33 @@ import { Fragment, useRef } from "react";
 import Link from "next/link";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
-import { MenuTimeline, ThemeChanger, WrappedNextLink } from "src/components";
+import { MenuTimeline, ThemeChanger } from "src/components";
 import SiteConfig from "src/data/site.config.json";
 
 type MenuPopoverProps = {
   open: boolean;
   closePopover: () => void;
+};
+
+type MenuLinkProps = {
+  title: string;
+  href: string;
+
+  closePopover: () => void;
+};
+
+const MenuLink = ({ title, href, closePopover }: MenuLinkProps) => {
+  return (
+    <li>
+      <button
+        onClick={() => closePopover()}
+        className="hover:text-orange-400 transition-colors duration-250 ease-in"
+        tabIndex={-1}
+      >
+        <Link href={href}>{title}</Link>
+      </button>
+    </li>
+  );
 };
 
 const MenuPopover = ({ open, closePopover }: MenuPopoverProps) => {
@@ -42,17 +63,12 @@ const MenuPopover = ({ open, closePopover }: MenuPopoverProps) => {
               <h3 className="text-lg font-semibold">Site</h3>
               <ul className="mt-3 space-y-3">
                 {SiteConfig.nav.subMenuItems.map((item) => (
-                  <li key={item.title} className="">
-                    <button
-                      onClick={() => closePopover()}
-                      className=""
-                      tabIndex={-1}
-                    >
-                      <WrappedNextLink href={item.href}>
-                        {item.title}
-                      </WrappedNextLink>
-                    </button>
-                  </li>
+                  <MenuLink
+                    key={item.title}
+                    title={item.title}
+                    href={item.href}
+                    closePopover={closePopover}
+                  />
                 ))}
               </ul>
             </div>
@@ -60,18 +76,17 @@ const MenuPopover = ({ open, closePopover }: MenuPopoverProps) => {
               <h3 className="text-lg font-semibold">Connect</h3>
               <ul className="mt-3 space-y-3">
                 {SiteConfig.nav.socialMediaItems.map((item) => (
-                  <li key={item.title}>
-                    <Popover.Button as="div" className="appearance-none">
-                      <Link href={item.href}>
-                        <a>{item.title}</a>
-                      </Link>
-                    </Popover.Button>
-                  </li>
+                  <MenuLink
+                    title={item.title}
+                    href={item.href}
+                    closePopover={closePopover}
+                    key={item.title}
+                  />
                 ))}
               </ul>
             </div>
           </nav>
-          <div className=" px-4 py-8 pt-2 lg:pt-12 sm:py-12 sm:px-6 lg:px-8 xl:pl-12 opacity-50">
+          <div className=" px-4 py-8 pt-2 lg:pt-12 sm:py-12 sm:px-6 lg:px-8 xl:pl-12 opacity-100">
             <h3 className="text-lg font-semibold">Recent Activity</h3>
             <MenuTimeline />
             <div className="mt-10 text-sm font-medium text-right">
@@ -122,7 +137,7 @@ const Header = () => {
 
               <div className="relative flex items-center space-between w-full">
                 <div className="flex-grow font-display text-lg text-almostblack  dark:text-gray-50 font-bold">
-                  <WrappedNextLink href="/">ANDY.WS</WrappedNextLink>
+                  <Link href="/">ANDY.WS</Link>
                 </div>
 
                 <ThemeChanger />
