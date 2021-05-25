@@ -2,8 +2,15 @@
 
 ## Header
 
-ATM it kind of works, but I think there is an issue with tab focus styling in dark mode
+### 21-05-24
 
+- Kind of fixed using `MenuLink` component, which wraps a link in a button with `tabIndex` set to `-1`
+- Tabbing to item works, and when clicked / activated (using keyboard), navigates to page and hides popover
+- Deleting `WrappedNextLink` as we don't need it.
+
+### Original
+
+- ATM it kind of works, but I think there is an issue with tab focus styling in dark mode
 - [ ] to get popover to close when a next link is clicked, had to use ugly workaround:
   - [ ] https://github.com/tailwindlabs/headlessui/issues/427#issuecomment-826916025
 - [ ] Other info:
