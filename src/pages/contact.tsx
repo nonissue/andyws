@@ -7,11 +7,11 @@ const Contact: React.FunctionComponent & {
   return (
     <section className="padded-container bg-white dark:bg-almostblack font-sans">
       <div className="">
-        <h2 className="hidden text-3xl dark:text-gray-200 rcrsv font-medium  text-gray-700 text-left mb-8">
+        <h2 className=" text-3xl dark:text-gray-200 rcrsv font-medium  text-gray-700 text-left mb-8">
           Contact
         </h2>
 
-        <div className=" leading-10 mx-auto ">
+        <div className=" mx-auto ">
           <ul className="inline-flex flex-wrap font-display uppercase text-5xl">
             <li className="inline mr-2">
               <NextLink href="mailto:andy@nonissue.org">

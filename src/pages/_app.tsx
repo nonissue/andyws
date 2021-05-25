@@ -9,7 +9,7 @@ import Inspect from "inspx";
 import { SiteContextProvider } from "src/lib/context";
 import { Header } from "src/components";
 
-import "./app.css";
+import "src/styles/app.css";
 
 type ComponentWithLayout<P> = NextComponentType<NextPageContext, any, P> & {
   getLayout?: (
