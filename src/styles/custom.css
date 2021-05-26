@@ -14,11 +14,21 @@ body {
   @apply min-h-screen text-gray-900;
 }
 
+#__next {
+  @apply flex flex-col h-screen;
+}
+
+/* #__next > span {
+  @apply flex flex-col h-screen;
+} */
+
 @layer components {
   .padded-container {
-    /* @apply lg:px-6 lg:py-6; */
-    /* @apply px-6 py-6 pt-4 max-w-4xl mx-auto; */
-    @apply px-4 py-8 sm:py-12 sm:px-6 lg:px-8 max-w-4xl mx-auto;
+    @apply px-6 py-8 pt-2 sm:py-12 sm:pt-12 sm:px-6 lg:px-8 max-w-4xl mx-auto bg-white bg-opacity-10 dark:bg-almostblack;
+  }
+
+  .container-padding {
+    @apply px-4 py-8 pt-2 sm:py-12 sm:pt-12 sm:px-6 lg:px-8;
   }
 
   .custom-container {

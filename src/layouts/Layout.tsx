@@ -4,14 +4,11 @@ type Props = {
 
 function Layout({ children }: Props): React.ReactElement {
   return (
-    <div className="">
-      <section className="dark:text-gray-100 text-gray-700 font-sans">
-        {children}
-      </section>
-      <div className="custom-container mb-0 z-0 absolute bottom-0 left-0 right-0">
-        <div className="padded-container py-4 px-6 font-mono uppercase text-xxs md:text-center text-center bg-white text-gray-400 dark:bg-almostblack">
-          2021 © nonissue inc
-        </div>
+    <div className="flex-1 overflow-y-auto">
+      <div className="test">
+        <section className="dark:text-gray-100 text-gray-700 font-sans">
+          {children}
+        </section>
       </div>
     </div>
   );

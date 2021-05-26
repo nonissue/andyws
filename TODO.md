@@ -1,31 +1,32 @@
-## ISSUES
-
-- [x] css broken in prod
-      ~~- [ ] shrink logo~~
+# TODO
 
 ## Content
 
 - [ ] Add images to projects
+  - [ ] Screenshots? Use code screenshot/share tool
 - [ ] Add project pages
 - [ ] Fetch activity from github api
-- [ ] Add photos
+- [ ] Add photos page
 
 ## Arch
 
-- [x] `useContext` for... app context (state)
+- [ ] Setup `siteContext` -> worth doing because if I track things like `navOpen`, I could implement scroll lock, etc.
+- [ ] Use `siteContext` -> worth doing because if I track things like `navOpen`, I could implement scroll lock, etc.
 - [ ] Hook Nav state into new app context
+  - [ ] This may not be required with headless ui
 - [ ] Remove unused font styles
 
 ## UI
 
-~~- [ ] Change fontstack~~
-~~- [ ] IBM Plex Mono, IBM Plex Sans (see figma mockup)~~
-
-- [ ] Refactor components to use css files and `@apply` to style, rather than having inline
+- [x] Refactor components to use css files and `@apply` to style, rather than having inline
       ~~- [ ] Ability to change logo colour with tailwind~~
+- [ ] Fix footer (positon absolute but dont cover content)
+      ~~- [ ] Change fontstack~~
+      ~~- [ ] IBM Plex Mono, IBM Plex Sans (see figma mockup)~~
 
 ## Components
 
-- [ ] Menu Toggle
-  - [ ] For use with themechanger, open mobile menu, dismiss mobile menu
-  - [ ] Swap buttons when mobile nav open
+- [x] Menu Toggle
+  - [x] For use with themechanger, open mobile menu, dismiss mobile menu
+  - [x] Swap buttons when mobile nav open
+- [ ] Scale `MenuTimeline` content dynamically (so we can decrease size in mobile viewports)
