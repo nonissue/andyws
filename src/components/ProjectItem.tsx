@@ -24,7 +24,7 @@ const ProjectItem = (project: Project) => {
           <h2
             className="text-3xl mt-0.5 mb-2 font-mono font-semibold tracking-wider text-gray-700 underline-gray-300 
               md:text-3xl md:mt-1 md:mb-1 dark:underline-gray-800
-              lg:text-3xl
+              lg:text-2xl
             hover:text-orange-500 transition-colors duration-300
             dark:text-gray-300 dark:hover:text-purple-400"
           >

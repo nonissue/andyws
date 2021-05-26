@@ -1,3 +1,4 @@
+import NextLink from "next/link";
 import { getLayout } from "src/layouts/Layout";
 
 const About: React.FunctionComponent & {
@@ -5,17 +6,16 @@ const About: React.FunctionComponent & {
 } = () => {
   return (
     <section className="padded-container bg-white dark:bg-almostblack font-sans dark:border-gray-800">
-      <div className="">
-        {/* <h2 className="text-2xl dark:text-gray-200 font-bold font-sans text-gray-700 text-left mb-8 mt-4 lg:mt-0">
-          About
-        </h2> */}
-
-        <div className="flex flex-wrap text-3xl text-center p-10 leading-10">
-          Andy Williams is a developer and photographer based in Edmonton,
-          Canada.
-        </div>
-
-        <br />
+      <div className="text-3xl text-center p-10 leading-10 font-display">
+        <span className="font-semibold inline">Andy Williams</span> is a
+        developer and photographer based in Edmonton, Canada.
+      </div>
+      <div className="w-full text-center">
+        <NextLink href="/contact">
+          <a className="text-xl font-mono uppercase underline opacity-70">
+            Contact
+          </a>
+        </NextLink>
       </div>
     </section>
   );
