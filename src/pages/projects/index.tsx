@@ -7,7 +7,7 @@ const Projects: React.FunctionComponent & {
   getLayout?: (component: JSX.Element) => JSX.Element;
 } = () => {
   return (
-    <section className="padded-container bg-white dark:bg-almostblack font-sans">
+    <section className=" bg-white dark:bg-almostblack font-sans">
       <h2 className="font-display font-bold uppercase text-4xl sm:text-6xl md:text-5xl lg:text-6xl">
         Projects
       </h2>

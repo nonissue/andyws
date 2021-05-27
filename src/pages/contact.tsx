@@ -21,7 +21,7 @@ const Contact: React.FunctionComponent & {
   getLayout?: (component: JSX.Element) => JSX.Element;
 } = () => {
   return (
-    <section className="padded-container bg-white dark:bg-almostblack font-sans">
+    <section className="bg-white dark:bg-almostblack font-sans">
       <div className="">
         <h2 className="hidden text-2xl dark:text-gray-200 font-bold font-sans text-gray-700 text-left mb-8">
           Contact

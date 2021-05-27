@@ -5,11 +5,9 @@ type Props = {
 function Layout({ children }: Props): React.ReactElement {
   return (
     <div className="flex-1 overflow-y-auto">
-      <div className="test">
-        <section className="dark:text-gray-100 text-gray-700 font-sans">
-          {children}
-        </section>
-      </div>
+      <section className="dark:text-gray-100 text-gray-700 padded-container font-sans">
+        {children}
+      </section>
     </div>
   );
 }
