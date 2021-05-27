@@ -17,6 +17,7 @@ export const ThemeChanger: React.FunctionComponent = () => {
         onClick={() => {
           setTheme(theme === "light" ? "dark" : "light");
         }}
+        aria-label="Theme Toggle"
       >
         <div className="w-6 h-6">
           {theme === "light" ? (

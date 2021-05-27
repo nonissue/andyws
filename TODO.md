@@ -1,6 +1,14 @@
 # TODO
 
-## Content
+## BUGS
+
+### UI
+
+- [ ] **FIX LAYOUT SHIFT WHEN SCROLLBAR APPEARS?** !!
+
+## Improvements
+
+### Content
 
 - [ ] Add images to projects
   - [ ] Screenshots? Use code screenshot/share tool
@@ -8,7 +16,7 @@
 - [ ] Fetch activity from github api
 - [ ] Add photos page
 
-## Arch
+### Arch
 
 - [ ] Setup `siteContext` -> worth doing because if I track things like `navOpen`, I could implement scroll lock, etc.
 - [ ] Use `siteContext` -> worth doing because if I track things like `navOpen`, I could implement scroll lock, etc.
@@ -16,17 +24,19 @@
   - [ ] This may not be required with headless ui
 - [ ] Remove unused font styles
 
-## UI
+### UI
 
 - [x] Refactor components to use css files and `@apply` to style, rather than having inline
-      ~~- [ ] Ability to change logo colour with tailwind~~
-- [ ] Fix footer (positon absolute but dont cover content)
-      ~~- [ ] Change fontstack~~
-      ~~- [ ] IBM Plex Mono, IBM Plex Sans (see figma mockup)~~
+- [x] Fix footer (positon absolute but dont cover content)
 
-## Components
+### Components
 
 - [x] Menu Toggle
   - [x] For use with themechanger, open mobile menu, dismiss mobile menu
   - [x] Swap buttons when mobile nav open
 - [ ] Scale `MenuTimeline` content dynamically (so we can decrease size in mobile viewports)
+
+### Archive
+
+- [ ] Change fontstack
+- [ ] Ability to change logo colour with tailwind

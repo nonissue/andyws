@@ -45,7 +45,7 @@ const MenuPopover = ({ open, closePopover }: MenuPopoverProps) => {
     >
       <Popover.Panel
         static
-        className={`inset-x-0 transform absolute z-20 shadow-xl lg:dark:border-t-2 lg:dark:border-gray-900`}
+        className={`inset-x-0 transform absolute z-20 shadow-lg lg:dark:border-t-2 lg:dark:border-gray-900`}
       >
         <div className="absolute inset-0 flex" aria-hidden="true">
           <div className="bg-white w-1/2 dark:bg-almostblack lg:dark:border-r-2 dark:border-gray-900 border-r-0 " />
@@ -110,7 +110,7 @@ const Header = () => {
   const buttonClick = () => buttonRef.current?.click();
 
   return (
-    <Popover as="header" className="z-10 relative">
+    <Popover as="header" className="z-10 relative shadow-sm">
       {({ open }) => (
         <div className={`relative z-20`}>
           <Transition
@@ -149,7 +149,7 @@ const Header = () => {
                 </div>
 
                 <ThemeChanger />
-                <Popover.Button ref={buttonRef}>
+                <Popover.Button ref={buttonRef} aria-label="Navigation Toggle">
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
