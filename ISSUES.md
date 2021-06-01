@@ -5,6 +5,12 @@
 ### 21-05-31
 
 - Potential issue with theme changer still?
+  - Update: Nah, doesn't exist on dev
+  - UPDATE: ACTUALLY ISSUE OCCURS using private browser!
+  - Okay, finally fixed?
+    - added check of `theme` and `resolvedTheme` in `ThemeChanger`
+    - `localStorage.theme === "null"` is still buggy, but shouldn't occur in real world anyway
+    - Deploying to test now...
 
 ### 21-05-24
 

@@ -3,10 +3,12 @@ import { useTheme } from "next-themes";
 
 export const ThemeChanger: React.FunctionComponent = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, resolvedTheme, setTheme } = useTheme();
 
   // When mounted on client, now we can show the UI
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   if (!mounted) return null;
 
@@ -15,7 +17,16 @@ export const ThemeChanger: React.FunctionComponent = () => {
       <button
         className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-500 text-gray-600 border-0 border-gray-200 dark:border-gray-500 mr-1 dark:text-gray-300 bg-transparent dark:bg-transparent "
         onClick={() => {
-          setTheme(theme === "light" ? "dark" : "light");
+          // for some reason, if theme is light, setTheme doesn't
+          // change theme to dark on first use unless we use the logic below
+          let nextTheme;
+          if (theme === "system") {
+            nextTheme = resolvedTheme === "light" ? "dark" : "light";
+          } else {
+            nextTheme = theme === "light" ? "dark" : "light";
+          }
+
+          setTheme(nextTheme);
         }}
         aria-label="Theme Toggle"
       >
