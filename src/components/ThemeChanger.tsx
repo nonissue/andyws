@@ -13,7 +13,7 @@ export const ThemeChanger: React.FunctionComponent = () => {
   return (
     <div className="">
       <button
-        className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-500 text-gray-600 border-0 border-gray-200 dark:border-gray-500 mr-1 dark:text-gray-300 bg-transparent dark:bg-transparent "
+        className="p-2 m-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-500 text-gray-600 border-0 border-gray-200 dark:border-gray-500 mr-1 dark:text-gray-300 bg-transparent dark:bg-transparent "
         onClick={() => {
           setTheme(theme === "light" ? "dark" : "light");
         }}

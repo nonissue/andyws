@@ -29,5 +29,26 @@
     "type": "web",
     "link": "https://github.com/nonissue/wotd",
     "imgsrc": "/project-thumbs/3.jpg"
+  },
+  {
+    "title": "Test Proj",
+    "tags": [
+      "typescript",
+      "next.js",
+      "prisma",
+      "postgres",
+      "siri",
+      "shortcuts",
+      "blitzjs",
+      "prisma-engine",
+      "mongodb",
+      "couchdb",
+      "MYSQL",
+      "COBOL"
+    ],
+    "description": "A simple web project that allows me to share a word of the day by invoking a Siri shortcut on iOS. The shortcut sends a POST request with a JSON payload to a serverless API. The API runs a query with Prisma, and the PostgreSQL database is updated.",
+    "type": "web",
+    "link": "https://github.com/nonissue/wotd",
+    "imgsrc": "/project-thumbs/3.jpg"
   }
 ]

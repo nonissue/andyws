@@ -26,6 +26,45 @@ body {
   .padded-container {
     @apply px-6 py-8 pt-4 sm:py-12 sm:pt-12 sm:px-6 lg:px-8 max-w-4xl mx-auto bg-white bg-opacity-10 dark:bg-almostblack;
   }
+  .dark-shadow {
+    /* this is so dumb */
+    filter: drop-shadow(0px 1.5px 0px rgba(0, 0, 0, 0.9))
+      drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.4))
+      drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.6));
+  }
+  /* initial implementation of custom utility to transition gradient to transparent on hover */
+  /* this functionality is not provided by tailwind OOB */
+
+  .negative-z {
+    z-index: 1 !important;
+  }
+  .tag-gradient-hover {
+    position: relative;
+    display: block;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::after {
+      content: "";
+      opacity: 1;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      /* need to set z-index so that this bg doesn't cover */
+      z-index: -10;
+      transition: all 0.3s ease-in;
+
+      @apply bg-gradient-to-br from-gray-100 to-gray-50 dark:bg-gradient-to-l dark:from-gray-900 dark:to-gray-900 dark:via-almostblack;
+    }
+
+    &:hover::after {
+      opacity: 0;
+    }
+  }
 
   .container-padding {
     @apply px-4 py-8 pt-2 sm:py-12 sm:pt-12 sm:px-6 lg:px-8;

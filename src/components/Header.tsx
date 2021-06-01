@@ -149,7 +149,11 @@ const Header = () => {
                 </div>
 
                 <ThemeChanger />
-                <Popover.Button ref={buttonRef} aria-label="Navigation Toggle">
+                <Popover.Button
+                  ref={buttonRef}
+                  aria-label="Navigation Toggle"
+                  className="p-2"
+                >
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
