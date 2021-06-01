@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
+/*
+
+Notes:
+- should honour system theme by default
+- if changed, user pref stored in local storage
+
+*/
+
 export const ThemeChanger: React.FunctionComponent = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, resolvedTheme, setTheme } = useTheme();

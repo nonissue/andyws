@@ -11,6 +11,11 @@
     - added check of `theme` and `resolvedTheme` in `ThemeChanger`
     - `localStorage.theme === "null"` is still buggy, but shouldn't occur in real world anyway
     - Deploying to test now...
+    - To test:
+      - open site in private browsing window
+      - use theme toggle
+      - clear localstorage, change system ui theme
+      - try again
 
 ### 21-05-24
 
