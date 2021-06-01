@@ -2,6 +2,10 @@
 
 ## Header
 
+### 21-05-31
+
+- Potential issue with theme changer still?
+
 ### 21-05-24
 
 - Kind of fixed using `MenuLink` component, which wraps a link in a button with `tabIndex` set to `-1`

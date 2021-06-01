@@ -28,6 +28,7 @@
 
 - [x] Refactor components to use css files and `@apply` to style, rather than having inline
 - [x] Fix footer (positon absolute but dont cover content)
+- [ ] https://codepen.io/ReGGae/details/povjKxV
 
 ### Components
 
