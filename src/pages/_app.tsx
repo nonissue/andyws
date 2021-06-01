@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-types */
-
 import type { NextComponentType, NextPageContext } from "next";
 import { AppProps } from "next/app";
 import Head from "next/head";
@@ -33,7 +32,7 @@ const MyApp: React.FunctionComponent<AppPropsWithLayout> = ({
       <ThemeProvider
         forcedTheme={Component.theme || undefined}
         attribute="class"
-        enableSystem={true}
+        defaultTheme="system"
       >
         <SiteContextProvider>
           <Head>
