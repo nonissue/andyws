@@ -36,8 +36,8 @@ const ProjectItem = (project: Project) => {
             md:mb-2 md:justify-start md:pr-7
             lg:justify-start lg:pr-0 lg:-ml-1"
         >
-          {project.tags.map((title) => (
-            <Tag key={title} title={`#${title}`} />
+          {project.tags.map((title, index) => (
+            <Tag key={title} title={`#${title}`} index={index} />
           ))}
         </div>
       </div>
