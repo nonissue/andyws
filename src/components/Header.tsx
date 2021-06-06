@@ -53,7 +53,7 @@ const MenuPopover = ({ open, closePopover }: MenuPopoverProps) => {
         </div>
         <div className="relative max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 pb-2 md:pb-0">
           <nav
-            className="grid gap-y-6 md:gap-y-10 px-4 py-4 md:pt-8 sm:grid-cols-2 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12"
+            className="grid gap-y-6 md:gap-y-10 px-6 py-4 md:pt-8 sm:grid-cols-2 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12"
             aria-labelledby="site nav"
           >
             <h2 id="solutionsHeading" className="sr-only">
@@ -86,7 +86,7 @@ const MenuPopover = ({ open, closePopover }: MenuPopoverProps) => {
               </ul>
             </div>
           </nav>
-          <div className=" hidden md:block px-4 py-8 pt-2 sm:py-12 sm:px-6 lg:px-8 lg:pt-8 xl:pl-12 opacity-100">
+          <div className="block md:block px-6 py-4 sm:py-12 sm:px-6 lg:px-8 lg:pt-8 xl:pl-12 opacity-100">
             <h3 className="text-lg font-semibold">Recent Activity</h3>
             <MenuTimeline />
             <div className="mt-10 text-sm font-medium text-right">
@@ -129,7 +129,7 @@ const Header = () => {
             />
           </Transition>
           <div className="relative z-20 inset-0">
-            <div className="max-w-4xl mx-auto flex px-6 py-6 sm:px-6 lg:px-8 inset-0">
+            <div className="max-w-4xl mx-auto flex px-6 py-2 sm:px-6 lg:px-8 lg:py-6 inset-0">
               <div className="absolute inset-0 flex" aria-hidden="true">
                 <div className="bg-white w-1/2 dark:bg-almostblack lg:dark:border-r-0 dark:border-gray-900 border-r-0 100" />
                 <div className="bg-white w-1/2 dark:bg-almostblack lg:bg-gray-50 " />

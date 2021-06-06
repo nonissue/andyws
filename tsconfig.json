@@ -19,11 +19,6 @@
     "target": "esnext",
     "baseUrl": "."
   },
-  "exclude": ["node_modules", ".next", ".vercel", "public", "assets"],
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "src/components/Image.stories.tsx.ignore",
-    "src/components/Nav.stories.tsx.ignore"
-  ]
+  "exclude": ["node_modules", ".next", ".vercel", "public", "assets", "data"],
+  "include": ["**/*.ts", "**/*.tsx"]
 }

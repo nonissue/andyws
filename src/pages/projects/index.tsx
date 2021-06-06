@@ -1,7 +1,7 @@
 import NextLink from "next/link";
 import { slugify } from "src/lib/slugify";
 import { getLayout } from "src/layouts/Layout";
-import ProjectsData from "src/data/projects.json";
+import ProjectsData from "data/projects.json";
 
 const Projects: React.FunctionComponent & {
   getLayout?: (component: JSX.Element) => JSX.Element;

@@ -24,8 +24,9 @@ body {
 
 @layer components {
   .padded-container {
-    @apply px-6 py-8 pt-4 sm:py-12 sm:pt-12 sm:px-6 lg:px-8 max-w-4xl mx-auto bg-white bg-opacity-10 dark:bg-almostblack;
+    @apply px-6 py-8 pt-8 sm:py-12 sm:pt-12 sm:px-6 lg:px-8 max-w-4xl mx-auto bg-white bg-opacity-10 dark:bg-almostblack;
   }
+
   .dark-shadow {
     /* this is so dumb */
     filter: drop-shadow(0px 1.5px 0px rgba(0, 0, 0, 0.9))

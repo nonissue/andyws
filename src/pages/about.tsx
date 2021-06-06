@@ -6,7 +6,7 @@ const About: React.FunctionComponent & {
 } = () => {
   return (
     <section className="bg-white dark:bg-almostblack font-sans dark:border-gray-800">
-      <div className="text-3xl text-center p-10 leading-10 font-display">
+      <div className="text-xl text-left py-0 leading-10 font-display">
         <span className="font-semibold inline">Andy Williams</span> is a
         developer and photographer based in Edmonton, Canada.
       </div>
