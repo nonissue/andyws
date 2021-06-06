@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
 import { MenuTimeline, ThemeChanger } from "src/components";
-import SiteConfig from "src/data/site.config.json";
+import SiteConfig from "data/site.config.json";
 
 type MenuPopoverProps = {
   open: boolean;

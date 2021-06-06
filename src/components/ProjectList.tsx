@@ -1,5 +1,5 @@
 import { ProjectItem } from "./ProjectItem";
-import Projects from "src/data/projects.json";
+import Projects from "data/projects.json";
 
 const ProjectList = () => {
   return (
