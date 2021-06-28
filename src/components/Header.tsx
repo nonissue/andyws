@@ -86,18 +86,20 @@ const MenuPopover = ({ open, closePopover }: MenuPopoverProps) => {
               </ul>
             </div>
           </nav>
-          <div className="block md:block px-6 py-4 sm:py-12 sm:px-6 lg:px-8 lg:pt-8 xl:pl-12 opacity-100">
-            <h3 className="text-lg font-semibold">Recent Activity</h3>
-            <MenuTimeline />
-            <div className="mt-10 text-sm font-medium text-right">
-              <a
-                href="#"
-                className=" transition ease-in-out duration-150 dark:text-indigo-300"
-              >
-                View more activity <span aria-hidden="true">&rarr;</span>
-              </a>
+          {false && (
+            <div className="block md:block px-6 py-4 sm:py-12 sm:px-6 lg:px-8 lg:pt-8 xl:pl-12 opacity-100">
+              <h3 className="text-lg font-semibold">Recent Activity</h3>
+              <MenuTimeline />
+              <div className="mt-10 text-sm font-medium text-right">
+                <a
+                  href="#"
+                  className=" transition ease-in-out duration-150 dark:text-indigo-300"
+                >
+                  View more activity <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </Popover.Panel>
     </Transition>
