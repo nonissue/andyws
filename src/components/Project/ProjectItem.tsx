@@ -1,5 +1,5 @@
 import NextLink from "next/link";
-import { Tag } from "src/components";
+import { ProjectTag } from "src/components";
 
 type Project = {
   title: string;
@@ -41,7 +41,7 @@ const ProjectItem = (project: Project) => {
         >
           {/* <TagDropdown /> */}
           {project.tags.map((title, index) => (
-            <Tag key={title} title={`#${title}`} index={index} />
+            <ProjectTag key={title} title={`#${title}`} index={index} />
           ))}
         </div>
       </div>

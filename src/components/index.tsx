@@ -1,7 +1,5 @@
 export * from "./Header";
 export { Footer } from "./Footer";
-export { ProjectItem } from "./ProjectItem";
-export { ProjectList } from "./ProjectList";
+export * from "./Project";
 export { Providers } from "./Providers";
-export { Tag } from "./Tag";
 export { ThemeChanger } from "./ThemeChanger";

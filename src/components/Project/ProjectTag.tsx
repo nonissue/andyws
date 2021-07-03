@@ -3,7 +3,7 @@ type TagProps = {
   index: number;
 };
 
-const Tag = ({ title, index }: TagProps) => {
+const ProjectTag = ({ title, index }: TagProps) => {
   return (
     <>
       <div
@@ -25,4 +25,4 @@ const Tag = ({ title, index }: TagProps) => {
   );
 };
 
-export { Tag };
+export { ProjectTag };
