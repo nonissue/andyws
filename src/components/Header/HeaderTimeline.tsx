@@ -48,7 +48,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-const MenuTimeline = () => {
+const HeaderTimeline = () => {
   return (
     <div className="flow-root mt-4 text-sm">
       <ul className="-mb-8">
@@ -100,4 +100,4 @@ const MenuTimeline = () => {
   );
 };
 
-export { MenuTimeline };
+export { HeaderTimeline };
