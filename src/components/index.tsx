@@ -1,11 +1,8 @@
 export * from "./Header";
 export { Footer } from "./Footer";
 export { MenuTimeline } from "./MenuTimeline";
-// export { ProjectItem } from "./ProjectItem";
-export { ProjectItem } from "./ProjectItem2";
-// export { ProjectList } from "./ProjectList";
-export { ProjectList } from "./ProjectList2";
+export { ProjectItem } from "./ProjectItem";
+export { ProjectList } from "./ProjectList";
 export { Providers } from "./Providers";
 export { Tag } from "./Tag";
-export { TagDropdown } from "./TagDropdown";
 export { ThemeChanger } from "./ThemeChanger";
