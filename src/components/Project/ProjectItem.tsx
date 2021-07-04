@@ -1,4 +1,5 @@
 import NextLink from "next/link";
+import { slugify } from "src/lib/slugify";
 import { ProjectTag } from "src/components";
 
 type Project = {
@@ -21,7 +22,7 @@ const ProjectItem = (project: Project) => {
                     md:max-w-none md:mx-0
                     lg:col-span-1 "
       >
-        <NextLink href={project.link}>
+        <NextLink href={`/projects/${slugify(project.title)}`}>
           <a href={project.link} className="flex h-full items-center">
             <h2
               className="text-3xl mt-0.5 mb-2 font-sans font-black tracking-tightest text-gray-700 underline-gray-100

@@ -6,13 +6,13 @@ const About: React.FunctionComponent & {
 } = () => {
   return (
     <section className="bg-white dark:bg-almostblack font-sans dark:border-gray-800">
-      <div className="text-xl text-left py-0 leading-10 font-display">
+      <div className="text-xl text-left py-0 leading-8 font-display">
         <span className="font-semibold inline">Andy Williams</span> is a
         developer and photographer based in Edmonton, Canada.
       </div>
-      <div className="w-full text-center">
+      <div className="w-full my-8">
         <NextLink href="/contact">
-          <a className="text-xl font-mono uppercase underline opacity-70">
+          <a className="text-xl font-mono underline-gray-500 dark:underline-gray-500 opacity-90">
             Contact
           </a>
         </NextLink>
