@@ -14,6 +14,7 @@ body {
   @apply text-gray-900;
 }
 
+/* To future me: before messing with #__next, realize that it renders differently in dev vs prod for some reason */
 /* #__next {
   @apply flex flex-col h-screen;
 } */
