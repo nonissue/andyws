@@ -34,7 +34,7 @@ module.exports = {
         indigo: colors.indigo,
         lime: colors.lime,
         amber: colors.amber,
-        lb: colors.lightBlue,
+        sky: colors.sky,
         white: "#fff",
         mint: radixDark.mint,
         lime: radixDark.lime,

@@ -8,8 +8,8 @@ type ContactLinkProps = {
 
 const ContactLink = ({ title, href }: ContactLinkProps) => {
   return (
-    <li className="inline mr-2 hover:text-orange-400 transition-colors duration-250">
-      <span className=" font-normal opacity-50">@</span>
+    <li className="inline font-displayalt mr-2 hover:text-red-500 dark:hover:text-red-400 transition-colors duration-250 ease-in ">
+      <span className="font-light font-displayalt opacity-50">@</span>
       <NextLink href={href}>
         <a className="">{title}</a>
       </NextLink>
@@ -21,7 +21,7 @@ const Contact: React.FunctionComponent & {
   getLayout?: (component: JSX.Element) => JSX.Element;
 } = () => {
   return (
-    <section className="bg-white dark:bg-almostblack font-sans">
+    <section className="bg-white dark:bg-almostblack font-sans py-12">
       <div className="">
         <h2 className="hidden text-2xl dark:text-gray-200 font-bold font-sans text-gray-700 text-left mb-8">
           Contact

@@ -6,9 +6,9 @@ const Index: NextPage & {
   getLayout?: (component: JSX.Element) => JSX.Element;
 } = () => {
   return (
-    <div className="">
+    <section className="">
       <ProjectList />
-    </div>
+    </section>
   );
 };
 
