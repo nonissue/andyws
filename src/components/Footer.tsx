@@ -1,8 +1,9 @@
 const Footer = () => {
   return (
-    <div className=" custom-container mb-0 z-0 relative lg:static md:absolute bottom-0 left-0 right-0">
-      <div className="padded-container py-6 px-6 font-mono uppercase text-xxs md:text-center text-center bg-white text-gray-400 dark:bg-almostblack">
-        2021 © nonissue inc
+    <div className="  z-0 static flex justify-center mb-8 ">
+      <div className="py-0 px-1 font-display font-semibold tracking-wide uppercase text-md sm:text-md md:text-center text-center bg-gray-900 bg-opacity-100 text-white dark:text-black dark:bg-gray-300 dark:bg-opacity-90">
+        <span className="font-display text-md font-normal opacity-60">©</span>{" "}
+        nonissue inc
       </div>
     </div>
   );
