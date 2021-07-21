@@ -38,6 +38,10 @@ export default class Document extends NextDocument {
             href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
           <script async src={`https://sa.nonissue.org/latest.js`} />
         </Head>
         <body className="text-gray-900 dark:text-gray-100 dark:bg-almostblack bg-white">
