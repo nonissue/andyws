@@ -43,7 +43,7 @@ const HeaderPopover = ({ open, closePopover, data }: HeaderPopoverProps) => {
           <div className="bg-white w-3/5 dark:bg-almostblack " />
           <div className=" w-2/5 dark:bg-almostblack bg-white lg:bg-gray-50" />
         </div>
-        <div className="relative max-w-2xl mx-auto grid grid-cols-1 lg:grid-cols-1 pb-2 md:pb-0">
+        <div className="relative max-w-3xl mx-auto grid grid-cols-1 lg:grid-cols-1 pb-2 md:pb-0">
           <nav
             className="grid gap-y-6 md:gap-y-10 px-6 py-4 md:pt-8 sm:grid-cols-3 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12"
             aria-labelledby="site nav"

@@ -30,7 +30,7 @@ const Header = () => {
             />
           </Transition>
           <div className="relative z-20 inset-0">
-            <div className="max-w-2xl mx-auto flex px-6 py-2 sm:px-6 lg:px-8 lg:py-2 inset-0 ">
+            <div className="max-w-3xl mx-auto flex px-6 py-2 sm:px-6 lg:px-8 lg:py-2 inset-0 ">
               <div className="absolute inset-0 flex" aria-hidden="true">
                 <div className="bg-white w-3/5 dark:bg-almostblack" />
                 <div className="bg-white w-2/5 dark:bg-bluegray-900 dark:brightness-75 lg:bg-gray-50" />
@@ -48,7 +48,9 @@ const Header = () => {
                     </a>
                   </Link>
                 </div>
-
+                <div className="font-mono item-start flex-shrink tracking-wider uppercase text-xs mr-3 text-red-400 leading-none">
+                  beta
+                </div>
                 <ThemeChanger />
                 <Popover.Button
                   ref={buttonRef}
