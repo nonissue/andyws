@@ -14,9 +14,9 @@ body {
   @apply min-h-screen text-gray-900;
 }
 
-#__next {
+/* #__next {
   @apply flex flex-col h-screen;
-}
+} */
 
 /* #__next > span {
   @apply flex flex-col h-screen;
