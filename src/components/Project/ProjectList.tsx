@@ -13,7 +13,7 @@ const ProjectList = () => {
           Development
         </h2>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 divide-y divide-gray-200 dark:divide-gray-800 border-b dark:border-gray-600">
+      <div className="grid grid-cols-1 lg:grid-cols-3 divide-y divide-gray-200 dark:divide-gray-800 border-b dark:border-gray-800 ">
         {Projects.map((project) => (
           <ProjectItem key={project.title} {...project} />
         ))}
