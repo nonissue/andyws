@@ -3,19 +3,21 @@ import Projects from "data/projects.json";
 
 const ProjectList = () => {
   return (
-    <div className="bg-white dark:bg-almostblack">
-      <div className="grid grid-cols-1 md:grid-cols-3 items-center mb-4">
+    <div className="bg-white dark:bg-almostblack mx-auto">
+      <div className="grid-cols-1 md:grid-cols-1 items-center mb-4">
         <h2
-          className="mx-auto text-xl font-bold w-full text-gray-700 text-left 
-           dark:text-gray-100
+          className="text-lg md:text-xl bg-red-100 dark:bg-red-900 overflow-hidden dark:bg-opacity-30 font-normal relative inline bg-opacity-70 px-2 leading-tight py-1 font-display  text-left text-red-500
+           dark:text-red-200
             md:mt-0 md:max-w-none md:col-span-3 md:mx-0"
         >
-          Projects
+          Development
         </h2>
       </div>
-      {Projects.map((project) => (
-        <ProjectItem key={project.title} {...project} />
-      ))}
+      <div className="grid grid-cols-1 lg:grid-cols-3 divide-y divide-gray-200 dark:divide-gray-800 border-b dark:border-gray-600">
+        {Projects.map((project) => (
+          <ProjectItem key={project.title} {...project} />
+        ))}
+      </div>
     </div>
   );
 };
