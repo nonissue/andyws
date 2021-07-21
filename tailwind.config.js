@@ -1,4 +1,7 @@
 /* eslint-disable */
+
+const radixDark = require("./plugins/radix-colors/dark");
+const radixLight = require("./plugins/radix-colors/light");
 const underlineColorPlugin = require("./tailwind-underline-plugin");
 const colors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
@@ -33,13 +36,19 @@ module.exports = {
         amber: colors.amber,
         lb: colors.lightBlue,
         white: "#fff",
+        mint: radixDark.mint,
+        lime: radixDark.lime,
+        limeLight: radixLight.lime,
+        limeA: radixDark.limeA,
+        amber: radixDark.amber,
       },
       fontSize: {
         xxs: ".625rem",
       },
       fontFamily: {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
-        display: ["Space Mono", ...defaultTheme.fontFamily.sans],
+        display: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
+        displayalt: ["Space Mono", ...defaultTheme.fontFamily.sans],
         mono: [
           "IBM Plex Mono",
           "ui-monospace",
