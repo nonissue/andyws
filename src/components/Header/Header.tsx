@@ -11,7 +11,7 @@ const Header = () => {
   const buttonClick = () => buttonRef.current?.click();
 
   return (
-    <Popover as="header" className="z-10 relative shadow-sm">
+    <Popover as="header" className="z-10 relative shadow-sm  ">
       {({ open }) => (
         <div className={`relative z-20`}>
           <Transition
@@ -30,10 +30,10 @@ const Header = () => {
             />
           </Transition>
           <div className="relative z-20 inset-0">
-            <div className="max-w-4xl mx-auto flex px-6 py-2 sm:px-6 lg:px-8 lg:py-6 inset-0">
+            <div className="max-w-2xl mx-auto flex px-6 py-2 sm:px-6 lg:px-8 lg:py-2 inset-0 ">
               <div className="absolute inset-0 flex" aria-hidden="true">
-                <div className="bg-white w-1/2 dark:bg-almostblack lg:dark:border-r-0 dark:border-gray-900 border-r-0 100" />
-                <div className="bg-white w-1/2 dark:bg-almostblack lg:bg-gray-50 " />
+                <div className="bg-white w-3/5 dark:bg-almostblack" />
+                <div className="bg-white w-2/5 dark:bg-bluegray-900 dark:brightness-75 lg:bg-gray-50" />
               </div>
 
               <div className="relative flex items-center space-between w-full">

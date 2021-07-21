@@ -34,15 +34,18 @@ const HeaderPopover = ({ open, closePopover, data }: HeaderPopoverProps) => {
     >
       <Popover.Panel
         static
-        className={`inset-x-0 transform absolute z-20 shadow-lg lg:dark:border-t-2 lg:dark:border-gray-900`}
+        className={`inset-x-0 transform absolute z-20 shadow-lg dark:shadow-2xl lg:dark:border-t-2 dark:border-opacity-60 dark:border-gray-900 `}
       >
-        <div className="absolute inset-0 flex" aria-hidden="true">
-          <div className="bg-white w-1/2 dark:bg-almostblack lg:dark:border-r-2 dark:border-gray-900 border-r-0 " />
-          <div className=" w-1/2 dark:bg-almostblack bg-white lg:bg-gray-50" />
+        <div
+          className="absolute inset-0 flex border-b dark:border-opacity-90 dark:border-gray-900"
+          aria-hidden="true"
+        >
+          <div className="bg-white w-3/5 dark:bg-almostblack " />
+          <div className=" w-2/5 dark:bg-almostblack bg-white lg:bg-gray-50" />
         </div>
-        <div className="relative max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 pb-2 md:pb-0">
+        <div className="relative max-w-2xl mx-auto grid grid-cols-1 lg:grid-cols-1 pb-2 md:pb-0">
           <nav
-            className="grid gap-y-6 md:gap-y-10 px-6 py-4 md:pt-8 sm:grid-cols-2 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12"
+            className="grid gap-y-6 md:gap-y-10 px-6 py-4 md:pt-8 sm:grid-cols-3 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12"
             aria-labelledby="site nav"
           >
             <h2 id="solutionsHeading" className="sr-only">
