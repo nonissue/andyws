@@ -24,13 +24,13 @@ pyftsubset Inter.ttf \
     U+FEFF, U+FFFD;
 }
 
-.italic,
-address,
+/* address,
 cite,
 dfn,
 em,
 h3,
-h5,
+h5, */
+.italic,
 i,
 var {
   font-variation-settings: "slnt" -8;
