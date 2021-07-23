@@ -1,4 +1,4 @@
-html {
+/* html {
   @apply min-h-screen;
   font-family: "Inter", sans-serif;
 }
@@ -6,7 +6,7 @@ html {
   html {
     font-family: "Inter var", sans-serif;
   }
-}
+} */
 
 body {
   @apply text-gray-900;

@@ -46,7 +46,7 @@ module.exports = {
         xxs: ".625rem",
       },
       fontFamily: {
-        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
         display: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
         displayalt: ["Space Mono", ...defaultTheme.fontFamily.sans],
         mono: [
