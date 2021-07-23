@@ -30,7 +30,7 @@ export default class Document extends NextDocument {
           />
           <link
             rel="preload"
-            href="/fonts/inter-var-latin-21-07-22-2.woff2"
+            href="/fonts/Inter-var-latin-21-07-22-2.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"

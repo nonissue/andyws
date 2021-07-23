@@ -48,7 +48,7 @@ const Header = () => {
                     </a>
                   </Link>
                 </div>
-                <div className="font-mono item-start flex-shrink tracking-wider uppercase text-xs mr-3 text-red-400 leading-none">
+                <div className="font-displayalt item-start flex-shrink font-medium tracking-wide uppercase  text-xs border border-dashed  border-gray-300 text-gray-600 dark:border-gray-600  py-0 px-1  mr-3 dark:text-gray-400 ">
                   beta
                 </div>
                 <ThemeChanger />
