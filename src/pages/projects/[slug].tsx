@@ -9,7 +9,7 @@ const ProjectPage = () => {
   return (
     <section className="padded-container bg-white dark:bg-almostblack font-sans">
       <div className="text-left opacity-50 text-xs uppercase py-1">
-        <NextLink href="/projects">
+        <NextLink href="/">
           <a>&larr; Back to Projects</a>
         </NextLink>
       </div>
