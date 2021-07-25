@@ -1,7 +1,8 @@
 import { ProjectItem } from "./ProjectItem";
-import Projects from "data/projects.json";
+import { Project } from "src/types";
+// import Projects from "data/projects.json";
 
-const ProjectList = () => {
+const ProjectList = ({ projects }: { projects: Project[] }) => {
   return (
     <div className="bg-white dark:bg-almostblack mx-auto">
       <div className="grid-cols-1 md:grid-cols-1 items-center mb-4">
@@ -14,7 +15,7 @@ const ProjectList = () => {
         </h3>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 divide-y divide-gray-200 dark:divide-gray-800 border-b dark:border-gray-800 ">
-        {Projects.map((project) => (
+        {projects.map((project) => (
           <ProjectItem key={project.title} {...project} />
         ))}
       </div>
