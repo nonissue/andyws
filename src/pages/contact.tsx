@@ -17,9 +17,7 @@ const ContactLink = ({ title, href }: ContactLinkProps) => {
   );
 };
 
-const Contact: React.FunctionComponent & {
-  getLayout?: (component: JSX.Element) => JSX.Element;
-} = () => {
+const Contact = () => {
   return (
     <section className="bg-white dark:bg-almostblack font-sans py-12">
       <div className="">
