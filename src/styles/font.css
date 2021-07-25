@@ -8,8 +8,6 @@ pyftsubset Inter.ttf \
   --flavor="woff2" \
   --output-file="Inter-subset-2.woff2"
 
-
-
 */
 
 /* latin */
@@ -48,5 +46,15 @@ var {
   i,
   var {
     font-style: normal;
+  }
+}
+
+@supports (font-variation-settings: normal) {
+  .font-label {
+    --casl: "CASL" 0;
+    --slnt: "slnt" 0;
+    --CRSV: "CRSV" 0;
+    --mono: "MONO" 1;
+    font-variation-settings: svar(--mono), var(--casl), var(--slnt), var(--CRSV);
   }
 }

@@ -3,7 +3,7 @@
     "subMenuItems": [
       {
         "title": "Projects",
-        "href": "/projects"
+        "href": "/"
       },
       {
         "title": "Contact",
