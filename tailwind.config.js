@@ -12,7 +12,6 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/layouts/**/*.{js,ts,jsx,tsx}",
-    // "./src/**/*.tsx",
   ],
   darkMode: "class", // 'media' or 'class'
   theme: {
@@ -48,11 +47,10 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
         display: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
-        displayalt: ["Space Mono", ...defaultTheme.fontFamily.sans],
+        display2: ["Space Mono", ...defaultTheme.fontFamily.sans],
         mono: [
-          "IBM Plex Mono",
-          "ui-monospace",
           "SFMono-Regular",
+          "ui-monospace",
           "Menlo",
           "Monaco",
           "Consolas",
@@ -72,14 +70,6 @@ module.exports = {
           "monospace",
         ],
       },
-      // spacing: {
-      //   1: "8px",
-      //   2: "12px",
-      //   3: "16px",
-      //   4: "24px",
-      //   5: "32px",
-      //   6: "48px",
-      // },
     },
   },
   variants: {

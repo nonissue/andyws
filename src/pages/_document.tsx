@@ -25,10 +25,6 @@ export default class Document extends NextDocument {
           />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=swap"
-            rel="stylesheet"
-          />
-          <link
             rel="preload"
             href="/fonts/Inter-var-latin-21-07-22-2.woff2"
             as="font"
@@ -36,9 +32,13 @@ export default class Document extends NextDocument {
             crossOrigin="anonymous"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Recursive:wght,CRSV,MONO@400,0,1;900,0,1&display=swap"
             rel="stylesheet"
           />
+          {/* <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+          /> */}
           <link
             href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
             rel="stylesheet"
