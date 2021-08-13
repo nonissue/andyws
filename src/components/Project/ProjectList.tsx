@@ -11,7 +11,7 @@ const ProjectList = ({ projects }: { projects: Project[] }) => {
            dark:text-red-200
             md:mt-0 md:max-w-none md:col-span-3 md:mx-0"
         >
-          Development
+          Projects
         </h3>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 divide-y divide-gray-200 dark:divide-gray-800 border-b dark:border-gray-800 ">

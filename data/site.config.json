@@ -3,7 +3,15 @@
     "subMenuItems": [
       {
         "title": "Projects",
-        "href": "/"
+        "href": "/projects"
+      },
+      {
+        "title": "Photography",
+        "href": "/photos"
+      },
+      {
+        "title": "Log",
+        "href": "/log"
       },
       {
         "title": "Contact",
@@ -12,10 +20,6 @@
       {
         "title": "About",
         "href": "/about"
-      },
-      {
-        "title": "404",
-        "href": "/404"
       }
     ],
     "socialMediaItems": [

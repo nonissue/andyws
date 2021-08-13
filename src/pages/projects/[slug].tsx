@@ -11,6 +11,14 @@ const ImageLoader = ({ src }: { src: string }) => {
 };
 
 const ProjectPage = ({ project }: { project: Project }) => {
+  if (!project) {
+    return (
+      <section className="padded-container bg-white dark:bg-almostblack font-sans">
+        Loading...
+      </section>
+    );
+  }
+
   return (
     <section className="padded-container bg-white dark:bg-almostblack font-sans">
       <div className="text-left opacity-50 text-xs uppercase py-1">

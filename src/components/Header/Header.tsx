@@ -49,7 +49,7 @@ const Header = () => {
                   </Link>
                 </div>
                 <div className="font-display2 item-start flex-shrink font-medium tracking-wide uppercase  text-xs border border-dashed  border-gray-300 text-gray-600 dark:border-gray-600  py-0 px-1  mr-3 dark:text-gray-400 ">
-                  beta
+                  <Link href="/404">beta</Link>
                 </div>
                 <ThemeChanger />
                 <Popover.Button
