@@ -19,6 +19,14 @@
     "target": "esnext",
     "baseUrl": "."
   },
-  "exclude": ["node_modules", ".next", ".vercel", "public", "assets", "data"],
+  "exclude": [
+    "node_modules",
+    ".next",
+    ".vercel",
+    "public",
+    "assets",
+    "data",
+    "out"
+  ],
   "include": ["**/*.ts", "**/*.tsx"]
 }
