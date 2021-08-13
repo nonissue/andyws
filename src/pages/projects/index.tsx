@@ -1,35 +1,27 @@
-import NextLink from "next/link";
-import { slugify } from "src/lib/slugify";
+import { ProjectList } from "src/components";
+import { NextPage } from "next/types";
 import { getLayout } from "src/layouts/Layout";
-import ProjectsData from "data/projects.json";
+import projectData from "data/projects.json";
+import { Project } from "src/types";
 
-const Projects: React.FunctionComponent & {
+const Index: NextPage<{ projects: Project[] }> & {
   getLayout?: (component: JSX.Element) => JSX.Element;
-} = () => {
+} = ({ projects }) => {
   return (
-    <section className=" bg-white dark:bg-almostblack font-sans py-16">
-      <h2 className="font-display font-bold uppercase text-4xl sm:text-6xl md:text-5xl lg:text-6xl">
-        Projects
-      </h2>
-      <br />
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-10 gap-y-6 min-h-full">
-        <ul>
-          {ProjectsData.map((project) => (
-            <li key={project.title}>
-              —{" "}
-              <NextLink href={`/projects/${slugify(project.title)}`}>
-                <a className="underline-gray-300 text-xl dark:underline-gray-600 hover:underline-orange-400 dark:hover:no-underline transition-all duration-1000">
-                  {project.title}
-                </a>
-              </NextLink>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <section>
+      <ProjectList projects={projects} />
     </section>
   );
 };
 
-Projects.getLayout = getLayout;
+export const getStaticProps = async () => {
+  return {
+    props: {
+      projects: projectData,
+    },
+  };
+};
 
-export default Projects;
+Index.getLayout = getLayout;
+
+export default Index;
