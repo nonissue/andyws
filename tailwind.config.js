@@ -41,6 +41,7 @@ module.exports = {
         limeA: radixDark.limeA,
         amber: radixDark.amber,
       },
+
       fontSize: {
         xxs: ".625rem",
       },
@@ -70,6 +71,95 @@ module.exports = {
           "monospace",
         ],
       },
+      typography: (theme) => ({
+        // https://sergiodxa.com/articles/use-tailwindcss-typography-with-dark-mode-styles
+        // Reference custom fontFamily: https://github.com/tailwindlabs/tailwindcss-typography/issues/14
+        DEFAULT: {
+          css: {
+            color: theme("colors.gray.800"),
+            a: {
+              color: theme("colors.red.900"),
+              "text-decoration": "none",
+              fontWeight: "false",
+              "&:hover, &.active": {
+                color: theme("colors.red.500"),
+                strong: {
+                  color: theme("colors.gray.50"),
+                },
+              },
+            },
+            h1: {
+              color: theme("colors.gray.800"),
+              fontFamily: `${theme("fontFamily.sans")}`,
+              fontWeight: 900,
+            },
+            h2: {
+              color: theme("colors.gray.800"),
+            },
+            h3: {
+              color: theme("colors.gray.400"),
+              fontWeight: 400,
+            },
+            h4: {
+              color: theme("colors.gray.800"),
+            },
+            h5: {
+              color: theme("colors.gray.500"),
+              // fontStyle: "italic",
+              fontSize: "0.9em",
+              // lineHeight: "calc(0.9em * 1.8)",
+            },
+            code: {
+              color: theme("colors.gray.50"),
+              "background-color": theme("colors.gray.800"),
+              "&:before, &:after": {
+                display: "none",
+              },
+            },
+            p: {
+              color: theme("colors.gray.800"),
+            },
+          },
+        },
+        dark: {
+          css: {
+            color: theme("colors.gray.900"),
+            a: {
+              color: theme("colors.gray.50"),
+              "text-decoration": "none",
+              "&:hover, &.active": {
+                color: theme("colors.amber.amber11"),
+              },
+            },
+            h1: {
+              color: theme("colors.white"),
+            },
+            h2: {
+              color: theme("colors.red.100"),
+            },
+            h3: {
+              color: theme("colors.gray.200"),
+              fontWeight: 400,
+            },
+            h4: {
+              color: theme("colors.gray.50"),
+            },
+            h5: {
+              color: theme("colors.gray.500"),
+            },
+            code: {
+              color: theme("colors.gray.800"),
+              "background-color": theme("colors.gray.50"),
+              "&:before, &:after": {
+                display: "none",
+              },
+            },
+            p: {
+              color: theme("colors.gray.50"),
+            },
+          },
+        },
+      }),
     },
   },
   variants: {
@@ -82,6 +172,7 @@ module.exports = {
       ringColor: ["dark", "hover"],
       ringOpacity: ["dark", "hover"],
       ringWidth: ["dark", "hover"],
+      typography: ["dark"],
     },
   },
   plugins: [
