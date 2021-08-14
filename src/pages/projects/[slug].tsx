@@ -4,7 +4,8 @@ import Image from "next/image";
 import { slugify } from "src/lib/slugify";
 import { Project } from "src/types";
 import projectData from "data/projects.json";
-// import projectPic from "../../../public/rose-thorn_25p.png";
+
+const ZERO = 0; // why do i do this
 
 const ImageLoader = ({ src }: { src: string }) => {
   return `https://dev.andy.ws/_next/image?url=${src}&w=3840&q=75`;
@@ -70,7 +71,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      project: project[0],
+      project: project[ZERO], // destructure instead of being an idiot plz
     },
   };
 };
@@ -81,8 +82,8 @@ export async function getStaticPaths() {
   }));
 
   return {
-    paths,
     fallback: false, // See the "fallback" section below
+    paths,
   };
 }
 
