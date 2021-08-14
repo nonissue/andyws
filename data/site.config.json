@@ -2,20 +2,20 @@
   "nav": {
     "subMenuItems": [
       {
-        "title": "Projects",
-        "href": "/"
+        "title": "Projects*",
+        "href": "/projects"
+      },
+      {
+        "title": "Log*",
+        "href": "/WIP"
       },
       {
         "title": "Contact",
         "href": "/contact"
       },
       {
-        "title": "About",
-        "href": "/about"
-      },
-      {
-        "title": "404",
-        "href": "/404"
+        "title": "Photos*",
+        "href": "/WIP"
       }
     ],
     "socialMediaItems": [

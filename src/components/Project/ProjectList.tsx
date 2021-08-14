@@ -11,13 +11,23 @@ const ProjectList = ({ projects }: { projects: Project[] }) => {
            dark:text-red-200
             md:mt-0 md:max-w-none md:col-span-3 md:mx-0"
         >
-          Development
+          Projects*
         </h3>
       </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-3 divide-y divide-gray-200 dark:divide-gray-800 border-b dark:border-gray-800 ">
         {projects.map((project) => (
           <ProjectItem key={project.title} {...project} />
         ))}
+      </div>
+      <div className=" my-4">
+        <h3
+          className="text-sm md:text-sm opacity-75 overflow-hidden dark:bg-opacity-30 relative inline bg-opacity-70 leading-tight py-1 font-mono  text-left text-gray-500
+           dark:text-gray-200
+            md:mt-0 md:max-w-none md:col-span-3 md:mx-0"
+        >
+          * – Work in Progress
+        </h3>
       </div>
     </div>
   );

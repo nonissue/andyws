@@ -59,14 +59,14 @@ const ProjectItemHeaderButton = ({ title, link }: ProjectItemHeaderProps) => {
             dark:bg-gradient-to-tl dark:from-gray-800 dark:via-bluegray-900 dark:to-gray-700`}
         >
           <h2
-            className={`text-2xl  font-display font-black bg-white bg-opacity-75 text-mint-mint7 underline-gray-400 transition-colors duration-300
-                   md:text-5xl lg:text-5xl shadow-md dark:shadow-xl
-                 hover:text-orange-500
-                 dark:bg-almostblack dark:bg-opacity-90
-                 dark:text-mint-mint9 dark:hover:text-orange-400 dark:underline-gray-700
-                py-1 px-2 md:py-3 rounded md:px-5 ${calcOffset(
-                  currentRotate
-                )} ${calcOffset(currentSkew)}`}
+            className={`text-2xl font-display font-black bg-white bg-opacity-75 text-mint-mint7 underline-gray-900 transition-colors duration-300 shadow-md  py-1 px-2  rounded  
+                        md:text-5xl lg:text-5xl md:py-3
+                      hover:text-orange-500
+                      dark:bg-almostblack dark:bg-opacity-90  dark:shadow-xl
+                      dark:text-mint-mint9 dark:hover:text-orange-400 dark:underline-gray-700
+                        md:px-5 ${calcOffset(currentRotate)} ${calcOffset(
+              currentSkew
+            )}`}
           >
             {title}
           </h2>
@@ -83,7 +83,7 @@ const ProjectItemHeader = ({ title, link }: ProjectItemHeaderProps) => {
         <a href={link} className={`h-full items-center w-max`}>
           {/* ${calcOffset(currentRotate)} ${calcOffset(currentSkew)} */}
           <h2
-            className={`text-4xl font-sans tracking-tighter font-extrabold text-gray-800 transition-colors duration-200
+            className={`text-4xl font-sans  tracking-tighter font-extrabold text-gray-800 transition-colors duration-200
                    md:text-5xl lg:text-6xl 
                  hover:text-red-500 dark:hover:text-red-400
                  dark:text-gray-50

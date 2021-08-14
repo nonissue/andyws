@@ -19,6 +19,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended", // eslint react rules (github.com/yannickcr/eslint-plugin-react)
     "plugin:jsx-a11y/recommended", // accessibility plugin
+    "plugin:@next/next/recommended",
   ],
   rules: {
     "react/prop-types": "off", // We turn off prop-types rule, as we will use TypeScript's types instead.
