@@ -55,11 +55,11 @@ const Index: NextPage<{ projects: Project[] }> & {
           <Link href="https://verbosed.vercel.app">
             <a>words</a>
           </Link>{" "}
-          that pique my interest, browse some of my favourite
+          that pique my interest, browse some of my favourite{" "}
           <Link href="/photos">
-            <a>photos,</a>
+            <a>photos</a>
           </Link>
-          or find out different ways to{" "}
+          , or find out different ways to{" "}
           <Link href="/contact">
             <a>contact me</a>
           </Link>

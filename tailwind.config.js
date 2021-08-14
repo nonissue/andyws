@@ -97,7 +97,7 @@ module.exports = {
               transition: "all 0.15s ease-in",
               color: theme("colors.lightRadixRed.red11"),
               background: theme("colors.lightRadixRed.red4"),
-              lineHeight: `calc(0.9em * 1.7)`,
+              lineHeight: `1.7`,
               display: "inline-block",
               "text-decoration": "none",
               "&:hover, &.active": {
@@ -105,8 +105,10 @@ module.exports = {
                 background: theme("colors.lightRadixRed.red3"),
               },
               "text-decoration": "none",
-              paddingRight: `calc(${theme("padding[0.5]")} * 3)`,
-              paddingLeft: `calc(${theme("padding[0.5]")} * 3)`,
+              paddingRight: `${theme("padding[1]")}`,
+              paddingLeft: `${theme("padding[1]")}`,
+              // paddingRight: `calc(${theme("padding[0.5]")} * 3)`,
+              // paddingLeft: `calc(${theme("padding[0.5]")} * 3)`,
               fontWeight: "false",
               display: "inline-block",
             },
@@ -125,17 +127,14 @@ module.exports = {
             },
             h5: {
               color: theme("colors.gray.500"),
-              // fontStyle: "italic",
+
               fontSize: "0.9em",
-              // lineHeight: "initial",
-              lineHeight: `calc(0.9em * 2)`,
+
+              lineHeight: `1.8em`,
               "& a": {
-                // lineHeight: `calc(0.9em * 1.7)`,
-                // display: "inline-block",
                 display: "inline",
                 padding: `0px !important`,
                 background: `${theme("colors.transparent")} !important`,
-
                 // paddingTop: `calc(${theme("padding[0]")} * 0)`,
                 // paddingBottom: `calc(${theme("padding[0]")} * 0)`,
                 // paddingRight: `calc(${theme("padding[0.5]")} * 2)`,

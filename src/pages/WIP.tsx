@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getLayout } from "src/layouts/Layout";
 
 const WIPPage = () => (
@@ -11,9 +12,9 @@ const WIPPage = () => (
       </span> */}
       This section isn&apos;t finished yet! <br />
       Return{" "}
-      <a href="/" className="font-bold">
-        Home
-      </a>
+      <Link href="/">
+        <a className="font-bold">Home</a>
+      </Link>
       .
     </article>
   </section>
