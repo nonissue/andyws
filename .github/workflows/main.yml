@@ -9,6 +9,7 @@ jobs:
         uses: treosh/lighthouse-ci-action@v8
         with:
           urls: |
+            https://andy.ws
             https://dev.andy.ws
           budgetPath: .github/lighthouse/budget.json # test performance budgets
           uploadArtifacts: true # save results as an action artifacts
