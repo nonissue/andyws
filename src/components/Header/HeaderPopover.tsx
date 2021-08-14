@@ -78,6 +78,15 @@ const HeaderPopover = ({ open, closePopover, data }: HeaderPopoverProps) => {
               </ul>
             </div>
           </nav>
+          <div className="px-6 py-4 md:pt-8 sm:py-3 sm:px-6 lg:py-8 xl:pr-12">
+            <h3
+              className="text-xs md:text-xs opacity-90 overflow-hidden font-light dark:bg-opacity-30 relative inline bg-opacity-70 leading-tight py-1 font-label-mono  text-left text-gray-500
+           dark:text-gray-200
+            md:mt-0 md:max-w-none md:col-span-3 md:mx-0"
+            >
+              * – Work in Progress
+            </h3>
+          </div>
           {false && (
             <div className="block md:block px-6 py-4 sm:py-12 sm:px-6 lg:px-8 lg:pt-8 xl:pl-12 opacity-100">
               <h3 className="text-lg font-semibold">Recent Activity</h3>

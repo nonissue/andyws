@@ -26,6 +26,10 @@ module.exports = {
         bluegray: colors.blueGray,
         almostblack: "hsl(221, 30%, 7%)",
         red: colors.red,
+        darkRadixRed: radixDark.red,
+        lightRadixRed: radixLight.red,
+        darkRadixTomato: radixDark.tomato,
+        lightRadixTomato: radixLight.tomato,
         orange: colors.orange,
         green: colors.green,
         pink: colors.pink,
@@ -40,6 +44,7 @@ module.exports = {
         limeLight: radixLight.lime,
         limeA: radixDark.limeA,
         amber: radixDark.amber,
+        crimson: radixDark.crimson,
       },
 
       fontSize: {
@@ -70,6 +75,17 @@ module.exports = {
           "Courier New",
           "monospace",
         ],
+        "label-mono": [
+          "Recursive",
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          "Liberation Mono",
+          "Courier New",
+          "monospace",
+        ],
       },
       typography: (theme) => ({
         // https://sergiodxa.com/articles/use-tailwindcss-typography-with-dark-mode-styles
@@ -78,26 +94,30 @@ module.exports = {
           css: {
             color: theme("colors.gray.800"),
             a: {
-              color: theme("colors.red.900"),
+              transition: "all 0.15s ease-in",
+              color: theme("colors.lightRadixRed.red11"),
+              background: theme("colors.lightRadixRed.red4"),
+              lineHeight: `calc(0.9em * 1.7)`,
+              display: "inline-block",
               "text-decoration": "none",
-              fontWeight: "false",
               "&:hover, &.active": {
-                color: theme("colors.red.500"),
-                strong: {
-                  color: theme("colors.gray.50"),
-                },
+                color: theme("colors.lightRadixRed.red12"),
+                background: theme("colors.lightRadixRed.red3"),
               },
+              "text-decoration": "none",
+              paddingRight: `calc(${theme("padding[0.5]")} * 3)`,
+              paddingLeft: `calc(${theme("padding[0.5]")} * 3)`,
+              fontWeight: "false",
+              display: "inline-block",
             },
-            h1: {
+            h1: { color: theme("colors.gray.800") },
+            h2: {
               color: theme("colors.gray.800"),
               fontFamily: `${theme("fontFamily.sans")}`,
               fontWeight: 900,
             },
-            h2: {
-              color: theme("colors.gray.800"),
-            },
             h3: {
-              color: theme("colors.gray.400"),
+              color: theme("colors.gray.600"),
               fontWeight: 400,
             },
             h4: {
@@ -107,7 +127,23 @@ module.exports = {
               color: theme("colors.gray.500"),
               // fontStyle: "italic",
               fontSize: "0.9em",
-              // lineHeight: "calc(0.9em * 1.8)",
+              // lineHeight: "initial",
+              lineHeight: `calc(0.9em * 2)`,
+              "& a": {
+                // lineHeight: `calc(0.9em * 1.7)`,
+                // display: "inline-block",
+                display: "inline",
+                padding: `0px !important`,
+                background: `${theme("colors.transparent")} !important`,
+
+                // paddingTop: `calc(${theme("padding[0]")} * 0)`,
+                // paddingBottom: `calc(${theme("padding[0]")} * 0)`,
+                // paddingRight: `calc(${theme("padding[0.5]")} * 2)`,
+                // paddingLeft: `calc(${theme("padding[0.5]")} * 2)`,
+                "&:hover, &.active": {
+                  color: theme("colors.lightRadixRed.red12"),
+                },
+              },
             },
             code: {
               color: theme("colors.gray.50"),
@@ -125,10 +161,12 @@ module.exports = {
           css: {
             color: theme("colors.gray.900"),
             a: {
-              color: theme("colors.gray.50"),
+              color: theme("colors.lightRadixRed.red6"),
+              background: theme("colors.darkRadixRed.red4"),
               "text-decoration": "none",
               "&:hover, &.active": {
-                color: theme("colors.amber.amber11"),
+                color: theme("colors.lightRadixRed.red3"),
+                background: theme("colors.darkRadixRed.red7"),
               },
             },
             h1: {
@@ -145,7 +183,17 @@ module.exports = {
               color: theme("colors.gray.50"),
             },
             h5: {
-              color: theme("colors.gray.500"),
+              color: theme("colors.gray.400"),
+
+              "& a": {
+                // lineHeight: `calc(0.9em * 1.7)`,
+                // display: "inline-block",
+                background: `${theme("colors.transparent")} !important`,
+
+                "&:hover, &.active": {
+                  color: theme("colors.darkRadixRed.red12"),
+                },
+              },
             },
             code: {
               color: theme("colors.gray.800"),

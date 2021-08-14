@@ -83,7 +83,7 @@ const ProjectItemHeader = ({ title, link }: ProjectItemHeaderProps) => {
         <a href={link} className={`h-full items-center w-max`}>
           {/* ${calcOffset(currentRotate)} ${calcOffset(currentSkew)} */}
           <h2
-            className={`text-4xl font-sans tracking-tighter font-extrabold text-gray-800 transition-colors duration-200
+            className={`text-4xl font-sans  tracking-tighter font-extrabold text-gray-800 transition-colors duration-200
                    md:text-5xl lg:text-6xl 
                  hover:text-red-500 dark:hover:text-red-400
                  dark:text-gray-50
