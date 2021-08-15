@@ -36,7 +36,7 @@ const MyApp: React.FunctionComponent<AppPropsWithLayout> = ({
       >
         <SiteContextProvider>
           <Head>
-            <title>andy.ws - the portfolio of andy williams</title>
+            <title>andy.ws</title>
           </Head>
 
           <Header />
