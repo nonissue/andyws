@@ -56,6 +56,7 @@ const Header = () => {
                   ref={buttonRef}
                   aria-label="Navigation Toggle"
                   className="p-2"
+                  id="toggle-popover"
                 >
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />

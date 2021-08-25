@@ -1,10 +1,11 @@
 import { getPage } from "next-page-tester";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { screen, fireEvent } from "@testing-library/react";
-// import IndexPage from "src/pages/index";
 
+// localStorageMock object for next-theme
 let localStorageMock: { [key: string]: string } = {};
 
+// set up `window.matchMedia` mock for `next-theme` testing.
 beforeAll(() => {
   // Create a mock of the window.matchMedia function
   // Based on: https://stackoverflow.com/questions/39830580/jest-test-fails-typeerror-window-matchmedia-is-not-a-function
@@ -37,22 +38,28 @@ beforeEach(() => {
 });
 
 describe("App", () => {
-  it("renders a heading", async () => {
+  it("renders index route", async () => {
     const { render } = await getPage({
       route: "/",
-      // useDocument: true,
     });
 
     render();
 
     expect(screen.getByText("dotfiles")).toBeInTheDocument();
+    // fireEvent.click(screen.getByText("beta"));
+    // await screen.findByText("WIP");
+  });
+});
+
+describe("Header", () => {
+  it("navigates on beta link event", async () => {
+    const { render } = await getPage({
+      route: "/",
+    });
+
+    render();
+
     fireEvent.click(screen.getByText("beta"));
     await screen.findByText("WIP");
-    // fireEvent.click(screen.getByText("beta"));
-    // const { getByRole } = render(<IndexPage />);
-    // await screen.findByText("beta");
-
-    // fireEvent.click(screen.getByText("Andy.ws"));
-    // expect(heading).toBeInTheDocument();
   });
 });
