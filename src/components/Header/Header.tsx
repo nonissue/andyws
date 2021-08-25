@@ -2,8 +2,8 @@ import { Fragment, useRef } from "react";
 import Link from "next/link";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
-import { HeaderPopover, ThemeChanger } from "src/components";
-import SiteConfig from "data/site.config.json";
+import { HeaderPopover, ThemeChanger } from "@/components";
+import SiteConfig from "@/data/site.config.json";
 
 const Header = () => {
   // use buttonRef to close popover when menu link is tapped/clicked
@@ -49,7 +49,7 @@ const Header = () => {
                   </Link>
                 </div>
                 <div className="font-display2 item-start flex-shrink font-medium tracking-wide uppercase  text-xs border border-dashed  border-gray-300 text-gray-600 dark:border-gray-600  py-0 px-1  mr-3 dark:text-gray-400 ">
-                  <Link href="/404">beta</Link>
+                  <Link href="/WIP">beta</Link>
                 </div>
                 <ThemeChanger />
                 <Popover.Button

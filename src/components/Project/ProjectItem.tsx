@@ -1,5 +1,5 @@
-import { ProjectItemHeader, ProjectTag } from "src/components";
-import { Project } from "src/types";
+import { ProjectItemHeader, ProjectTag } from "@/components";
+import { Project } from "@/types";
 
 // type Project = {
 //   title: string;

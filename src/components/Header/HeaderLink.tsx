@@ -1,5 +1,5 @@
 import Link from "next/link";
-const NEGATIVE_ONE = -1;
+const NEGATIVE_ONE = 0;
 
 type MenuLinkProps = {
   title: string;
@@ -16,7 +16,9 @@ const HeaderLink = ({ title, href, closePopover }: MenuLinkProps) => {
         className="hover:text-red-500 dark:hover:text-red-400 transition-colors duration-250 ease-in"
         tabIndex={NEGATIVE_ONE}
       >
-        <Link href={href}>{title}</Link>
+        <Link href={href}>
+          <a tabIndex={-1}>{title}</a>
+        </Link>
       </button>
     </li>
   );

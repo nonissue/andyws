@@ -1,8 +1,8 @@
 import { NextPage } from "next/types";
 import Link from "next/link";
-import { getLayout } from "src/layouts/Layout";
+import { getLayout } from "@/layouts/Layout";
 
-const Index: NextPage & {
+const IndexPage: NextPage & {
   getLayout?: (component: JSX.Element) => JSX.Element;
 } = () => {
   return (
@@ -56,6 +56,6 @@ const Index: NextPage & {
   );
 };
 
-Index.getLayout = getLayout;
+IndexPage.getLayout = getLayout;
 
-export default Index;
+export default IndexPage;

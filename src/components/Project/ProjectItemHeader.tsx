@@ -1,5 +1,5 @@
 import NextLink from "next/link";
-import { slugify } from "src/lib/slugify";
+import { slugify } from "@/lib/slugify";
 
 type ProjectItemHeaderProps = {
   title: string;

@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import { HeaderLink, HeaderTimeline } from "src/components";
+import { HeaderLink, HeaderTimeline } from "@/components";
 
 type HeaderDataItem = {
   title: string;

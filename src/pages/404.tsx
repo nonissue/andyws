@@ -1,4 +1,4 @@
-import { getLayout } from "src/layouts/Layout";
+import { getLayout } from "@/layouts/Layout";
 
 const Custom404 = () => (
   <section className="py-12">

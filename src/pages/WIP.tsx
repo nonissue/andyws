@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getLayout } from "src/layouts/Layout";
+import { getLayout } from "@/layouts/Layout";
 
 const WIPPage = () => (
   <section className="py-12">
@@ -7,9 +7,6 @@ const WIPPage = () => (
       WIP
     </h3>
     <article className="prose-2xl">
-      {/* <span className="opacity-75 font-mono block my-4 text-base">
-        (Work in progress)
-      </span> */}
       This section isn&apos;t finished yet! <br />
       Return{" "}
       <Link href="/">

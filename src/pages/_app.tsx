@@ -5,10 +5,10 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import { ThemeProvider } from "next-themes";
 import Inspect from "inspx";
-import { SiteContextProvider } from "src/lib/context";
-import { Header, Footer } from "src/components";
+import { SiteContextProvider } from "@/lib/context";
+import { Header, Footer } from "@/components";
 
-import "src/styles/app.css";
+import "@/styles/app.css";
 
 type ComponentWithLayout<P> = NextComponentType<NextPageContext, any, P> & {
   getLayout?: (

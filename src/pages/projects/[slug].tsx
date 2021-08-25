@@ -2,7 +2,7 @@ import NextLink from "next/link";
 import { GetStaticProps } from "next";
 import Image from "next/image";
 import { slugify } from "src/lib/slugify";
-import { Project } from "src/types";
+import { Project } from "@/types";
 import projectData from "data/projects.json";
 
 const ZERO = 0; // why do i do this
