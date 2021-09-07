@@ -46,8 +46,6 @@ describe("App", () => {
     render();
 
     expect(screen.getByText("dotfiles")).toBeInTheDocument();
-    // fireEvent.click(screen.getByText("beta"));
-    // await screen.findByText("WIP");
   });
 });
 

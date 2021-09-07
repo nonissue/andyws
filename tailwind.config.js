@@ -2,7 +2,6 @@
 
 const radixDark = require("./plugins/radix-colors/dark");
 const radixLight = require("./plugins/radix-colors/light");
-const underlineColorPlugin = require("./tailwind-underline-plugin");
 const colors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
@@ -226,6 +225,5 @@ module.exports = {
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms"),
     require("@tailwindcss/line-clamp"),
-    underlineColorPlugin,
   ],
 };
