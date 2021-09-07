@@ -1,3 +1,7 @@
+/*
+Test index page rendering with utilities for mocking required `next-themes` context 
+*/
+
 import { getPage } from "next-page-tester";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { screen, fireEvent } from "@testing-library/react";
