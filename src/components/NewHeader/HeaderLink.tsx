@@ -7,7 +7,7 @@ type NewHeaderLinkProps = {
 
 const NewHeaderLink = ({ title, href }: NewHeaderLinkProps) => {
   return (
-    <div className="text-xs sm:text-lg font-mono">
+    <div className="text-xs sm:text-base font-display2 uppercase opacity-90 tracking-wider">
       <Link href={href}>{title}</Link>
     </div>
   );
