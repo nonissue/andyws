@@ -7,8 +7,12 @@ type NewHeaderLinkProps = {
 
 const NewHeaderLink = ({ title, href }: NewHeaderLinkProps) => {
   return (
-    <div className="text-xs sm:text-base font-display2 uppercase opacity-90 tracking-wider">
-      <Link href={href}>{title}</Link>
+    <div>
+      <Link href={href}>
+        <a className="font-medium transition-colors duration-200 text-xs hover:text-darkRadixRed-red10 sm:text-base font-sans capitalize opacity-90 tracking-wide">
+          {title}
+        </a>
+      </Link>
     </div>
   );
 };
