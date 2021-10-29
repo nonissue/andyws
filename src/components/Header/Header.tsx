@@ -11,7 +11,7 @@ const Header = () => {
   const buttonClick = () => buttonRef.current?.click();
 
   return (
-    <Popover as="header" className="z-10 relative shadow-sm  ">
+    <Popover as="header" className="z-10 relative shadow-sm">
       {({ open }) => (
         <div className={`relative z-20`}>
           <Transition
