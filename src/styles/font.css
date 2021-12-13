@@ -57,7 +57,7 @@ var {
     --mono: "MONO" 0;
     font-variation-settings: var(--mono), var(--casl), var(--slnt), var(--CRSV);
   }
-  .font-label-mono {
+  .font-labelmono {
     --casl: "CASL" 0;
     --slnt: "slnt" 0;
     --CRSV: "CRSV" 0;

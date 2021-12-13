@@ -7,7 +7,18 @@ const IndexPage: NextPage & {
 } = () => {
   return (
     <>
-      <section className="prose prose-lg lg:prose-2xl dark:prose-dark ">
+      <section
+        className="prose prose-lg lg:prose-2xl 
+        prose-a:no-underline prose-a:inline-block 
+        prose-a:transition-all prose-a:duration-150
+        dark:prose-invert
+      "
+      >
+        {/* 
+        prose-a:text-sky-700 prose-a:bg-sky-200 
+         hover:prose-a:text-sky-100 hover:prose-a:bg-sky-600
+        dark:prose-a:bg-sky-900 dark:prose-a:inline-block
+        dark:prose-a:text-sky-200 dark:hover:prose-a:text-sky-900 */}
         <p>
           Hi! I&apos;m Andy Williams. I am a Computer Science student{" @ "}
           <Link href="https://macewan.ca">
@@ -28,7 +39,7 @@ const IndexPage: NextPage & {
           </Link>
           .
         </p>
-        <h5>
+        <h5 className="text-gray-400 text-xl leading-relaxed font-sans prose-a:bg-transparent prose-a:bg-opacity-0 dark:prose-a:bg-opacity-0  prose-a:text-sky-800">
           You can learn more about some of{" "}
           <Link href="/projects">
             <a>my current projects</a>
