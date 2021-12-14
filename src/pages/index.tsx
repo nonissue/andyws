@@ -1,6 +1,60 @@
 import { NextPage } from "next/types";
 import Link from "next/link";
+import { LinkProps as NextLinkProps } from "next/dist/client/link";
 import { getLayout } from "@/layouts/Layout";
+import { PropsWithChildren } from "react";
+
+// type StyledLinkProps = PropsWithChildren<
+//   { ref: LinkRef } & NextLinkProps & {
+//     className: string;
+//     href: string;
+//   }
+// >;
+
+// type LinkRef = HTMLAnchorElement;
+
+// // eslint-disable-next-line react/display-name
+// const StyledLink = forwardRef(
+//   (
+//     { href, children, className }: StyledLinkProps,
+//     ref: Ref<LinkRef>
+//   ) => {
+//     return (
+//       <a className={className} href={href} onClick={onClick} ref={ref}>
+//         {children}
+//       </a>
+//     );
+//   }
+// );
+
+type LinkWrapperProps = PropsWithChildren<
+  NextLinkProps & { className?: string }
+>;
+
+const LinkWrapper = ({
+  href,
+  as,
+  replace,
+  scroll,
+  shallow,
+  prefetch,
+  children,
+  className,
+}: LinkWrapperProps) => {
+  return (
+    <Link
+      passHref={true}
+      href={href}
+      as={as}
+      replace={replace}
+      scroll={scroll}
+      shallow={shallow}
+      prefetch={prefetch}
+    >
+      <a className={className}>{children}</a>
+    </Link>
+  );
+};
 
 const IndexPage: NextPage & {
   getLayout?: (component: JSX.Element) => JSX.Element;
@@ -21,9 +75,12 @@ const IndexPage: NextPage & {
         dark:prose-a:text-sky-200 dark:hover:prose-a:text-sky-900 */}
         <p>
           Hi! I&apos;m Andy Williams. I am a Computer Science student{" @ "}
-          <Link href="https://macewan.ca">
-            <a>Macewan University</a>
-          </Link>
+          <LinkWrapper
+            href="https://macewan.ca"
+            className="bg-yellow-400 hover:bg-white"
+          >
+            Macewan University
+          </LinkWrapper>
           &nbsp;in Edmonton, Canada. I spend most of my free time tinkering with{" "}
           <Link href="https://github.com/nonissue/andyws">
             <a>web technologies</a>

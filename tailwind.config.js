@@ -1,5 +1,8 @@
 /* eslint-disable */
 
+// https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/master/tailwind.config.js
+// https://github.com/tailwindlabs/tailwindcss/issues/6251
+
 const radixDark = require("./plugins/radix-colors/dark");
 const radixLight = require("./plugins/radix-colors/light");
 const colors = require("tailwindcss/colors");

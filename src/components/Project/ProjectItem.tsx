@@ -1,15 +1,6 @@
 import { ProjectItemHeader, ProjectTag } from "@/components";
 import { Project } from "@/types";
 
-// type Project = {
-//   title: string;
-//   tags: string[];
-//   description: string;
-//   type: string;
-//   link: string;
-//   imgsrc: string;
-// };
-
 const ProjectItem = (project: Project) => {
   return (
     <div className="py-6 md:py-10 grid-cols-1 grid md:grid-cols-4 text-left md:col-span-3 lg:last:mb-0">
