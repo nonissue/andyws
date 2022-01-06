@@ -48,7 +48,7 @@ const LinkWrapper = ({
   );
 };
 
-const withStyling = (
+const withLinkStyle = (
   BaseComponent: typeof LinkWrapper,
   newClassName: string
 ) => {
@@ -58,6 +58,4 @@ const withStyling = (
   return NewComp;
 };
 
-const NewLink = withStyling(LinkWrapper, "bg-pink-400");
-
-export { LinkWrapper, NewLink };
+export { LinkWrapper, withLinkStyle };
