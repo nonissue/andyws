@@ -1,32 +1,63 @@
-// import { ProjectItemHeader, ProjectTag } from "@/components";
-// import { Project } from "@/types";
+import Link from "next/link";
+import { LinkProps as NextLinkProps } from "next/dist/client/link";
+import { PropsWithChildren } from "react";
 
-// const LinkWrapper = (project: Project) => {
-//   return (
-//     <div className="py-6 md:py-10 grid-cols-1 grid md:grid-cols-4 text-left md:col-span-3 lg:last:mb-0">
-//       <ProjectItemHeader title={project.title} link={project.link} />
+/*
 
-//       <div className="col-span-1 mt-3 md:mt-4 md:col-span-4 md:col-start-1">
-//         <article
-//           className="prose text-gray-600 pb-0
-//         md:prose-2xl md:mx-0
-//         dark:text-gray-300"
-//         >
-//           {project.description}
-//         </article>
-//       </div>
+Basic LinkWrapper 
++
+WIP Link Styling factory
 
-//       <div
-//         className="space-x-1 flex space-y-2 flex-wrap col-span-4 md:col-span-4 md:col-start-1
-//           -ml-1 mt-1 mb-1 md:mb-0 md:pr-0 lg:pr-0 lg:-ml-1"
-//       >
-//         {/* <TagDropdown /> */}
-//         {project.tags.map((title, index) => (
-//           <ProjectTag key={title} title={`${title}`} index={index} />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
+Example:
+const redLink = withStyling(LinkWrapper, 'tailwind-class-names-go-here bg-red-400 hover:bg-red-900')
 
-// export { ProjectItem };
+Issues: 
+Don't get autocomplete for tailwind classnames
+
+*/
+
+// Handle other passed through props?
+// www.smashingmagazine.com/2020/06/higher-order-components-react/#provide-components-with-specific-styling
+
+type LinkWrapperProps = PropsWithChildren<
+  NextLinkProps & { className?: string }
+>;
+
+const LinkWrapper = ({
+  href,
+  as,
+  replace,
+  scroll,
+  shallow,
+  prefetch,
+  children,
+  className,
+}: LinkWrapperProps) => {
+  return (
+    <Link
+      passHref={true}
+      href={href}
+      as={as}
+      replace={replace}
+      scroll={scroll}
+      shallow={shallow}
+      prefetch={prefetch}
+    >
+      <a className={className}>{children}</a>
+    </Link>
+  );
+};
+
+const withStyling = (
+  BaseComponent: typeof LinkWrapper,
+  newClassName: string
+) => {
+  const NewComp = (props: Omit<LinkWrapperProps, "className">) => {
+    return <BaseComponent className={newClassName} {...props} />;
+  };
+  return NewComp;
+};
+
+const NewLink = withStyling(LinkWrapper, "bg-pink-400");
+
+export { LinkWrapper, NewLink };
