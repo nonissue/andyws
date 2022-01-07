@@ -1,9 +1,9 @@
-import NextLink from "next/link";
-import { GetStaticProps } from "next";
-import Image from "next/image";
-import { slugify } from "src/lib/slugify";
-import { Project } from "@/types";
-import projectData from "data/projects.json";
+import NextLink from 'next/link';
+import { GetStaticProps } from 'next';
+import Image from 'next/image';
+import { slugify } from 'src/lib/slugify';
+import { Project } from '@/types';
+import projectData from 'data/projects.json';
 
 const ZERO = 0; // why do i do this
 
@@ -23,7 +23,7 @@ const ProjectPage = ({ project }: { project: Project }) => {
   return (
     <section className="padded-container bg-white dark:bg-almostblack font-sans">
       <div className="text-left opacity-50 text-xs uppercase py-1">
-        <NextLink href="/">
+        <NextLink href="/projects">
           <a>&larr; Back to Projects</a>
         </NextLink>
       </div>

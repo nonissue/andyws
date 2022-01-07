@@ -30,7 +30,7 @@ const IndexPage: NextPage & {
   return (
     <>
       <section className="prose prose-lg md:prose-xl lg:prose-2xl dark:prose-invert">
-        <p className="">
+        <p>
           Hi! I&apos;m Andy Williams. I am a Computing student{' @ '}
           <PrimaryLink href="https://macewan.ca">
             Macewan University
