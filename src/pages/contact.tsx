@@ -8,7 +8,7 @@ type ContactLinkProps = {
 
 const ContactLink = ({ title, href }: ContactLinkProps) => {
   return (
-    <li className="inline font-display2 mr-2 hover:text-red-500 dark:hover:text-red-400 transition-colors duration-250 ease-in ">
+    <li className="inline font-display2 mr-2 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-250 ease-in ">
       <span className="font-light font-display2 opacity-50">@</span>
       <NextLink href={href}>
         <a className="">{title}</a>
