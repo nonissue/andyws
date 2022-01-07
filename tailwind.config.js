@@ -3,8 +3,6 @@
 // https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/master/tailwind.config.js
 // https://github.com/tailwindlabs/tailwindcss/issues/6251
 
-const radixDark = require("./plugins/radix-colors/dark");
-const radixLight = require("./plugins/radix-colors/light");
 const colors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
@@ -28,10 +26,6 @@ module.exports = {
         bluegray: colors.slate,
         almostblack: "hsl(221, 30%, 7%)",
         red: colors.red,
-        darkRadixRed: radixDark.red,
-        lightRadixRed: radixLight.red,
-        darkRadixTomato: radixDark.tomato,
-        lightRadixTomato: radixLight.tomato,
         orange: colors.orange,
         green: colors.green,
         pink: colors.pink,
@@ -41,12 +35,6 @@ module.exports = {
         amber: colors.amber,
         sky: colors.sky,
         white: "#fff",
-        mint: radixDark.mint,
-        lime: radixDark.lime,
-        limeLight: radixLight.lime,
-        limeA: radixDark.limeA,
-        amber: radixDark.amber,
-        crimson: radixDark.crimson,
       },
       fontSize: {
         xxs: ".625rem",
@@ -56,6 +44,7 @@ module.exports = {
         display: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
         display2: ["Space Mono", ...defaultTheme.fontFamily.sans],
         mono: [
+          "Space Mono",
           "SFMono-Regular",
           "ui-monospace",
           "Menlo",
