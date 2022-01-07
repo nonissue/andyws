@@ -12,7 +12,7 @@ Example:
 const redLink = withStyling(LinkWrapper, 'tailwind-class-names-go-here bg-red-400 hover:bg-red-900')
 
 Issues: 
-Don't get autocomplete for tailwind classnames
+Don't get autocomplete for tailwind classnames!!
 
 */
 

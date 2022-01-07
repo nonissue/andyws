@@ -1,77 +1,69 @@
 /* eslint-disable react/display-name */
 import { NextPage } from "next/types";
-import Link from "next/link";
 import { getLayout } from "@/layouts/Layout";
 import { LinkWrapper, withLinkStyle } from "src/components/LinkWrapper";
 
-const NewLink = withLinkStyle(
+const PrimaryLink = withLinkStyle(
   LinkWrapper,
-  "px-1 bg-blue-200 no-underline inline-block transition-all duration-500 hover:bg-blue-100 dark:bg-blue-800/50 dark:hover:bg-blue-900/25"
+  `
+  px-1 md:px-2  no-underline py-1
+  box-decoration-clone
+  bg-blue-200 text-blue-700 
+  transition-all duration-200 hover:bg-sky-100 
+  dark:text-blue-200 dark:bg-blue-800
+  dark:hover:text-blue-100  dark:hover:bg-blue-600
+  `
+);
+
+const SecondaryLink = withLinkStyle(
+  LinkWrapper,
+  `no-underline
+  leading-normal text-blue-600
+  transition-all duration-300 hover:text-blue-900 
+  dark:text-blue-300 dark:hover:text-blue-100`
 );
 
 const IndexPage: NextPage & {
   getLayout?: (component: JSX.Element) => JSX.Element;
 } = () => {
-  console.log(NewLink);
+  console.log(PrimaryLink);
   return (
     <>
-      <section
-        className="prose prose-lg lg:prose-2xl 
-        dark:prose-invert
-      "
-      >
-        {/* 
-          prose-a:no-underline prose-a:inline-block 
-        prose-a:transition-all prose-a:duration-500
-        prose-a:text-sky-700 prose-a:bg-sky-200 
-         hover:prose-a:text-sky-100 hover:prose-a:bg-sky-600
-        dark:prose-a:bg-sky-900 dark:prose-a:inline-block
-        dark:prose-a:text-sky-200 dark:hover:prose-a:text-sky-900 */}
-        <p>
-          Hi! I&apos;m Andy Williams. I am a Computer Science student{" @ "}
-          <NewLink
-            href="https://macewan.ca"
-            // className="bg-blue-700 hover:bg-blue-400"
-          >
+      <section className="prose prose-lg md:prose-xl lg:prose-2xl dark:prose-invert">
+        <p className="">
+          Hi! I&apos;m Andy Williams. I am a Computing student{" @ "}
+          <PrimaryLink href="https://macewan.ca">
             Macewan University
-          </NewLink>
-          &nbsp;in Edmonton, Canada. I spend most of my free time tinkering with{" "}
-          <Link href="https://github.com/nonissue/andyws">
-            <a>web technologies</a>
-          </Link>
-          , attempting to understand my own overly-complicated,
-          rube-goldberesque{" "}
-          <Link href="https://github.com/nonissue/dotfiles">
-            <a>dotfiles</a>
-          </Link>
+          </PrimaryLink>{" "}
+          in Edmonton, Canada. I spend most of my free time tinkering with{" "}
+          <span className="inline-block whitespace-nowrap">
+            <PrimaryLink href="https://github.com/nonissue/andyws">
+              web technology
+            </PrimaryLink>
+            ,
+          </span>{" "}
+          attempting to understand my own overly-complicated, rube-goldberesque{" "}
+          <PrimaryLink href="https://github.com/nonissue/dotfiles">
+            dotfiles
+          </PrimaryLink>
           , or taking{" "}
-          <Link href="https://instagram.com/nonissue">
-            <a>photos</a>
-          </Link>
+          <PrimaryLink href="https://instagram.com/nonissue">
+            photos
+          </PrimaryLink>
           .
         </p>
-        <h5 className="text-gray-400 text-xl leading-relaxed font-sans prose-a:bg-transparent prose-a:bg-opacity-0 dark:prose-a:bg-opacity-0  prose-a:text-sky-800">
+        <h5 className="text-gray-400 prose-sm md:prose-base lg:prose-xl leading-relaxed font-sans">
           You can learn more about some of{" "}
-          <Link href="/projects">
-            <a>my current projects</a>
-          </Link>
-          , view{" "}
-          <Link href="/log">
-            <a>links</a>
-          </Link>{" "}
-          I find interesting, peruse{" "}
-          <Link href="https://verbosed.vercel.app">
-            <a>words</a>
-          </Link>{" "}
+          <SecondaryLink href="/projects">my current projects</SecondaryLink>,
+          view <SecondaryLink href="/log">links</SecondaryLink> I find
+          interesting, peruse{" "}
+          <SecondaryLink href="https://verbosed.vercel.app">
+            words
+          </SecondaryLink>{" "}
           that pique my interest, browse some of my favourite{" "}
-          <Link href="/photos">
-            <a>photos</a>
-          </Link>
-          , or find out different ways to{" "}
-          <Link href="/contact">
-            <a>contact me</a>
-          </Link>
-          .
+          <SecondaryLink href="/photos">photos</SecondaryLink>, or find out
+          different ways to{" "}
+          <SecondaryLink href="/contact">contact me</SecondaryLink>.
         </h5>
       </section>
     </>
