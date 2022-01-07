@@ -1,5 +1,5 @@
-import { ProjectItem } from "./ProjectItem";
-import { Project } from "@/types";
+import { ProjectItem } from './ProjectItem';
+import { Project } from '@/types';
 // import Projects from "data/projects.json";
 
 const ProjectList = ({ projects }: { projects: Project[] }) => {
@@ -7,8 +7,8 @@ const ProjectList = ({ projects }: { projects: Project[] }) => {
     <div className="bg-white dark:bg-almostblack mx-auto">
       <div className="grid-cols-1 md:grid-cols-1 items-center mb-4">
         <h3
-          className="text-lg md:text-xl bg-red-100 dark:bg-red-900 overflow-hidden dark:bg-opacity-30 font-normal relative inline bg-opacity-70 px-2 leading-tight py-1 font-display  text-left text-red-500
-           dark:text-red-200
+          className="text-lg md:text-xl bg-blue-100 dark:bg-blue-900 overflow-hidden dark:bg-opacity-30 font-normal relative inline bg-opacity-70 px-2 leading-tight py-1 font-display  text-left text-blue-500
+           dark:text-blue-200
             md:mt-0 md:max-w-none md:col-span-3 md:mx-0"
         >
           Projects*

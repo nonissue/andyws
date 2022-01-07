@@ -1,32 +1,14 @@
-import NextLink from "next/link";
-import { slugify } from "@/lib/slugify";
+import NextLink from 'next/link';
+import { slugify } from '@/lib/slugify';
 
 type ProjectItemHeaderProps = {
   title: string;
   link: string;
 };
 
-const skews = [
-  "skew-x-2",
-  // "skew-x-6",
-  // "skew-x-3",
-  // "skew-x-6",
-  "-skew-x-2",
-  // "-skew-x-6",
-  // "-skew-x-3",
-  // "-skew-x-6",
-];
+const skews = ['skew-x-2', '-skew-x-2'];
 
-const rotates = [
-  // "rotate-2",
-  "rotate-1",
-  // "rotate-3",
-  // "rotate-1",
-  // "-rotate-2",
-  "-rotate-1",
-  // "-rotate-3",
-  // "-rotate-1",
-];
+const rotates = ['rotate-1', '-rotate-1'];
 
 const ProjectItemHeaderButton = ({ title, link }: ProjectItemHeaderProps) => {
   const randomSkew = () => {
@@ -41,10 +23,10 @@ const ProjectItemHeaderButton = ({ title, link }: ProjectItemHeaderProps) => {
   const currentRotate = randomRotate();
 
   const calcOffset = (currentTransform: string) => {
-    if (currentTransform[0] == "-") {
+    if (currentTransform[0] == '-') {
       return currentTransform.substring(1);
     } else {
-      return "-" + currentTransform;
+      return '-' + currentTransform;
     }
   };
 
@@ -85,7 +67,7 @@ const ProjectItemHeader = ({ title, link }: ProjectItemHeaderProps) => {
           <h2
             className={`text-4xl font-sans  tracking-tighter font-extrabold text-gray-800 transition-colors duration-200
                    md:text-5xl lg:text-6xl 
-                 hover:text-red-500 dark:hover:text-red-400
+                 hover:text-blue-500 dark:hover:text-blue-400
                  dark:text-gray-50
                 `}
           >
