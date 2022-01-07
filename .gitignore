@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+*.tsbuildinfo
 
 # testing
 /coverage
@@ -34,5 +35,5 @@ yarn-error.log*
 # vercel
 .vercel
 
-
-
+tsconfig.tsbuildinfo
+perf
