@@ -19,6 +19,10 @@ const NewHeader = () => {
                 </a>
               </Link>
             </div>
+            <NewHeaderLink href="/404" title="404" />
+            <span className="text-sm sm:text-lg font-light opacity-30">
+              &nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
             <NewHeaderLink href="/WIP" title="Projects" />
             <span className="text-sm sm:text-lg font-light opacity-30">
               &nbsp;&nbsp;&nbsp;&nbsp;
