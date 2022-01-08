@@ -27,11 +27,22 @@ module.exports = {
     'react-hooks/exhaustive-deps': ['warn'],
   },
   settings: {
-    'import/resolver': {
-      typescript: {
-        project: '.',
-      },
-    },
+    /* 
+    ISSUE / TODO
+
+    is this really needed?
+    can we remove eslint-import-resolver-typescript?
+    https:ithub.com/vercel/next.js/issues/25920
+
+    Yah, it's here:
+    https://github.com/vercel/next.js/blob/320986a2b897bc512c21f7148f4a4c8ce749dcae/packages/eslint-config-next/index.js#L70 
+    */
+    /* disabling it seems to not cause issues? */
+    // 'import/resolver': {
+    //   typescript: {
+    //     project: '.',
+    //   },
+    // },
     react: {
       version: 'detect',
     },
