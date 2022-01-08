@@ -12,8 +12,9 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended', // eslint TypeScript rules (github.com/typescript-eslint/typescript-eslint)
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
-    'next/core-web-vitals',
     'prettier',
+    'next/core-web-vitals',
+    'next',
   ],
   rules: {
     // 'jsx-a11y/anchor-is-valid': 'off',
@@ -23,7 +24,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error'],
     'react/react-in-jsx-scope': 'off',
     '@next/next/link-passhref': ['error'],
-    'react-hooks/exhaustive-deps': ['error'],
+    'react-hooks/exhaustive-deps': ['warn'],
   },
   settings: {
     'import/resolver': {
