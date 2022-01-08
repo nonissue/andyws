@@ -26,7 +26,6 @@ const SecondaryLink = withLinkStyle(
 const IndexPage: NextPage & {
   getLayout?: (component: JSX.Element) => JSX.Element;
 } = () => {
-  console.log(PrimaryLink);
   return (
     <>
       <section className="prose prose-lg md:prose-xl lg:prose-2xl dark:prose-invert">
