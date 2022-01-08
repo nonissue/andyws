@@ -1,6 +1,7 @@
 /* eslint-disable react/display-name */
 import { NextPage } from 'next/types';
 import { getLayout } from '@/layouts/Layout';
+import { useEffect, useState } from 'react';
 import { LinkWrapper, withLinkStyle } from 'src/components/LinkWrapper';
 
 const PrimaryLink = withLinkStyle(
@@ -23,12 +24,33 @@ const SecondaryLink = withLinkStyle(
   dark:text-blue-300 dark:hover:text-blue-100`
 );
 
+const notTest = 'NOTTEST';
+
 const IndexPage: NextPage & {
   getLayout?: (component: JSX.Element) => JSX.Element;
 } = () => {
+  const [test, setTest] = useState('FML');
+
+  const CONSTANTTEST = 'HAHAHA';
+
+  useEffect(() => {
+    setTest((test) => test + '134' + notTest);
+    updateTest();
+    console.log(CONSTANTTEST);
+  }, []);
+
+  useEffect(() => {
+    console.log(test);
+  }, []);
+
+  const updateTest = () => {
+    setTest('NOTTEST');
+  };
+
   return (
     <>
       <section className="prose prose-lg md:prose-xl lg:prose-2xl dark:prose-invert">
+        <button onClick={updateTest}>TEST</button>
         <p>
           Hi! I&apos;m Andy Williams. I am a Computing student{' @ '}
           <PrimaryLink href="https://macewan.ca">
