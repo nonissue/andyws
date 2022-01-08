@@ -1,9 +1,9 @@
-import { Fragment, useRef } from "react";
-import Link from "next/link";
-import { Popover, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/solid";
-import { HeaderPopover, ThemeChanger } from "@/components";
-import SiteConfig from "@/data/site.config.json";
+import { Fragment, useRef } from 'react';
+import Link from 'next/link';
+import { Popover, Transition } from '@headlessui/react';
+import { MenuIcon, XIcon } from '@heroicons/react/solid';
+import { HeaderPopover, ThemeChanger } from '@/components';
+import SiteConfig from '@/data/site.config.json';
 
 const Header = () => {
   // use buttonRef to close popover when menu link is tapped/clicked
@@ -26,7 +26,7 @@ const Header = () => {
           >
             <Popover.Overlay
               static
-              className={`${"bg-white dark:bg-almostblack fixed inset-0 bg-opacity-80 dark:bg-opacity-80"}`}
+              className={`${'bg-white dark:bg-almostblack fixed inset-0 bg-opacity-80 dark:bg-opacity-80'}`}
             />
           </Transition>
           <div className="relative z-20 inset-0">

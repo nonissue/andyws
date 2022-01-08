@@ -1,51 +1,51 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { CheckIcon, ThumbUpIcon, UserIcon } from "@heroicons/react/solid";
+import { CheckIcon, ThumbUpIcon, UserIcon } from '@heroicons/react/solid';
 
 const timeline = [
   {
     id: 1,
-    content: "Applied to",
-    target: "Lorem Ipsum is simply dummy.",
-    href: "#",
-    date: "Sep 20",
-    datetime: "2020-09-20",
+    content: 'Applied to',
+    target: 'Lorem Ipsum is simply dummy.',
+    href: '#',
+    date: 'Sep 20',
+    datetime: '2020-09-20',
     icon: UserIcon,
-    iconBackground: "bg-indigo-500",
+    iconBackground: 'bg-indigo-500',
   },
   {
     id: 2,
-    content: "Advanced to phone screening by",
-    target: "Bethany Blake",
-    href: "#",
-    date: "Sep 22",
-    datetime: "2020-09-22",
+    content: 'Advanced to phone screening by',
+    target: 'Bethany Blake',
+    href: '#',
+    date: 'Sep 22',
+    datetime: '2020-09-22',
     icon: ThumbUpIcon,
-    iconBackground: "bg-purple-500",
+    iconBackground: 'bg-purple-500',
   },
   {
     id: 3,
-    content: "Completed phone screening with",
-    target: "Martha Gardner",
-    href: "#",
-    date: "Sep 28",
-    datetime: "2020-09-28",
+    content: 'Completed phone screening with',
+    target: 'Martha Gardner',
+    href: '#',
+    date: 'Sep 28',
+    datetime: '2020-09-28',
     icon: CheckIcon,
-    iconBackground: "bg-pink-500",
+    iconBackground: 'bg-pink-500',
   },
   {
     id: 4,
-    content: "Advanced to interview by",
-    target: "Bethany Blake",
-    href: "#",
-    date: "Sep 30",
-    datetime: "2020-09-30",
+    content: 'Advanced to interview by',
+    target: 'Bethany Blake',
+    href: '#',
+    date: 'Sep 30',
+    datetime: '2020-09-30',
     icon: ThumbUpIcon,
-    iconBackground: "bg-indigo-500",
+    iconBackground: 'bg-indigo-500',
   },
 ];
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 const HeaderTimeline = () => {
@@ -66,7 +66,7 @@ const HeaderTimeline = () => {
                   <span
                     className={classNames(
                       event.iconBackground,
-                      "h-6 w-6 rounded-full flex items-center justify-center ring-8 ring-white md:ring-gray-50 dark:ring-almostblack"
+                      'h-6 w-6 rounded-full flex items-center justify-center ring-8 ring-white md:ring-gray-50 dark:ring-almostblack'
                     )}
                   >
                     <event.icon
@@ -78,7 +78,7 @@ const HeaderTimeline = () => {
                 <div className="min-w-0 flex-1 flex justify-between space-x-3 space-y-0 mt-px">
                   <div>
                     <p className={`text-md dark:text-gray-400 line-clamp-1`}>
-                      {event.content}{" "}
+                      {event.content}{' '}
                       <a
                         href={event.href}
                         className="font-medium text-gray-900 dark:text-gray-300"

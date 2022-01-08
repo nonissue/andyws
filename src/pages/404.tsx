@@ -1,4 +1,4 @@
-import { getLayout } from "@/layouts/Layout";
+import { getLayout } from '@/layouts/Layout';
 
 const Custom404 = () => (
   <section className="py-12">
@@ -10,7 +10,7 @@ const Custom404 = () => (
         The requested page cannot be found. <br />
         <a href="mailto:andy@andy.ws" className="font-bold">
           Contact
-        </a>{" "}
+        </a>{' '}
         me if this error is erroneous.
       </p>
     </article>

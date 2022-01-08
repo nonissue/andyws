@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState } from 'react';
 
 type SiteContextState = {
   isLoading: boolean;
@@ -37,7 +37,7 @@ export const useSiteContext = () => {
   const context = useContext(SiteContext);
 
   if (context === undefined) {
-    throw new Error("useSiteContext must be used within a SiteProvider");
+    throw new Error('useSiteContext must be used within a SiteProvider');
   }
 
   return context;

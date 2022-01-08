@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
+import { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
 
 /*
 Notes:
@@ -26,10 +26,10 @@ export const ThemeChanger: React.FunctionComponent = () => {
           // for some reason, if theme is light, setTheme doesn't
           // change theme to dark on first use unless we use the logic below
           let nextTheme;
-          if (theme === "system") {
-            nextTheme = resolvedTheme === "light" ? "dark" : "light";
+          if (theme === 'system') {
+            nextTheme = resolvedTheme === 'light' ? 'dark' : 'light';
           } else {
-            nextTheme = theme === "light" ? "dark" : "light";
+            nextTheme = theme === 'light' ? 'dark' : 'light';
           }
 
           setTheme(nextTheme);
@@ -37,7 +37,7 @@ export const ThemeChanger: React.FunctionComponent = () => {
         aria-label="Theme Toggle"
       >
         <div className="w-6 h-6">
-          {theme === "light" ? (
+          {theme === 'light' ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

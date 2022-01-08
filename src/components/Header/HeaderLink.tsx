@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 const NEGATIVE_ONE = 0;
 
 type MenuLinkProps = {

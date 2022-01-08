@@ -1,5 +1,5 @@
-import { ProjectItemHeader, ProjectTag } from "@/components";
-import { Project } from "@/types";
+import { ProjectItemHeader, ProjectTag } from '@/components';
+import { Project } from '@/types';
 
 const ProjectItem = (project: Project) => {
   return (

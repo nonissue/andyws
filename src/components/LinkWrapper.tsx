@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { LinkProps as NextLinkProps } from "next/dist/client/link";
-import { PropsWithChildren } from "react";
+import Link from 'next/link';
+import { LinkProps as NextLinkProps } from 'next/dist/client/link';
+import { PropsWithChildren } from 'react';
 
 /*
 
@@ -52,7 +52,7 @@ const withLinkStyle = (
   BaseComponent: typeof LinkWrapper,
   newClassName: string
 ) => {
-  const NewComp = (props: Omit<LinkWrapperProps, "className">) => {
+  const NewComp = (props: Omit<LinkWrapperProps, 'className'>) => {
     return <BaseComponent className={newClassName} {...props} />;
   };
   return NewComp;

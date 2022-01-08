@@ -17,7 +17,7 @@ const ProjectTag = ({ title, index }: TagProps) => {
       {index % 1 === 1 ? (
         <div className="hidden w-0 h-0 lg:block lg:w-full" />
       ) : (
-        ""
+        ''
       )}
     </>
   );

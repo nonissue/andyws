@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-types */
-import type { NextComponentType, NextPageContext } from "next";
-import { AppProps } from "next/app";
-import Head from "next/head";
-import { ThemeProvider } from "next-themes";
-import Inspect from "inspx";
-import { SiteContextProvider } from "@/lib/context";
-import { NewHeader, Footer } from "@/components";
+import type { NextComponentType, NextPageContext } from 'next';
+import { AppProps } from 'next/app';
+import Head from 'next/head';
+import { ThemeProvider } from 'next-themes';
+import Inspect from 'inspx';
+import { SiteContextProvider } from '@/lib/context';
+import { NewHeader, Footer } from '@/components';
 
-import "@/styles/app.css";
+import '@/styles/app.css';
 
 type ComponentWithLayout<P> = NextComponentType<NextPageContext, any, P> & {
   getLayout?: (

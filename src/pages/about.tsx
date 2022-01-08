@@ -1,4 +1,4 @@
-import { getLayout } from "src/layouts/Layout";
+import { getLayout } from 'src/layouts/Layout';
 
 const About = () => {
   return (
