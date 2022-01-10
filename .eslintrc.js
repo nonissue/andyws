@@ -3,6 +3,7 @@
 // https://www.npmjs.com/package/eslint-config-nextjs
 // https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest
 // https://github.com/vercel/next.js/blob/320986a2b897bc512c21f7148f4a4c8ce749dcae/packages/eslint-config-next/index.js#L70
+// https://github.com/vercel/next.js/issues/25920
 module.exports = {
   root: true,
   plugins: ['@typescript-eslint'],
