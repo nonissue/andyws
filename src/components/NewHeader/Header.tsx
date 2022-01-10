@@ -3,24 +3,24 @@ import { NewHeaderLink, ThemeChanger } from '@/components';
 
 const NewHeader = () => {
   return (
-    <div className="z-10 relative shadow-sm dark:border-b dark:border-gray-900">
-      <div className="relative z-20 inset-0">
-        <div className="max-w-3xl mx-auto flex px-6 py-2 sm:px-6 lg:px-8 lg:py-2 inset-0 ">
-          <div className="relative flex items-center space-between w-full">
-            <div className="flex-grow font-display ">
+    <div className="relative z-10 dark:border-b dark:border-gray-900 shadow-sm">
+      <div className="relative inset-0 z-20">
+        <div className="flex inset-0 py-2 px-6 mx-auto max-w-3xl sm:px-6 lg:py-2 lg:px-8">
+          <div className="flex relative justify-between items-center w-full">
+            <div className="grow font-display">
               <Link href="/">
                 <a className=" flex items-center">
-                  <div className="font-bold tracking-tight text-lg sm:text-xl md:text-2xl text-gray-900 dark:text-gray-50">
+                  <div className="text-lg font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-xl md:text-2xl">
                     andy
                   </div>
-                  <div className="tracking-tight text-opacity-80 first-letter:text-opacity-100 text-gray-900 font-display  dark:text-gray-400 text-xs sm:text-base">
+                  <div className="font-display text-xs tracking-tight text-gray-900/80 first-letter:text-gray-900/100 dark:first-letter:text-gray-400 dark:text-gray-600 sm:text-base">
                     .ws
                   </div>
                 </a>
               </Link>
             </div>
             <NewHeaderLink href="/projects" title="Projects" />
-            <span className="text-sm sm:text-lg font-light opacity-30">
+            <span className="text-sm font-light opacity-30 sm:text-lg">
               &nbsp;&nbsp;&nbsp;&nbsp;
             </span>
             <NewHeaderLink href="/contact" title="Contact" />

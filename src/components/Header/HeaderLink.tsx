@@ -13,7 +13,7 @@ const HeaderLink = ({ title, href, closePopover }: MenuLinkProps) => {
     <li>
       <button
         onClick={() => closePopover()}
-        className="hover:text-red-500 dark:hover:text-red-400 transition-colors duration-250 ease-in"
+        className="hover:text-red-500 dark:hover:text-red-400 transition-colors duration-200 ease-in"
         tabIndex={NEGATIVE_ONE}
       >
         <Link href={href}>

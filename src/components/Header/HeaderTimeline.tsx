@@ -57,11 +57,11 @@ const HeaderTimeline = () => {
             <div className="relative pb-8">
               {eventIdx !== timeline.length - 1 ? (
                 <span
-                  className="absolute top-6 left-3 -ml-px h-full w-0.5 bg-gray-200 dark:bg-gray-800"
+                  className="absolute top-6 left-3 -ml-px w-0.5 h-full bg-gray-200 dark:bg-gray-800"
                   aria-hidden="true"
                 />
               ) : null}
-              <div className="relative flex space-x-4 items-center">
+              <div className="flex relative items-center space-x-4">
                 <div>
                   <span
                     className={classNames(
@@ -70,12 +70,12 @@ const HeaderTimeline = () => {
                     )}
                   >
                     <event.icon
-                      className="h-4 w-4 text-white dark:text-black"
+                      className="w-4 h-4 text-white dark:text-black"
                       aria-hidden="true"
                     />
                   </span>
                 </div>
-                <div className="min-w-0 flex-1 flex justify-between space-x-3 space-y-0 mt-px">
+                <div className="flex flex-1 justify-between mt-px space-y-0 space-x-3 min-w-0">
                   <div>
                     <p className={`text-md dark:text-gray-400 line-clamp-1`}>
                       {event.content}{' '}
@@ -87,7 +87,7 @@ const HeaderTimeline = () => {
                       </a>
                     </p>
                   </div>
-                  <div className="text-right text-sm whitespace-nowrap text-gray-600 font-mono">
+                  <div className="font-mono text-sm text-right text-gray-600 whitespace-nowrap">
                     <time dateTime={event.datetime}>{event.date}</time>
                   </div>
                 </div>

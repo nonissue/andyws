@@ -31,7 +31,7 @@ const ProjectItemHeaderButton = ({ title, link }: ProjectItemHeaderProps) => {
   };
 
   return (
-    <div className="mb-2 flex justify-left md:block">
+    <div className="flex justify-end mb-2 md:block">
       <NextLink href={`/projects/${slugify(title)}`}>
         <a
           href={link}
@@ -60,7 +60,7 @@ const ProjectItemHeaderButton = ({ title, link }: ProjectItemHeaderProps) => {
 
 const ProjectItemHeader = ({ title, link }: ProjectItemHeaderProps) => {
   return (
-    <div className="mb-0 block md:block col-span-4">
+    <div className="block col-span-4 mb-0 md:block">
       <NextLink href={`/projects/${slugify(title)}`}>
         <a href={link} className={`h-full items-center w-max`}>
           {/* ${calcOffset(currentRotate)} ${calcOffset(currentSkew)} */}

@@ -1,7 +1,6 @@
 /* eslint-disable react/display-name */
 import { NextPage } from 'next/types';
 import { getLayout } from '@/layouts/Layout';
-import { useEffect, useState } from 'react';
 import { LinkWrapper, withLinkStyle } from 'src/components/LinkWrapper';
 
 const PrimaryLink = withLinkStyle(
@@ -24,33 +23,12 @@ const SecondaryLink = withLinkStyle(
   dark:text-blue-300 dark:hover:text-blue-100`
 );
 
-const notTest = 'NOTTEST';
-
 const IndexPage: NextPage & {
   getLayout?: (component: JSX.Element) => JSX.Element;
 } = () => {
-  const [test, setTest] = useState('FML');
-
-  const CONSTANTTEST = 'HAHAHA';
-
-  useEffect(() => {
-    setTest((test) => test + '134' + notTest);
-    updateTest();
-    console.log(CONSTANTTEST);
-  }, []);
-
-  useEffect(() => {
-    console.log(test);
-  }, []);
-
-  const updateTest = () => {
-    setTest('NOTTEST');
-  };
-
   return (
     <>
-      <section className="prose prose-lg md:prose-xl lg:prose-2xl dark:prose-invert">
-        <button onClick={updateTest}>TEST</button>
+      <section className="prose prose-lg dark:prose-invert md:prose-xl lg:prose-2xl">
         <p>
           Hi! I&apos;m Andy Williams. I am a Computing student{' @ '}
           <PrimaryLink href="https://macewan.ca">
@@ -73,7 +51,7 @@ const IndexPage: NextPage & {
           </PrimaryLink>
           .
         </p>
-        <h5 className="text-gray-400 prose-sm md:prose-base lg:prose-xl leading-relaxed font-sans">
+        <h5 className="font-sans leading-relaxed text-gray-400 prose-sm md:prose-base lg:prose-xl">
           You can learn more about some of{' '}
           <SecondaryLink href="/projects">my current projects</SecondaryLink>,
           view <SecondaryLink href="/log">links</SecondaryLink> I find

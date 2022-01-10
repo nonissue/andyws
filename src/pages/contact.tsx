@@ -8,8 +8,8 @@ type ContactLinkProps = {
 
 const ContactLink = ({ title, href }: ContactLinkProps) => {
   return (
-    <li className="inline font-display2 mr-2 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-250 ease-in ">
-      <span className="font-light font-display2 opacity-50">@</span>
+    <li className="inline mr-2 font-display2 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-200 ease-in">
+      <span className="font-display2 font-light opacity-50">@</span>
       <NextLink href={href}>
         <a className="">{title}</a>
       </NextLink>
@@ -19,13 +19,13 @@ const ContactLink = ({ title, href }: ContactLinkProps) => {
 
 const Contact = () => {
   return (
-    <section className="bg-white dark:bg-almostblack font-sans py-12">
+    <section className="py-12 font-sans bg-white dark:bg-almostblack">
       <div className="">
-        <h2 className="hidden text-2xl dark:text-gray-200 font-bold font-sans text-gray-700 text-left mb-8">
+        <h2 className="hidden mb-8 font-sans text-2xl font-bold text-left text-gray-700 dark:text-gray-200">
           Contact
         </h2>
-        <div className="mx-auto pr-24 md:pr-0">
-          <ul className="flex flex-col font-display uppercase text-4xl sm:text-6xl md:text-5xl lg:text-6xl">
+        <div className="pr-24 mx-auto md:pr-0">
+          <ul className="flex flex-col font-display text-4xl uppercase sm:text-6xl md:text-5xl lg:text-6xl">
             <ContactLink href="mailto:andy@nonissue.org" title="Email" />
             <ContactLink href="https://github.com/nonissue" title="Github" />
             <ContactLink

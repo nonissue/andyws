@@ -14,25 +14,25 @@ const ImageLoader = ({ src }: { src: string }) => {
 const ProjectPage = ({ project }: { project: Project }) => {
   if (!project) {
     return (
-      <section className="padded-container bg-white dark:bg-almostblack font-sans">
+      <section className="font-sans bg-white dark:bg-almostblack padded-container">
         Loading...
       </section>
     );
   }
 
   return (
-    <section className="padded-container bg-white dark:bg-almostblack font-sans">
-      <div className="text-left opacity-50 text-xs uppercase py-1">
+    <section className="font-sans bg-white dark:bg-almostblack padded-container">
+      <div className="py-1 text-xs text-left uppercase opacity-50">
         <NextLink href="/projects">
           <a>&larr; Back to Projects</a>
         </NextLink>
       </div>
-      <h2 className="font-display font-bold uppercase text-4xl sm:text-6xl md:text-5xl lg:text-6xl">
+      <h2 className="font-display text-4xl font-bold uppercase sm:text-6xl md:text-5xl lg:text-6xl">
         {project.title}
       </h2>
       <br />
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-10 gap-y-6">
-        <article className="lg:col-span-2 relative h-48 sm:h-80 lg:h-72">
+      <div className="grid grid-cols-1 gap-x-10 gap-y-6 lg:grid-cols-3">
+        <article className="relative h-48 sm:h-80 lg:col-span-2 lg:h-72">
           <Image
             loader={ImageLoader}
             src="/rose-thorn_25p.png"
@@ -41,17 +41,17 @@ const ProjectPage = ({ project }: { project: Project }) => {
           />
         </article>
 
-        <article className="lg:col-span-1 col-span-1 font-sans italic prose-sm text-gray-700 dark:text-gray-300 font-light underline-gray-600">
+        <article className="col-span-1 font-sans italic font-light text-gray-700 dark:text-gray-300 prose-sm lg:col-span-1">
           Posuere morbi leo urna molestie at elementum eu. Urna duis convallis
           convallis tellus. Urna molestie at elementum eu. Nunc sed blandit
           libero volutpat.
         </article>
 
-        <article className="lg:col-span-2 lg:col-start-2 col-span-1 prose lg:prose-xl text-gray-700 dark:text-gray-300">
+        <article className="col-span-1 text-gray-700 dark:text-gray-300 prose lg:col-span-2 lg:col-start-2 lg:prose-xl">
           {project.description}
         </article>
 
-        <article className="lg:col-span-2 lg:col-start-2 col-span-1 prose lg:prose-xl text-gray-700 dark:text-gray-300">
+        <article className="col-span-1 text-gray-700 dark:text-gray-300 prose lg:col-span-2 lg:col-start-2 lg:prose-xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis
           egestas pretium aenean pharetra. Orci eu lobortis elementum nibh

@@ -2,12 +2,12 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <div className="z-0 bottom-0 static flex flex-col  justify-start  px-6 md:px-8 max-w-3xl mx-auto mb-8 ">
-      <div className="font-display capitalize  font-bold leading-relaxed    border-0 border-gray-300 bg-opacity-100 text-almostblack dark:text-gray-50 dark:border-gray-600 ">
+    <div className="flex static bottom-0 z-0 flex-col justify-start px-6 mx-auto mb-8 max-w-3xl md:px-8">
+      <div className="font-display font-bold leading-relaxed text-almostblack dark:text-gray-50 capitalize border-0 border-gray-300 dark:border-gray-600">
         <span
           role="img"
           aria-label="100 emoji"
-          className="h-5 leading-5 text-sm inline-block filter grayscale dark:invert"
+          className="inline-block h-5 text-sm leading-5 grayscale dark:invert"
         >
           💯
         </span>
@@ -18,9 +18,7 @@ const Footer = () => {
               aria-hidden="true"
               data-prefix="fab"
               data-icon="github"
-              className="w-5 h-5 -mt-1 inline-block ml-2 text-gray-400 transition-colors duration-300fill-curernt
-            hover:text-gray-900
-            dark:hover:text-gray-100   dark:text-gray-400 "
+              className="inline-block -mt-1 ml-2 w-5 h-5 text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors duration-300"
               viewBox="0 0 496 512"
               width="20"
               height="20"
