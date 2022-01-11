@@ -8,7 +8,7 @@ type ContactLinkProps = {
 
 const ContactLink = ({ title, href }: ContactLinkProps) => {
   return (
-    <li className="inline mr-2 font-display2 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-200 ease-in">
+    <li className="inline mr-2 font-display2 text-blue-700 hover:text-blue-400 dark:text-blue-200 dark:hover:text-blue-400 transition-colors duration-200 ease-in">
       <span className="font-display2 font-light opacity-50">@</span>
       <NextLink href={href}>
         <a className="">{title}</a>
@@ -19,7 +19,7 @@ const ContactLink = ({ title, href }: ContactLinkProps) => {
 
 const Contact = () => {
   return (
-    <section className="py-12 font-sans bg-white dark:bg-almostblack">
+    <section className="py-12 font-sans">
       <div className="">
         <h2 className="hidden mb-8 font-sans text-2xl font-bold text-left text-gray-700 dark:text-gray-200">
           Contact
