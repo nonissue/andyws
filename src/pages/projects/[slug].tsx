@@ -13,15 +13,11 @@ const ImageLoader = ({ src }: { src: string }) => {
 
 const ProjectPage = ({ project }: { project: Project }) => {
   if (!project) {
-    return (
-      <section className="font-sans bg-white dark:bg-almostblack padded-container">
-        Loading...
-      </section>
-    );
+    return <section className="font-sans padded-container">Loading...</section>;
   }
 
   return (
-    <section className="font-sans bg-white dark:bg-almostblack padded-container">
+    <section className="font-sans padded-container">
       <div className="py-1 text-xs text-left uppercase opacity-50">
         <NextLink href="/projects">
           <a>&larr; Back to Projects</a>

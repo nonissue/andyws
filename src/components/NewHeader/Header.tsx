@@ -13,8 +13,8 @@ const NewHeader = () => {
                   <div className="text-lg font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-xl md:text-2xl">
                     andy
                   </div>
-                  <div className="font-display text-xs tracking-tight text-gray-900/80 first-letter:text-gray-900/100 dark:first-letter:text-gray-400 dark:text-gray-600 sm:text-base">
-                    .ws
+                  <div className="font-display text-xs tracking-tight text-gray-500 dark:text-gray-400 sm:text-base">
+                    <span className="text-gray-500">.</span>ws
                   </div>
                 </a>
               </Link>

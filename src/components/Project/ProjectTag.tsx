@@ -7,10 +7,7 @@ const ProjectTag = ({ title, index }: TagProps) => {
   return (
     <>
       <div
-        className={`px-1 py-0 rounded-sm shadow-sm text-xs md:text-base font-mono text-gray-600 z-0
-      border border-opacity-20 border-gray-500 uppercase tracking-wider
-      dark:text-gray-400 dark:border-gray-800
-      first:ml-1 first:mt-2`}
+        className={`px-2 py-0 rounded-sm shadow-sm text-xs md:text-base font-mono font-base text-slate-600 z-0 border border-opacity-20 border-slate-500 uppercase tracking-wide dark:text-slate-500 dark:border-slate-700 first:ml-1`}
       >
         {title}
       </div>

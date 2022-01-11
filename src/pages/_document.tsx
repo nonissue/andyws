@@ -43,7 +43,7 @@ export default class Document extends NextDocument {
           />
           <script async src={`https://sa.nonissue.org/latest.js`} />
         </Head>
-        <body className="text-gray-900 dark:text-gray-100 dark:bg-almostblack bg-white">
+        <body className="dark:bg-slate-900 bg-white">
           <Main />
           <NextScript />
         </body>

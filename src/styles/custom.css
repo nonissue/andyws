@@ -4,7 +4,7 @@ body {
 
 @layer components {
   .padded-container {
-    @apply px-6 py-8 pt-8 sm:py-12 sm:pt-12 sm:px-6 lg:px-8 max-w-3xl mx-auto bg-white bg-opacity-10 dark:bg-almostblack;
+    @apply px-6 py-8 pt-8 sm:py-12 sm:pt-12 sm:px-6 lg:px-8 max-w-3xl mx-auto bg-white bg-opacity-10 dark:bg-slate-900;
   }
 
   /* initial implementation of custom utility to transition gradient to transparent on hover */

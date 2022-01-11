@@ -30,6 +30,12 @@ module.exports = {
         display: ['Space Grotesk', ...defaultTheme.fontFamily.sans],
         display2: ['Space Mono', ...defaultTheme.fontFamily.sans],
         mono: [
+          'SFMono-Regular',
+          'ui-monospace',
+          'Georgia',
+          ...defaultTheme.fontFamily.mono,
+        ],
+        display_mono: [
           'Space Mono',
           'SFMono-Regular',
           'ui-monospace',
