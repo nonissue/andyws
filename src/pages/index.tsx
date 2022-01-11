@@ -2,25 +2,51 @@
 import { NextPage } from 'next/types';
 import { getLayout } from '@/layouts/Layout';
 import { LinkWrapper, withLinkStyle } from 'src/components/LinkWrapper';
+import ctl from '@netlify/classnames-template-literals';
 
 const PrimaryLink = withLinkStyle(
   LinkWrapper,
-  `
-  px-1 md:px-2  no-underline py-1
-  box-decoration-clone ${/* for multiline padded bg with css */ ''}
-  bg-blue-200 text-blue-700 
-  transition-all duration-200 hover:bg-sky-100 
-  dark:text-blue-200 dark:bg-blue-700/25
-  dark:hover:text-blue-100  dark:hover:bg-blue-700
-  `
+  ctl(
+    `
+    box-decoration-clone
+    p-1
+    font-medium
+    text-blue-700
+    hover:text-blue-100
+    dark:text-blue-800
+    dark:hover:text-blue-100
+    no-underline
+    bg-blue-200
+    hover:bg-blue-700
+    dark:bg-blue-300
+    dark:hover:bg-blue-700
+    shadow-md
+    shadow-slate-300/10
+    hover:shadow-blue-400/5
+    dark:shadow-slate-900/10 
+    transition-all
+    duration-200
+    md:px-2
+    `
+  )
 );
 
 const SecondaryLink = withLinkStyle(
   LinkWrapper,
-  `no-underline
-  leading-normal text-blue-600
-  transition-all duration-300 hover:text-blue-900 
-  dark:text-blue-300 dark:hover:text-blue-100`
+
+  ctl(
+    `
+    font-medium 
+    leading-normal 
+    text-blue-600 
+    hover:text-blue-900 
+    dark:text-blue-300 
+    dark:hover:text-blue-100 
+    no-underline 
+    transition-all 
+    duration-300
+    `
+  )
 );
 
 const IndexPage: NextPage & {
@@ -28,7 +54,7 @@ const IndexPage: NextPage & {
 } = () => {
   return (
     <>
-      <section className="prose prose-lg dark:prose-invert md:prose-xl lg:prose-2xl">
+      <section className="font-medium prose prose-xl dark:prose-invert md:prose-xl lg:prose-2xl">
         <p>
           Hi! I&apos;m Andy Williams. I am a Computing student{' @ '}
           <PrimaryLink href="https://macewan.ca">
@@ -51,7 +77,7 @@ const IndexPage: NextPage & {
           </PrimaryLink>
           .
         </p>
-        <h5 className="font-sans leading-relaxed text-gray-400 prose-sm md:prose-base lg:prose-xl">
+        <h5 className="font-sans font-medium leading-relaxed text-slate-500 dark:text-slate-400/90 prose-sm md:prose-base lg:prose-xl">
           You can learn more about some of{' '}
           <SecondaryLink href="/projects">my current projects</SecondaryLink>,
           view <SecondaryLink href="/log">links</SecondaryLink> I find
