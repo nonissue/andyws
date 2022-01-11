@@ -18,36 +18,56 @@ const ProjectPage = ({ project }: { project: Project }) => {
 
   return (
     <section className="font-sans padded-container">
-      <div className="py-1 text-xs text-left uppercase opacity-50">
+      <div className="text-xs text-left dark:text-slate-100 uppercase opacity-50">
         <NextLink href="/projects">
           <a>&larr; Back to Projects</a>
         </NextLink>
       </div>
-      <h2 className="font-display text-4xl font-bold uppercase sm:text-6xl md:text-5xl lg:text-6xl">
+      <h2 className="my-4 font-sans text-3xl font-black dark:text-slate-100 sm:my-5 sm:text-6xl md:text-5xl lg:text-6xl">
         {project.title}
       </h2>
-      <br />
-      <div className="grid grid-cols-1 gap-x-10 gap-y-6 lg:grid-cols-3">
-        <article className="relative h-48 sm:h-80 lg:col-span-2 lg:h-72">
-          <Image
-            loader={ImageLoader}
-            src="/rose-thorn_25p.png"
-            layout="fill"
-            alt="Random image from unsplash.com"
-          />
-        </article>
 
-        <article className="col-span-1 font-sans italic font-light text-gray-700 dark:text-gray-300 prose-sm lg:col-span-1">
+      <div className="grid grid-cols-1 gap-x-10 gap-y-6 lg:grid-cols-3">
+        <article className="col-span-1 font-sans italic font-light text-gray-700 dark:text-gray-300 prose-lg sm:prose-2xl lg:col-span-3 lg:col-start-1">
           Posuere morbi leo urna molestie at elementum eu. Urna duis convallis
           convallis tellus. Urna molestie at elementum eu. Nunc sed blandit
           libero volutpat.
         </article>
 
-        <article className="col-span-1 text-gray-700 dark:text-gray-300 prose lg:col-span-2 lg:col-start-2 lg:prose-xl">
+        <article className="relative h-48 sm:h-80 lg:col-span-2 lg:col-start-1 lg:h-72">
+          <Image
+            loader={ImageLoader}
+            src="/rose-thorn_25p.png"
+            layout="fill"
+            alt="Random image from unsplash.com"
+            className="rounded"
+          />
+        </article>
+        <article className="overflow-hidden relative h-48 rounded sm:h-80 lg:col-span-1 lg:col-start-3 lg:h-72">
+          <Image
+            loader={ImageLoader}
+            src="/rose-thorn_50p.png"
+            layout="fill"
+            alt="Random image from unsplash.com"
+            className="rounded scale-150"
+          />
+        </article>
+        <article className="col-span-1 my-auto text-gray-700 dark:text-gray-300 align-middle opacity-50 prose-sm lg:col-span-2 lg:col-start-1 lg:text-left lg:prose-sm">
           {project.description}
         </article>
 
-        <article className="col-span-1 text-gray-700 dark:text-gray-300 prose lg:col-span-2 lg:col-start-2 lg:prose-xl">
+        <article className="col-span-1 text-gray-700 dark:text-gray-300 prose lg:col-span-3 lg:col-start-1 lg:prose-xl">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis
+          egestas pretium aenean pharetra. Orci eu lobortis elementum nibh
+          tellus molestie. Vulputate dignissim suspendisse in est. Vel pharetra
+          vel turpis nunc. Malesuada nunc vel risus commodo. Nisi vitae suscipit
+          tellus mauris. Posuere morbi leo urna molestie at elementum eu. Urna
+          duis convallis convallis tellus. Urna molestie at elementum eu. Nunc
+          sed blandit libero volutpat.
+        </article>
+
+        <article className="col-span-1 text-gray-700 dark:text-gray-300 prose lg:col-span-3 lg:col-start-1 lg:prose-xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis
           egestas pretium aenean pharetra. Orci eu lobortis elementum nibh
