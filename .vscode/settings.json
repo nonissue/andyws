@@ -1,0 +1,67 @@
+{
+  // Formatting
+  "editor.formatOnSave": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // ESLint
+  //   "eslint.useFlatConfig": true,
+  //   "eslint.workingDirectories": [
+  //     {
+  //       "mode": "auto"
+  //     }
+  //   ],
+  //   "eslint.validate": [
+  //     "javascript",
+  //     "javascriptreact",
+  //     "typescript",
+  //     "typescriptreact"
+  //   ],
+
+  // Prettier
+  //   "prettier.configPath": "./prettier.config.mjs",
+  //   "prettier.useEditorConfig": true,
+
+  // Tailwind CSS
+  "tailwindCSS.includeLanguages": {
+    "typescript": "typescript",
+    "javascript": "javascript",
+    "typescriptreact": "typescriptreact",
+    "javascriptreact": "javascriptreact"
+  },
+  //   "tailwindCSS.experimental.configFile": "app/globals.css",
+
+  // Misc
+  "css.lint.unknownAtRules": "ignore",
+  "css.validate": true,
+  "typescript.validate.enable": true
+}
