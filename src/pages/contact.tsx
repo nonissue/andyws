@@ -1,5 +1,5 @@
-import NextLink from "next/link";
-import { getLayout } from "src/layouts/Layout";
+import NextLink from 'next/link';
+import { getLayout } from 'src/layouts/Layout';
 
 type ContactLinkProps = {
   title: string;
@@ -25,7 +25,7 @@ const Contact = () => {
           Contact
         </h2>
         <div className="mx-auto pr-24 md:pr-0">
-          <ul className="flex flex-col font-display uppercase text-4xl sm:text-6xl md:text-5xl lg:text-6xl">
+          <ul className="flex flex-col font-display uppercase text-6xl sm:text-6xl md:text-5xl lg:text-6xl">
             <ContactLink href="mailto:andy@nonissue.org" title="Email" />
             <ContactLink href="https://github.com/nonissue" title="Github" />
             <ContactLink
