@@ -6,7 +6,7 @@ import Head from "next/head";
 import { ThemeProvider } from "next-themes";
 import Inspect from "inspx";
 import { SiteContextProvider } from "@/lib/context";
-import { NewHeader, Footer } from "@/components";
+import { Header, Footer } from "@/components";
 
 import "@/styles/app.css";
 
@@ -39,7 +39,7 @@ const MyApp: React.FunctionComponent<AppPropsWithLayout> = ({
             <title>andy.ws</title>
           </Head>
 
-          <NewHeader />
+          <Header />
           {getLayout(<Component {...pageProps} />, pageProps)}
           <Footer />
         </SiteContextProvider>

@@ -1,26 +1,22 @@
-import Link from "next/link";
-const NEGATIVE_ONE = 0;
+import Link from 'next/link';
 
-type MenuLinkProps = {
-  title: string;
+type HeaderLinkProps = {
   href: string;
-
-  closePopover: () => void;
+  title: string;
 };
 
-const HeaderLink = ({ title, href, closePopover }: MenuLinkProps) => {
+const HeaderLink = ({ title, href }: HeaderLinkProps) => {
   return (
-    <li>
-      <button
-        onClick={() => closePopover()}
-        className="hover:text-red-500 dark:hover:text-red-400 transition-colors duration-250 ease-in"
-        tabIndex={NEGATIVE_ONE}
-      >
-        <Link href={href}>
-          <a tabIndex={-1}>{title}</a>
-        </Link>
-      </button>
-    </li>
+    <div>
+      <Link href={href}>
+        <a
+          className="font-medium transition-colors duration-200 text-xs sm:text-base font-sans capitalize opacity-90 tracking-wide
+        hover:text-blue-600 dark:hover:text-blue-400 "
+        >
+          {title}
+        </a>
+      </Link>
+    </div>
   );
 };
 
