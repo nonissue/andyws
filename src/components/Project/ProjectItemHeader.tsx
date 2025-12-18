@@ -1,14 +1,14 @@
-import NextLink from 'next/link';
-import { slugify } from '@/lib/slugify';
+import NextLink from "next/link";
+import { slugify } from "@/lib/slugify";
 
 type ProjectItemHeaderProps = {
   title: string;
   link: string;
 };
 
-const skews = ['skew-x-2', '-skew-x-2'];
+const skews = ["skew-x-2", "-skew-x-2"];
 
-const rotates = ['rotate-1', '-rotate-1'];
+const rotates = ["rotate-1", "-rotate-1"];
 
 const ProjectItemHeaderButton = ({ title, link }: ProjectItemHeaderProps) => {
   const randomSkew = () => {
@@ -23,10 +23,10 @@ const ProjectItemHeaderButton = ({ title, link }: ProjectItemHeaderProps) => {
   const currentRotate = randomRotate();
 
   const calcOffset = (currentTransform: string) => {
-    if (currentTransform[0] == '-') {
+    if (currentTransform[0] == "-") {
       return currentTransform.substring(1);
     } else {
-      return '-' + currentTransform;
+      return "-" + currentTransform;
     }
   };
 
@@ -47,8 +47,8 @@ const ProjectItemHeaderButton = ({ title, link }: ProjectItemHeaderProps) => {
                       dark:bg-almostblack dark:bg-opacity-90  dark:shadow-xl
                       dark:text-mint-mint9 dark:hover:text-orange-400 dark:underline-gray-700
                         md:px-5 ${calcOffset(currentRotate)} ${calcOffset(
-              currentSkew
-            )}`}
+                          currentSkew,
+                        )}`}
           >
             {title}
           </h2>

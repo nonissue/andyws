@@ -1,5 +1,5 @@
-import { ProjectItem } from './ProjectItem';
-import { Project } from '@/types';
+import { ProjectItem } from "./ProjectItem";
+import { Project } from "@/types";
 // import Projects from "data/projects.json";
 
 const ProjectList = ({ projects }: { projects: Project[] }) => {

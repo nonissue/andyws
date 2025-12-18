@@ -6,10 +6,7 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "es2017"
-    ],
+    "lib": ["dom", "es2017"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -22,27 +19,13 @@
     "target": "esnext",
     "baseUrl": ".",
     "paths": {
-      "@/components": [
-        "src/components"
-      ],
-      "@/data/*": [
-        "data/*"
-      ],
-      "@/layouts/*": [
-        "src/layouts/*"
-      ],
-      "@/lib/*": [
-        "src/lib/*"
-      ],
-      "@/styles/*": [
-        "src/styles/*"
-      ],
-      "@/types/*": [
-        "src/types/*"
-      ],
-      "@/types": [
-        "src/types/index"
-      ]
+      "@/components": ["src/components"],
+      "@/data/*": ["data/*"],
+      "@/layouts/*": ["src/layouts/*"],
+      "@/lib/*": ["src/lib/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/types/*": ["src/types/*"],
+      "@/types": ["src/types/index"]
     },
     "incremental": true
   },
@@ -55,8 +38,5 @@
     "data",
     "out"
   ],
-  "include": [
-    "**/*.ts",
-    "**/*.tsx"
-  ]
+  "include": ["**/*.ts", "**/*.tsx"]
 }

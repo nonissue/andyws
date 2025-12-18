@@ -5,11 +5,8 @@ const Header = () => {
     <div className="z-10 relative ">
       {/*☄︎ ☺︎☢︎☸︎⚇⚇⍺⍵☺︎  */}
       <div className=" ">
-  
         <ThemeChanger />
       </div>
-
-
     </div>
   );
 };

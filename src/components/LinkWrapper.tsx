@@ -50,7 +50,7 @@ const LinkWrapper = ({
 
 const withLinkStyle = (
   BaseComponent: typeof LinkWrapper,
-  newClassName: string
+  newClassName: string,
 ) => {
   const NewComp = (props: Omit<LinkWrapperProps, "className">) => {
     return <BaseComponent className={newClassName} {...props} />;

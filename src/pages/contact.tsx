@@ -1,5 +1,5 @@
-import NextLink from 'next/link';
-import { getLayout } from 'src/layouts/Layout';
+import NextLink from "next/link";
+import { getLayout } from "src/layouts/Layout";
 
 type ContactLinkProps = {
   title: string;

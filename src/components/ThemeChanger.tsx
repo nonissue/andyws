@@ -18,10 +18,7 @@ export const ThemeChanger: React.FunctionComponent = () => {
     console.log(`theme: ${theme}`);
   }, []);
 
-  
   if (!mounted) return null;
-
-    
 
   return (
     <div>
@@ -49,7 +46,6 @@ export const ThemeChanger: React.FunctionComponent = () => {
           }`}
         >
           ☺︎
-       
         </div>
       </button>
     </div>

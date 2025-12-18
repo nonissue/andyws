@@ -3,7 +3,6 @@ import { NextPage } from "next/types";
 import { getLayout } from "@/layouts/Layout";
 import NextLink from "next/link";
 
-
 type ContactLinkProps = {
   title: string;
   href: string;
@@ -23,7 +22,6 @@ const ContactLink = ({ title, href }: ContactLinkProps) => {
 const IndexPage: NextPage & {
   getLayout?: (component: JSX.Element) => JSX.Element;
 } = () => {
-
   return (
     <section className="font-sans ">
       <div className="">

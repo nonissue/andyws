@@ -13,7 +13,7 @@ import "@/styles/app.css";
 type ComponentWithLayout<P> = NextComponentType<NextPageContext, any, P> & {
   getLayout?: (
     page: JSX.Element,
-    layoutProps: Record<string, unknown>
+    layoutProps: Record<string, unknown>,
   ) => JSX.Element;
 };
 
