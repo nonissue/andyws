@@ -11,7 +11,6 @@ const Footer = () => {
     setMounted(true);
   }, []);
 
-
   return (
     <div className="z-0 flex-col  justify-center  px-6 md:px-8 max-w-3xl mx-auto     ">
       <div
@@ -26,9 +25,7 @@ const Footer = () => {
             role="img"
             aria-label="attribution"
             style={{
-
-       
-                textShadow: `0 0 0 ${
+              textShadow: `0 0 0 ${
                 resolvedTheme == "light" ? "#E84203" : "#000000"
               }`,
             }}
