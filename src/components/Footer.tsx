@@ -3,43 +3,40 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Footer = () => {
-  const { theme, resolvedTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
-
-  console.log(`resolvedTheme: ${resolvedTheme}`);
-  console.log(`theme: ${theme}`);
-  //   console.log(theme)
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  //   if (!mounted) return null;
 
   return (
-    <div className="z-0 flex-col  justify-center  px-6 md:px-8 max-w-3xl mx-auto mb-8 ">
+    <div className="z-0 flex-col  justify-center  px-6 md:px-8 max-w-3xl mx-auto     ">
       <div
         aria-label="100 emoji"
-        className=" text-klimOrange dark:text-black font-display font-bold leading-5 text-lg inline-block uppercase transition-all duration-1000 "
+        className=" text-klimOrange dark:text-black font-display font-bold leading-5 text-lg inline-block uppercase transition-colors duration-300 delay-200 ease-out"
       >
         andy w
       </div>
-      <div className="font-display flex flex-row items-center justify-center gap-x-1 font-bold leading-relaxed ">
-        {/* {true && ( */}
+      <div className="font-display flex flex-row items-center justify-center gap-x-1 font-bold leading-none ">
+        {mounted && (
           <span
             role="img"
             aria-label="attribution"
             style={{
-              textShadow: `0 0 0 ${
+
+       
+                textShadow: `0 0 0 ${
                 resolvedTheme == "light" ? "#E84203" : "#000000"
               }`,
             }}
-            className=" leading-5 text-lg text-transparent inline-block "
+            className=" leading-5 text-lg inline-block text-transparent"
           >
             💯
           </span>
-        {/* )} */}
+        )}
 
         <Link href="https://github.com/nonissue/andyws">
           <a aria-label="Link to source code for this site on github">
@@ -47,9 +44,7 @@ const Footer = () => {
               aria-hidden="true"
               data-prefix="fab"
               data-icon="github"
-              className="w-5 h-5 -mt-1 inline-block text-klimOrange dark:text-black  fill-curernt
-            hover:text-gray-900
-            dark:hover:text-white"
+              className="w-5 h-5 -mt-1 inline-block text-klimOrange dark:text-black hover:text-gray-900 dark:hover:text-white transition-colors duration-200 delay-100 ease-in-out "
               viewBox="0 0 496 512"
               width="20"
               height="20"

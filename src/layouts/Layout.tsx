@@ -4,7 +4,7 @@ type Props = {
 
 function Layout({ children }: Props): React.ReactElement {
   return (
-    <div className="font-sans">
+    <div className="font-sans ">
       {children}
     </div>
   );
