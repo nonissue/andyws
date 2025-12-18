@@ -19,9 +19,9 @@ export const ThemeChanger: React.FunctionComponent = () => {
   if (!mounted) return null;
 
   return (
-    <div className="">
+    <div>
       <button
-        className="p-2 m-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-500 text-gray-600 border-0 border-gray-200 dark:border-gray-500 mr-1 dark:text-gray-300 bg-transparent dark:bg-transparent "
+        className="p-0 m-0 leading-none "
         onClick={() => {
           // for some reason, if theme is light, setTheme doesn't
           // change theme to dark on first use unless we use the logic below
@@ -36,8 +36,13 @@ export const ThemeChanger: React.FunctionComponent = () => {
         }}
         aria-label="Theme Toggle"
       >
-        <div className="w-6 h-6">
-          {theme === "light" ? (
+        <div
+          className={`leading-none text-4xl sm:text-4xl md:text-5xl transition-colors duration-200 ${
+            resolvedTheme == "light" ? "text-klimOrange hover:text-black" : "text-black hover:text-white"
+          }`}
+        >
+          ☺︎
+          {/* {theme === "light" ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -65,7 +70,7 @@ export const ThemeChanger: React.FunctionComponent = () => {
                 d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
               />
             </svg>
-          )}
+          )} */}
         </div>
       </button>
     </div>

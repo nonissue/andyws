@@ -35,6 +35,7 @@ module.exports = {
         amber: colors.amber,
         sky: colors.sky,
         white: "#fff",
+        klimOrange: "#E84203",
       },
       fontSize: {
         xxs: ".625rem",

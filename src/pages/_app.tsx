@@ -38,10 +38,11 @@ const MyApp: React.FunctionComponent<AppPropsWithLayout> = ({
           <Head>
             <title>andy.ws</title>
           </Head>
-
-          <Header />
-          {getLayout(<Component {...pageProps} />, pageProps)}
-          <Footer />
+          <div className="flex flex-col justify-between items-center h-screen overflow-hidden">
+            <Header />
+            {getLayout(<Component {...pageProps} />, pageProps)}
+            <Footer />
+          </div>
         </SiteContextProvider>
       </ThemeProvider>
     </Inspect>
