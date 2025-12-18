@@ -6,6 +6,7 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
+    "format": "prettier --check .",
     "eslint": "node ./node_modules/eslint/bin/eslint.js --ext .ts,.tsx ."
   },
   "dependencies": {
@@ -40,6 +41,7 @@
     "postcss-import": "^14.0.1",
     "postcss-nested": "^5.0.6",
     "postcss-preset-env": "^7.2.0",
+    "prettier": "^3.7.4",
     "tailwindcss": "^3.0.11",
     "typescript": "^4.5.4"
   },
