@@ -22,6 +22,7 @@ export const ThemeChanger: React.FunctionComponent = () => {
 
   return (
     <div>
+      {/* ☺ */}
       <button
         className="p-0 m-0 leading-none "
         onClick={() => {
@@ -38,15 +39,33 @@ export const ThemeChanger: React.FunctionComponent = () => {
         }}
         aria-label="Theme Toggle"
       >
-        <div
+        <span
+          role="img"
+          aria-label="attribution"
+          className="inline-block text-transparent emoji-shadow hover:emoji-shadow-hover  leading-none text-4xl sm:text-4xl md:text-5xl transition-all  ease-in duration-300 "
+        >
+          💯
+        </span>
+        {/* <div
           className={`leading-none text-4xl sm:text-4xl md:text-5xl transition-colors  ease-in duration-300 ${
             resolvedTheme == "light"
               ? "text-klimOrange hover:text-black"
               : "text-black hover:text-white"
           }`}
         >
-          ☺︎
-        </div>
+          <span
+            role="img"
+            aria-label="attribution"
+            style={{
+              textShadow: `0 0 0 ${
+                resolvedTheme == "light" ? "#E84203" : "#000000"
+              }`,
+            }}
+            className=" leading-5 text-lg inline-block text-transparent"
+          >
+            💯
+          </span>
+        </div> */}
       </button>
     </div>
   );

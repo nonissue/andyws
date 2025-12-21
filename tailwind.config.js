@@ -5,6 +5,7 @@
 
 const colors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   mode: "jit",
@@ -36,6 +37,10 @@ module.exports = {
         sky: colors.sky,
         white: "#fff",
         klimOrange: "#E84203",
+        emojiLight: "yellow",
+        emojiLightHover: colors.blue,
+        emojiDark: colors.black,
+        emojiDarkHover: colors.white,
       },
       fontSize: {
         xxs: ".625rem",
@@ -80,5 +85,22 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    plugin(function ({ addUtilities }) {
+      addUtilities(
+        {
+          // base
+          ".emoji-shadow": { textShadow: "0 0 0 #E84203" },
+          ".emoji-shadow-hover": { textShadow: "0 0 0 #000000" },
+
+          // dark base
+          ".dark .emoji-shadow": { textShadow: "0 0 0 #000000" },
+          ".dark .emoji-shadow-hover": { textShadow: "0 0 0 #ffffff" },
+        },
+        // These variants matter if you want to use `hover:` in className
+        ["hover"],
+      );
+    }),
+  ],
 };

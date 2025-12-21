@@ -12,15 +12,16 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="z-0 flex-col  justify-center  px-6 md:px-8 max-w-3xl mx-auto     ">
+    <div className="z-0 flex flex-row  gap-x-2 justify-center  px-6 md:px-8 max-w-3xl mx-auto     ">
       <div
         aria-label="100 emoji"
-        className=" text-klimOrange dark:text-black font-display font-bold leading-5 text-lg inline-block uppercase transition-colors duration-300 delay-200 ease-out"
+        className=" text-klimOrange text-center dark:text-black font-sans font-semibold leading-5 text-lg inline-block uppercase transition-colors duration-300 delay-200 ease-out"
       >
-        andy w
+
+        andy <br/>williams
       </div>
       <div className="font-display flex flex-row items-center justify-center gap-x-1 font-bold leading-none ">
-        {mounted && (
+        {mounted && false && (
           <span
             role="img"
             aria-label="attribution"
@@ -41,7 +42,7 @@ const Footer = () => {
               aria-hidden="true"
               data-prefix="fab"
               data-icon="github"
-              className="w-5 h-5 -mt-1 inline-block text-klimOrange dark:text-black hover:text-gray-900 dark:hover:text-white transition-colors duration-200 delay-100 ease-in-out "
+              className="w-5 h-5 -mt-1 hidden text-klimOrange dark:text-black hover:text-gray-900 dark:hover:text-white transition-colors duration-200 delay-100 ease-in-out "
               viewBox="0 0 496 512"
               width="20"
               height="20"
