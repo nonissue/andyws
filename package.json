@@ -7,35 +7,30 @@
     "start": "next start",
     "type-check": "tsc",
     "format": "prettier --check .",
-    "eslint": "node ./node_modules/eslint/bin/eslint.js --ext .ts,.tsx ."
+    "eslint": "node ./node_modules/eslint/bin/eslint.js --ext .ts,.tsx .",
+    "knip": "knip"
   },
   "dependencies": {
-    "@headlessui/react": "^1.4.2",
-    "@heroicons/react": "^1.0.5",
     "next": "^12.0.7",
     "next-themes": "0.0.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@tailwindcss/aspect-ratio": "^0.4.0",
-    "@tailwindcss/forms": "^0.4.0",
-    "@tailwindcss/line-clamp": "^0.3.0",
     "@tailwindcss/typography": "^0.5.0",
-    "@types/node": "^17.0.8",
+    "@types/node": "^25.0.3",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.9.0",
     "autoprefixer": "^10.4.0",
     "eslint": "^8.6.0",
-    "eslint-config-next": "^12.0.7",
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
     "inspx": "^0.0.1-alpha.6",
+    "knip": "^5.76.1",
     "postcss": "^8.4.5",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^14.0.1",
@@ -43,7 +38,7 @@
     "postcss-preset-env": "^7.2.0",
     "prettier": "^3.7.4",
     "tailwindcss": "^3.0.11",
-    "typescript": "^4.5.4"
+    "typescript": "^5.9.3"
   },
   "license": "MIT"
 }

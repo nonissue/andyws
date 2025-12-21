@@ -42,7 +42,7 @@ export const ThemeChanger: React.FunctionComponent = () => {
         <span
           role="img"
           aria-label="attribution"
-          className="inline-block text-transparent emoji-shadow hover:emoji-shadow-hover  leading-none text-4xl sm:text-4xl md:text-5xl transition-all  ease-in duration-300 "
+          className="inline-block text-transparent emoji-shadow hover:emoji-shadow-hover leading-none text-4xl sm:text-4xl md:text-5xl transition-all  ease-in duration-300 "
         >
           💯
         </span>

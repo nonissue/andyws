@@ -15,11 +15,14 @@ const Footer = () => {
     <div className="z-0 flex flex-row  gap-x-2 justify-center  px-6 md:px-8 max-w-3xl mx-auto     ">
       <div
         aria-label="100 emoji"
-        className=" text-klimOrange text-center dark:text-black font-sans font-semibold leading-5 text-lg inline-block uppercase transition-colors duration-300 delay-200 ease-out"
+        className=" text-klimOrange flex flex-col items-center gap-x-2 text-center  dark:text-black font-display uppercase  font-[500] leading-snug tracking-wide  text-base sm:text-xl transition-all duration-300 delay-200 ease-out"
       >
-
-        andy <br/>williams
+        <span className="font-mono tracking-widest text-xs sm:text-sm font-[400] opacity-100">
+          built by/for
+        </span>
+        andy williams
       </div>
+
       <div className="font-display flex flex-row items-center justify-center gap-x-1 font-bold leading-none ">
         {mounted && false && (
           <span

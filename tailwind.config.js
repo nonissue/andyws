@@ -90,6 +90,15 @@ module.exports = {
     plugin(function ({ addUtilities }) {
       addUtilities(
         {
+          ".text-shadow": {
+            textShadow: "1px 1.5px 1.5px rgb(0 0 0 / 0.15)",
+          },
+          ".dark .text-shadow": {
+            textShadow: "1px 1.5px 1.5px rgb(0 0 0 / 0.2)",
+          },
+          ".text-shadow-lg": {
+            textShadow: "3px 3px 0px rgb(0 0 0 / 0.15)",
+          },
           // base
           ".emoji-shadow": { textShadow: "0 0 0 #E84203" },
           ".emoji-shadow-hover": { textShadow: "0 0 0 #000000" },
