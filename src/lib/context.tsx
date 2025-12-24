@@ -16,7 +16,7 @@ const initialSiteContext: SiteContextState = {
   },
 };
 
-export const SiteContext = createContext<
+const SiteContext = createContext<
   | {
       state: SiteContextState;
       updateState: React.Dispatch<React.SetStateAction<SiteContextState>>;

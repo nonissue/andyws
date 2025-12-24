@@ -9,5 +9,3 @@ function Layout({ children }: Props): React.ReactElement {
 export const getLayout = (page: React.ReactElement): React.ReactElement => (
   <Layout>{page}</Layout>
 );
-
-export { Layout };
