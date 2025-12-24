@@ -7,7 +7,7 @@
     "start": "next start",
     "type-check": "tsc",
     "format": "prettier --check .",
-    "format:write": "prettier --fix .",
+    "format:write": "prettier --write .",
     "eslint": "node ./node_modules/eslint/bin/eslint.js --ext .ts,.tsx .",
     "knip": "knip"
   },
