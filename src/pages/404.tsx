@@ -1,11 +1,11 @@
 import { getLayout } from "@/layouts/Layout";
 
 const Custom404 = () => (
-  <section className="py-12 max-w-md md:max-w-lg text-center">
-    <h1 className="text-shadow-lg text-8xl text-black dark:text-black font-display  font-bold mb-6">
+  <section className="max-w-md py-12 text-center md:max-w-lg">
+    <h1 className="mb-6 font-display text-8xl font-bold text-black text-shadow-lg dark:text-black">
       404
     </h1>
-    <article className="prose-xl dark:prose-dark max-w-sm ">
+    <article className="dark:prose-dark prose-xl max-w-sm">
       <p>
         The requested page cannot be found. <br />
         <a href="mailto:andy@andy.ws" className="font-bold">

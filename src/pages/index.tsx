@@ -10,8 +10,8 @@ type ContactLinkProps = {
 
 const ContactLink = ({ title, href }: ContactLinkProps) => {
   return (
-    <li className="inline font-bold font-display2 mr-2 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out ">
-      <span className="font-light font-display2 opacity-50">@</span>
+    <li className="mr-2 inline font-display2 font-bold transition-colors duration-300 ease-in-out hover:text-black dark:hover:text-white">
+      <span className="font-display2 font-light opacity-50">@</span>
       <NextLink href={href}>
         <a className="">{title}</a>
       </NextLink>
@@ -23,9 +23,9 @@ const IndexPage: NextPage & {
   getLayout?: (component: JSX.Element) => JSX.Element;
 } = () => {
   return (
-    <section className="font-sans ">
+    <section className="font-sans">
       <div className="">
-        <ul className="flex flex-col transform rotate-[35deg] -mr-[4vw] -mt-[3vh] text-klimOrange dark:text-black text-center font-display uppercase text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+        <ul className="-mr-[4vw] -mt-[3vh] flex rotate-[35deg] transform flex-col text-center font-display text-5xl uppercase text-klimOrange dark:text-black sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl landscape:text-xl landscape:sm:text-2xl landscape:md:text-3xl landscape:lg:text-8xl landscape:xl:text-8xl">
           <ContactLink href="mailto:andy@nonissue.org" title="Email" />
           <ContactLink href="https://github.com/nonissue" title="Github" />
           <ContactLink

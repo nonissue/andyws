@@ -67,7 +67,7 @@ export default class Document extends NextDocument {
           /> */}
           {/* <script async src={`https://sa.nonissue.org/latest.js`} /> */}
         </Head>
-        <body className=" dark:bg-klimOrange bg-white dark:text-black transition-colors duration-500 delay-200 ease-in-out">
+        <body className="bg-white transition-colors delay-200 duration-500 ease-in-out dark:bg-klimOrange dark:text-black">
           <Main />
           <NextScript />
         </body>

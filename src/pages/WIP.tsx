@@ -3,7 +3,7 @@ import { getLayout } from "@/layouts/Layout";
 
 const WIPPage = () => (
   <section className="py-12">
-    <h3 className="text-8xl text-blue-500 dark:text-blue-500 font-label_mono font-black mb-3">
+    <h3 className="mb-3 font-label_mono text-8xl font-black text-blue-500 dark:text-blue-500">
       WIP
     </h3>
     <article className="prose-2xl">

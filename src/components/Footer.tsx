@@ -12,18 +12,18 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="z-0 flex flex-row  gap-x-2 justify-center  px-6 md:px-8 max-w-3xl mx-auto     ">
+    <div className="z-0 mx-auto flex max-w-3xl flex-row justify-center gap-x-2 px-6 md:px-8">
       <div
         aria-label="100 emoji"
-        className=" text-klimOrange flex flex-col items-center gap-x-2 text-center  dark:text-black font-display uppercase  font-[500] leading-snug tracking-wide  text-base sm:text-xl transition-all duration-300 delay-200 ease-out"
+        className="flex flex-col items-center gap-x-2 text-center font-display text-base font-[500] uppercase leading-snug tracking-wide text-klimOrange transition-all delay-200 duration-300 ease-out dark:text-black sm:text-xl"
       >
-        <span className="font-mono tracking-widest text-xs sm:text-sm font-[400] opacity-100">
+        <span className="font-mono text-xs font-[400] tracking-widest opacity-100 sm:text-sm">
           built by/for
         </span>
         andy williams
       </div>
 
-      <div className="font-display flex flex-row items-center justify-center gap-x-1 font-bold leading-none ">
+      <div className="flex flex-row items-center justify-center gap-x-1 font-display font-bold leading-none">
         {mounted && false && (
           <span
             role="img"
@@ -33,7 +33,7 @@ const Footer = () => {
                 resolvedTheme == "light" ? "#E84203" : "#000000"
               }`,
             }}
-            className=" leading-5 text-lg inline-block text-transparent"
+            className="inline-block text-lg leading-5 text-transparent"
           >
             💯
           </span>
@@ -45,7 +45,7 @@ const Footer = () => {
               aria-hidden="true"
               data-prefix="fab"
               data-icon="github"
-              className="w-5 h-5 -mt-1 hidden text-klimOrange dark:text-black hover:text-gray-900 dark:hover:text-white transition-colors duration-200 delay-100 ease-in-out "
+              className="-mt-1 hidden h-5 w-5 text-klimOrange transition-colors delay-100 duration-200 ease-in-out hover:text-gray-900 dark:text-black dark:hover:text-white"
               viewBox="0 0 496 512"
               width="20"
               height="20"

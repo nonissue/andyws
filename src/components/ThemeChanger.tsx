@@ -24,7 +24,7 @@ export const ThemeChanger: React.FunctionComponent = () => {
     <div>
       {/* ☺ */}
       <button
-        className="p-0 m-0 leading-none "
+        className="m-0 p-0 leading-none"
         onClick={() => {
           // for some reason, if theme is light, setTheme doesn't
           // change theme to dark on first use unless we use the logic below
@@ -42,7 +42,7 @@ export const ThemeChanger: React.FunctionComponent = () => {
         <span
           role="img"
           aria-label="attribution"
-          className="inline-block text-transparent emoji-shadow hover:emoji-shadow-hover leading-none text-4xl sm:text-4xl md:text-5xl transition-all  ease-in duration-300 "
+          className="inline-block text-4xl leading-none text-transparent transition-all duration-300 ease-in emoji-shadow hover:emoji-shadow-hover sm:text-4xl md:text-5xl"
         >
           💯
         </span>

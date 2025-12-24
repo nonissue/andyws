@@ -2,7 +2,7 @@ import { ThemeChanger } from "../ThemeChanger";
 
 const Header = () => {
   return (
-    <div className="z-10 relative ">
+    <div className="relative z-10">
       {/*☄︎ ☺︎☢︎☸︎⚇⚇⍺⍵☺︎  */}
       <div className=" ">
         <ThemeChanger />
