@@ -52,7 +52,7 @@ var {
 
 @supports (font-variation-settings: normal) {
   .font-label {
-      --slnt: "slnt" 0;
+    --slnt: "slnt" 0;
     --casl: "CASL" 0.19;
     --CRSV: "CRSV" 1;
     --mono: "MONO" 0;

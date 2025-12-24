@@ -4,18 +4,18 @@ body {
 
 @layer components {
   .padded-container {
-    @apply px-6 py-8 pt-8 sm:py-12 sm:pt-12 sm:px-6 lg:px-8 max-w-3xl mx-auto;
+    @apply mx-auto max-w-3xl px-6 py-8 pt-8 sm:py-12 sm:px-6 sm:pt-12 lg:px-8;
   }
 
   /* initial implementation of custom utility to transition gradient to transparent on hover */
   /* this functionality is not provided by tailwind OOB */
 
   .container-padding {
-    @apply px-6 py-8 pt-2 sm:py-12 sm:pt-12 sm:px-6 lg:px-8;
+    @apply px-6 py-8 pt-2 sm:py-12 sm:px-6 sm:pt-12 lg:px-8;
   }
 
   .custom-container {
-    @apply container max-w-4xl mx-auto;
+    @apply container mx-auto max-w-4xl;
   }
 
   .wavy-lines-bg {
