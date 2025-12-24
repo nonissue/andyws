@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-export default async (
+const handler = async (
   req: NextApiRequest,
   res: NextApiResponse,
 ): Promise<void> => {
@@ -26,3 +26,5 @@ async function handlePOST(_req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(201).json(result);
 }
+
+export default handler;
