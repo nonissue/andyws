@@ -2,7 +2,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const Footer = () => {
+export default function Footer() {
   const { resolvedTheme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
@@ -61,6 +61,4 @@ const Footer = () => {
       </div>
     </div>
   );
-};
-
-export { Footer };
+}

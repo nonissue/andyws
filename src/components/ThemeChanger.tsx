@@ -7,7 +7,7 @@ Notes:
 - if changed, user pref stored in local storage
 */
 
-export const ThemeChanger: React.FunctionComponent = () => {
+export default function ThemeChanger() {
   const [mounted, setMounted] = useState(false);
   const { theme, resolvedTheme, setTheme } = useTheme();
 
@@ -46,27 +46,7 @@ export const ThemeChanger: React.FunctionComponent = () => {
         >
           💯
         </span>
-        {/* <div
-          className={`leading-none text-4xl sm:text-4xl md:text-5xl transition-colors  ease-in duration-300 ${
-            resolvedTheme == "light"
-              ? "text-klimOrange hover:text-black"
-              : "text-black hover:text-white"
-          }`}
-        >
-          <span
-            role="img"
-            aria-label="attribution"
-            style={{
-              textShadow: `0 0 0 ${
-                resolvedTheme == "light" ? "#E84203" : "#000000"
-              }`,
-            }}
-            className=" leading-5 text-lg inline-block text-transparent"
-          >
-            💯
-          </span>
-        </div> */}
       </button>
     </div>
   );
-};
+}
