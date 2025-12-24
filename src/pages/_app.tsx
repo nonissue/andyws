@@ -39,7 +39,7 @@ const MyApp: React.FunctionComponent<AppPropsWithLayout> = ({
           <Head>
             <title>andy.ws</title>
           </Head>
-          <div className="flex h-screen flex-col items-center justify-between overflow-hidden py-8">
+          <div className="flex h-[100dvh] flex-col items-center justify-between overflow-hidden py-8">
             <Header />
             {getLayout(<Component {...pageProps} />, pageProps)}
             <Footer />
