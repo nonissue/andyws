@@ -6,7 +6,8 @@ import Head from "next/head";
 import { ThemeProvider } from "next-themes";
 import Inspect from "inspx";
 import { SiteContextProvider } from "@/lib/context";
-import { Header, Footer } from "@/components";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 import "@/styles/app.css";
 
