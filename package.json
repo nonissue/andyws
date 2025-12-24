@@ -31,7 +31,6 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
-    "inspx": "^0.0.1-alpha.6",
     "knip": "^5.76.1",
     "postcss": "^8.4.5",
     "postcss-flexbugs-fixes": "^5.0.2",

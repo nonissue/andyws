@@ -4,7 +4,6 @@ import type { NextComponentType, NextPageContext } from "next";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { ThemeProvider } from "next-themes";
-import Inspect from "inspx";
 import { SiteContextProvider } from "@/lib/context";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -29,24 +28,22 @@ const MyApp: React.FunctionComponent<AppPropsWithLayout> = ({
   const getLayout = Component.getLayout || ((page) => page);
 
   return (
-    <Inspect>
-      <ThemeProvider
-        forcedTheme={Component.theme || undefined}
-        attribute="class"
-        defaultTheme="system"
-      >
-        <SiteContextProvider>
-          <Head>
-            <title>andy.ws</title>
-          </Head>
-          <div className="flex h-[100dvh] flex-col items-center justify-between overflow-hidden py-8">
-            <Header />
-            {getLayout(<Component {...pageProps} />, pageProps)}
-            <Footer />
-          </div>
-        </SiteContextProvider>
-      </ThemeProvider>
-    </Inspect>
+    <ThemeProvider
+      forcedTheme={Component.theme || undefined}
+      attribute="class"
+      defaultTheme="system"
+    >
+      <SiteContextProvider>
+        <Head>
+          <title>andy.ws</title>
+        </Head>
+        <div className="flex h-[100dvh] flex-col items-center justify-between overflow-hidden py-8">
+          <Header />
+          {getLayout(<Component {...pageProps} />, pageProps)}
+          <Footer />
+        </div>
+      </SiteContextProvider>
+    </ThemeProvider>
   );
 };
 
