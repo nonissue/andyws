@@ -14,8 +14,8 @@ export default function ThemeChanger() {
   // When mounted on client, now we can show the UI
   useEffect(() => {
     setMounted(true);
-    console.log(`resolvedTheme: ${resolvedTheme}`);
-    console.log(`theme: ${theme}`);
+    // console.log(`resolvedTheme: ${resolvedTheme}`);
+    // console.log(`theme: ${theme}`);
   }, []);
 
   if (!mounted) return null;

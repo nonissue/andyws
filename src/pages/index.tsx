@@ -2,8 +2,8 @@
 import { NextPage } from "next/types";
 import { getLayout } from "@/layouts/Layout";
 import NextLink from "next/link";
-import { useSiteContext } from "@/lib/context";
-import { useEffect } from "react";
+// import { useSiteContext } from "@/lib/context";
+// import { useEffect } from "react";
 
 type ContactLinkProps = {
   title: string;
@@ -24,26 +24,25 @@ const ContactLink = ({ title, href }: ContactLinkProps) => {
 const IndexPage: NextPage & {
   getLayout?: (component: JSX.Element) => JSX.Element;
 } = () => {
-  const { state, updateState } = useSiteContext();
+  //   const { state, updateState } = useSiteContext();
 
-  console.log(state);
+  //   console.log(state);
 
-  useEffect(() => {
-    setTimeout(() => {
-      updateState({ ...state, isLoading: false });
-      console.log(state);
-    }, 1000);
-    // updateState({ ...state, isLoading: false });
-  }, []);
+  //   useEffect(() => {
+  //     setTimeout(() => {
+  //       updateState({ ...state, isLoading: false });
+  //       console.log(state);
+  //     }, 1000);
+  //   }, [state, updateState]);
 
   return (
     <section className="font-sans">
       <div className="">
-        {state.isLoading && (
+        {/* {state.isLoading && (
           <div className="fixed inset-0 z-10 h-[100dvh] w-[100dvw] bg-klimOrange transition-colors duration-500">
             Loading...
           </div>
-        )}
+        )} */}
         <ul className="-mr-[4vw] -mt-[3vh] flex rotate-[35deg] transform flex-col text-center font-display text-5xl uppercase text-klimOrange dark:text-black sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl landscape:text-xl landscape:sm:text-2xl landscape:md:text-3xl landscape:lg:text-8xl landscape:xl:text-8xl">
           <ContactLink href="mailto:andy@nonissue.org" title="Email" />
           <ContactLink href="https://github.com/nonissue" title="Github" />
